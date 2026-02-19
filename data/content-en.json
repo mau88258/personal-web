@@ -1,0 +1,241 @@
+{
+  "ui": {
+    "nav": {
+      "about": "About",
+      "ai": "AI Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "sections": {
+      "education": "Education",
+      "skills": "Skills",
+      "awards": "Awards",
+      "training": "Training",
+      "experience": "Experience",
+      "aiProjects": "AI Applications",
+      "contact": "Contact Me"
+    },
+    "labels": {
+      "master": "Master",
+      "bachelor": "Bachelor",
+      "present": "Present",
+      "months": "months",
+      "years": "years",
+      "ticketsHandled": "Tickets Handled",
+      "bugsReported": "Bugs Reported"
+    }
+  },
+  "personal": {
+    "name": "Neil Chen",
+    "nameEn": "Neil Chen",
+    "greeting": "Hi, I'm",
+    "title": "AI-Driven Development Practitioner · Software QA Engineer @ QNAP",
+    "description": "Building on QA automation expertise, actively exploring practical AI applications in workflows. From test case generation to ticket management and documentation collaboration, continuously experimenting and implementing various AI-assisted solutions. Believing AI is not just a tool, but an opportunity to transform how we work — aiming to become an engineer who leverages AI to create value.",
+    "tags": ["AI Integration", "Claude / Copilot", "QA Automation", "Python"],
+    "education": [
+      {
+        "school": "Tamkang University",
+        "major": "Electrical Engineering (Intelligent Robot Lab - Robotics Engineering)",
+        "degree": "Master",
+        "period": "2018 - 2020",
+        "activities": "Lab leader responsible for annual research planning, progress management, and task allocation. Led team to participate in FIRA RoboWorld Cup international robotics competition, developing team coordination and project execution skills."
+      },
+      {
+        "school": "Tamkang University",
+        "major": "Electrical Engineering",
+        "degree": "Bachelor",
+        "period": "2014 - 2018",
+        "activities": "Joined Intelligent Robot Lab in freshman year, accumulating four years of robotics development and AI application experience. Served as Vice President of Department Student Association and Class Representative, developing leadership and communication skills."
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "AI Applications",
+      "items": ["Claude Skills Development", "GitHub Copilot Collaboration", "Prompt Engineering", "AI-Assisted Workflow Design"]
+    },
+    {
+      "category": "Development",
+      "items": ["Python", "Robot Framework", "JavaScript / Node.js"]
+    },
+    {
+      "category": "Test Automation",
+      "items": ["Automation Framework Design", "CI/CD Integration", "Linux Operations"]
+    },
+    {
+      "category": "Technical Domains",
+      "items": ["Storage / NAS Systems", "HA Architecture", "Deep Learning Image Recognition"]
+    }
+  ],
+  "awards": [
+    {
+      "name": "Tamkang University Robot Creativity Competition",
+      "rank": "1st Place",
+      "year": 2017
+    },
+    {
+      "name": "Shin Kong Security Intelligent Robot Competition",
+      "rank": "Excellence Award",
+      "year": 2016
+    }
+  ],
+  "training": [
+    {
+      "year": 2021,
+      "name": "Industrial Bureau AI Excellence Program (ML, DL & Image Recognition)"
+    },
+    {
+      "year": 2019,
+      "name": "AI Smart Application New Generation Talent Program - Industrial Robotics"
+    },
+    {
+      "year": 2018,
+      "name": "NTU D-School 'Aging Design' Cross-Campus Course"
+    }
+  ],
+  "experience": [
+    {
+      "company": "QNAP Systems, Inc.",
+      "position": "Software QA Automation Engineer",
+      "period": "2021/11 - Present (4+ years)",
+      "description": "Responsible for quality assurance of QuTS hero and related products, focusing on test automation and AI tool integration.",
+      "projects": [
+        {
+          "name": "Hero HA (High Availability)",
+          "description": "High availability architecture testing, ensuring system stability and failover mechanisms",
+          "tags": ["QHRSHAMG", "CNR Testing"]
+        },
+        {
+          "name": "Storage Manager",
+          "description": "Storage management feature testing, including RAID expansion and core functionalities",
+          "tags": ["HROSTRMR", "RAID Expand"]
+        },
+        {
+          "name": "Snapshot Manager",
+          "description": "Complete snapshot feature testing, covering creation, scheduling, restoration, deletion, and export/import operations",
+          "tags": ["SNASHAPP", "Export/Import"]
+        }
+      ],
+      "stats": {
+        "ticketsHandled": "1400+",
+        "bugsReported": "780+"
+      }
+    },
+    {
+      "company": "Kuang Lue International Co., Ltd.",
+      "position": "Operations Manager",
+      "period": "2020/12 - 2021/6 (7 months)",
+      "description": "Responsible for store management, marketing campaigns, event planning, social media management, and brand promotion, developing communication and project planning skills."
+    }
+  ],
+  "aiProjects": [
+    {
+      "id": "personal-website",
+      "title": "AI-Assisted Personal Website",
+      "badge": "This Site",
+      "featured": true,
+      "description": "Built this website from scratch using GitHub Copilot (Claude). Described requirements in natural language → AI generated base architecture → Iteratively refined design through conversation → Established JSON-driven architecture → Created CLAUDE.md collaboration guidelines. Zero hand-written code, entirely developed through AI conversation.",
+      "features": [
+        { "icon": "💬", "text": "Full natural language development, zero hand-written code" },
+        { "icon": "🎨", "text": "Wood-tone dark theme with responsive layout" },
+        { "icon": "📄", "text": "JSON-driven architecture, no HTML editing for content updates" },
+        { "icon": "🤖", "text": "CLAUDE.md collaboration spec for AI maintainability" }
+      ],
+      "techStack": ["HTML/CSS/JS", "GitHub Copilot", "JSON"]
+    },
+    {
+      "id": "rf-testing",
+      "title": "Robot Framework AI-Assisted Testing",
+      "badge": "Core Achievement",
+      "featured": true,
+      "description": "Integrated GitHub Copilot into Robot Framework test development. Provided existing architecture and conventions to AI → Described test requirements → AI generated compliant test cases → Manual review for logic verification → Executed and validated. Also used for batch refactoring existing test files to meet new standards.",
+      "features": [
+        { "icon": "✅", "text": "Added 7 HA environment test cases covering Thick/Thin/Dedupe" },
+        { "icon": "📝", "text": "Batch refactored 16 test files, unified code style" },
+        { "icon": "🔧", "text": "Fixed shared keyword compatibility issues" },
+        { "icon": "⏱️", "text": "Reduced test case development from hours to under 30 minutes" }
+      ],
+      "techStack": ["GitHub Copilot", "Robot Framework", "Python"]
+    },
+    {
+      "id": "jira-automation",
+      "title": "Jira Ticket Automation",
+      "badge": "Cross-Platform",
+      "featured": true,
+      "description": "Built complete automation system with Claude Skills + Jira REST API. Issue commands in natural language via Claude → Skill calls corresponding JS script → Script executes API operations → Claude formats results for readability. Features include ticket queries, label management, status transitions, and weekly summary automation. Full support for macOS and Windows.",
+      "features": [
+        { "icon": "🔍", "text": "Natural language ticket queries with multiple filters" },
+        { "icon": "🏷️", "text": "One-click batch label add/remove for AI task classification" },
+        { "icon": "📊", "text": "Weekly AI Summary auto-generates work reports" },
+        { "icon": "🔄", "text": "Automated status transitions reduce repetitive work" }
+      ],
+      "techStack": ["JavaScript", "Jira REST API", "Claude Skills"]
+    },
+    {
+      "id": "git-automation",
+      "title": "Git Workflow Automation Suite",
+      "badge": "Team Tool",
+      "featured": true,
+      "description": "PowerShell script suite developed with AI assistance for daily Git operations. Execute commit → Auto-format message → Push and create MR → Auto-assign reviewer → Send Teams notification. Includes initialization script for one-click deployment by new team members. Deployed across QA team.",
+      "features": [
+        { "icon": "📝", "text": "Auto-format commit messages to team standards" },
+        { "icon": "🔀", "text": "One-click GitLab MR creation with auto-assigned reviewers" },
+        { "icon": "💬", "text": "Auto Teams notification on MR creation" },
+        { "icon": "📦", "text": "One-click initialization for new team members" }
+      ],
+      "techStack": ["PowerShell", "GitLab API", "Teams Webhook"]
+    },
+    {
+      "id": "ai-infrastructure",
+      "title": "AI Collaboration Best Practices",
+      "badge": "Knowledge Base",
+      "featured": false,
+      "description": "Systematic documentation from real AI collaboration experience. Includes debugging rules (avoid repeated pitfalls) → Prompt templates (improve AI comprehension) → Environment setup guides (ensure tools work correctly) → Workflow standards (define best processes). Shared within department to help colleagues quickly adopt AI-assisted development.",
+      "features": [
+        { "icon": "📖", "text": "16 debugging rules documenting common issues and solutions" },
+        { "icon": "📋", "text": "Standardized prompt templates for better AI responses" },
+        { "icon": "🔧", "text": "Environment setup guides ensuring proper tool operation" },
+        { "icon": "👥", "text": "Department-wide sharing to accelerate adoption" }
+      ],
+      "techStack": ["Documentation", "Prompt Engineering"]
+    },
+    {
+      "id": "bug-title-generator",
+      "title": "Bug Title Generator",
+      "badge": null,
+      "featured": false,
+      "description": "Claude Skill for automated standardized bug titles. Paste bug description → AI extracts key info (module, issue type, trigger conditions) → Generates standardized title per team conventions. Solves inconsistent naming styles, improves bug tracking searchability.",
+      "features": [
+        { "icon": "🐛", "text": "Auto-extract module, issue type, and trigger conditions" },
+        { "icon": "📏", "text": "Generate standardized titles per team conventions" },
+        { "icon": "🔍", "text": "Improved searchability for tracking and statistics" }
+      ],
+      "techStack": ["Claude Skills", "Prompt Engineering"]
+    }
+  ],
+  "contact": {
+    "email": "mau88258@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/%E5%BB%BA%E8%89%AF-%E9%99%B3-267875278/",
+    "line": "https://line.me/ti/p/nDbpSF6BKi",
+    "lineQR": "images/line-qr.png"
+  },
+  "footer": {
+    "copyright": "© 2026 Neil Chen. All rights reserved."
+  },
+  "contactPage": {
+    "title": "Contact Me",
+    "intro": "Feel free to reach out for collaboration opportunities or technical discussions",
+    "cta": {
+      "title": "Have any questions?",
+      "description": "Whether it's technical discussions, collaboration inquiries, or just networking — feel free to contact me through the channels above!"
+    },
+    "labels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "viewLinkedIn": "View my LinkedIn",
+      "line": "Line",
+      "addFriend": "Add me",
+      "orScanQR": "or scan QR Code below"
+    }
+  }
+}

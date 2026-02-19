@@ -1,0 +1,241 @@
+{
+  "ui": {
+    "nav": {
+      "about": "關於我",
+      "ai": "AI 應用",
+      "experience": "工作經歷",
+      "contact": "聯絡我"
+    },
+    "sections": {
+      "education": "學歷背景",
+      "skills": "專業技能",
+      "awards": "榮譽獎項",
+      "training": "專業培訓",
+      "experience": "工作經歷",
+      "aiProjects": "AI 應用專案",
+      "contact": "聯絡我"
+    },
+    "labels": {
+      "master": "碩士",
+      "bachelor": "學士",
+      "present": "現今",
+      "months": "個月",
+      "years": "年",
+      "ticketsHandled": "處理工單",
+      "bugsReported": "提交 Bug"
+    }
+  },
+  "personal": {
+    "name": "陳建良",
+    "nameEn": "Neil Chen",
+    "greeting": "Hi, 我是",
+    "title": "AI 輔助開發實踐者 · 軟體自動化測試工程師 @ QNAP",
+    "description": "以 QA 自動化為基礎，積極探索 AI 在工作流程中的實際應用。從測試案例生成、工單管理到文件協作，持續實驗並落地各種 AI 輔助方案。相信 AI 不只是工具，更是改變工作方式的契機——目標是成為能善用 AI 創造價值的工程師。",
+    "tags": ["AI Integration", "Claude / Copilot", "QA Automation", "Python"],
+    "education": [
+      {
+        "school": "淡江大學",
+        "major": "電機工程學系（智慧型機器人實驗室 - 機器人工程碩士學位）",
+        "degree": "碩士",
+        "period": "2018 - 2020",
+        "activities": "擔任實驗室負責人，統籌團隊年度研究規劃、進度管理與任務分配。帶領團隊參與 FIRA RoboWorld Cup 國際機器人競賽，培養團隊協調與專案執行能力。"
+      },
+      {
+        "school": "淡江大學",
+        "major": "電機工程學系",
+        "degree": "學士",
+        "period": "2014 - 2018",
+        "activities": "大一即加入智慧型機器人實驗室，累積四年機器人開發與 AI 應用經驗。擔任系學會副會長與班級代表，培養領導與溝通能力。"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "category": "AI 應用",
+      "items": ["Claude Skills 開發", "GitHub Copilot 協作", "Prompt Engineering", "AI 輔助工作流程設計"]
+    },
+    {
+      "category": "程式開發",
+      "items": ["Python", "Robot Framework", "JavaScript / Node.js"]
+    },
+    {
+      "category": "測試自動化",
+      "items": ["自動化測試架構設計", "CI/CD 整合", "Linux 系統操作"]
+    },
+    {
+      "category": "技術領域",
+      "items": ["Storage / NAS 系統", "HA 高可用架構", "深度學習影像辨識"]
+    }
+  ],
+  "awards": [
+    {
+      "name": "淡江大學機器人創意競賽",
+      "rank": "第一名",
+      "year": 2017
+    },
+    {
+      "name": "新光保全智慧型機器人競賽",
+      "rank": "優等",
+      "year": 2016
+    }
+  ],
+  "training": [
+    {
+      "year": 2021,
+      "name": "工業局 AI 精粹計畫（機器學習、深度學習與影像辨識實戰）"
+    },
+    {
+      "year": 2019,
+      "name": "AI 智慧應用新世代人才培育計畫 - 工業機器人之應用"
+    },
+    {
+      "year": 2018,
+      "name": "國立臺灣大學創新設計學院「智齡設計」跨校課程"
+    }
+  ],
+  "experience": [
+    {
+      "company": "QNAP Systems, Inc.",
+      "position": "軟體自動化測試工程師",
+      "period": "2021/11 - 現今（4年+）",
+      "description": "負責 QuTS hero 及相關產品的品質保證工作，專注於自動化測試與 AI 工具整合。",
+      "projects": [
+        {
+          "name": "Hero HA (High Availability)",
+          "description": "高可用性架構測試，確保系統穩定性與故障轉移機制",
+          "tags": ["QHRSHAMG", "CNR Testing"]
+        },
+        {
+          "name": "Storage Manager",
+          "description": "儲存管理功能測試，包含 RAID 擴展等核心功能",
+          "tags": ["HROSTRMR", "RAID Expand"]
+        },
+        {
+          "name": "Snapshot Manager",
+          "description": "快照功能完整測試，涵蓋快照建立、排程、還原、刪除、匯出/匯入等核心操作",
+          "tags": ["SNASHAPP", "Export/Import"]
+        }
+      ],
+      "stats": {
+        "ticketsHandled": "1400+",
+        "bugsReported": "780+"
+      }
+    },
+    {
+      "company": "廣略國際股份有限公司",
+      "position": "營運經理",
+      "period": "2020/12 - 2021/6（7個月）",
+      "description": "負責店內管理、宣傳行銷、活動策劃、粉絲團經營與品牌推廣，培養社交溝通與專案規劃能力。"
+    }
+  ],
+  "aiProjects": [
+    {
+      "id": "personal-website",
+      "title": "AI 輔助個人網站架設",
+      "badge": "本站",
+      "featured": true,
+      "description": "使用 GitHub Copilot (Claude) 從零建立本網站。以自然語言描述需求與設計偏好 → AI 生成基礎架構 → 對話迭代調整配色與互動 → 建立 JSON 資料驅動架構 → 撰寫 CLAUDE.md 協作規範。全程無需手寫程式碼，完全透過 AI 對話完成開發。",
+      "features": [
+        { "icon": "💬", "text": "全程自然語言對話開發，零手寫程式碼" },
+        { "icon": "🎨", "text": "木質調深色主題設計與響應式佈局" },
+        { "icon": "📄", "text": "JSON 資料驅動架構，內容更新無需改 HTML" },
+        { "icon": "🤖", "text": "CLAUDE.md 協作規範，AI 可直接理解維護" }
+      ],
+      "techStack": ["HTML/CSS/JS", "GitHub Copilot", "JSON"]
+    },
+    {
+      "id": "rf-testing",
+      "title": "Robot Framework AI 輔助測試開發",
+      "badge": "核心成果",
+      "featured": true,
+      "description": "整合 GitHub Copilot 於 Robot Framework 測試開發。提供既有架構與規範給 AI 分析 → 描述測試需求 → AI 生成符合規範的測試案例 → 人工 Review 確認邏輯 → 執行驗證通過。也用於批量重構既有測試檔案，一次性更新以符合新規範。",
+      "features": [
+        { "icon": "✅", "text": "新增 7 個 HA 環境測試案例，涵蓋 Thick/Thin/Dedupe 驗證" },
+        { "icon": "📝", "text": "批量重構 16 個測試檔案，統一程式碼風格與規範" },
+        { "icon": "🔧", "text": "修復共用關鍵字相容性問題，提升測試穩定性" },
+        { "icon": "⏱️", "text": "測試案例開發時間從數小時縮短至 30 分鐘內" }
+      ],
+      "techStack": ["GitHub Copilot", "Robot Framework", "Python"]
+    },
+    {
+      "id": "jira-automation",
+      "title": "Jira 工單自動化管理",
+      "badge": "跨平台",
+      "featured": true,
+      "description": "建立 Claude Skills 整合 Jira REST API 的完整自動化系統。在 Claude 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → Claude 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、週報自動統整，全套支援 macOS 與 Windows。",
+      "features": [
+        { "icon": "🔍", "text": "自然語言查詢工單，支援多種篩選條件" },
+        { "icon": "🏷️", "text": "一鍵批量添加/移除標籤，管理 AI 相關任務分類" },
+        { "icon": "📊", "text": "Weekly AI Summary 自動生成週報，彙整工作成果" },
+        { "icon": "🔄", "text": "工單狀態轉換自動化，減少重複操作" }
+      ],
+      "techStack": ["JavaScript", "Jira REST API", "Claude Skills"]
+    },
+    {
+      "id": "git-automation",
+      "title": "Git 工作流自動化套件",
+      "badge": "團隊工具",
+      "featured": true,
+      "description": "使用 AI 協助開發的 PowerShell 腳本套件，自動化日常 Git 操作。執行 commit → 自動格式化訊息 → 推送並建立 MR → 自動指派 Reviewer → 發送 Teams 通知。套件含初始化腳本，新成員一鍵部署即可使用，已在 QA 團隊推廣。",
+      "features": [
+        { "icon": "📝", "text": "自動格式化 Commit Message，符合團隊規範" },
+        { "icon": "🔀", "text": "一鍵建立 GitLab MR，自動指派 Reviewer" },
+        { "icon": "💬", "text": "MR 建立後自動發送 Teams 通知" },
+        { "icon": "📦", "text": "初始化套件一鍵部署，新成員快速上手" }
+      ],
+      "techStack": ["PowerShell", "GitLab API", "Teams Webhook"]
+    },
+    {
+      "id": "ai-infrastructure",
+      "title": "AI 協作最佳實踐文件",
+      "badge": "知識庫",
+      "featured": false,
+      "description": "從實際 AI 協作經驗累積的系統性文件。包含除錯經驗規則（避免重複踩坑）→ Prompt 撰寫模板（提升 AI 理解度）→ 環境設定指南（確保工具正確運作）→ 工作流規範（定義最佳流程）。已在部門內分享，幫助同事快速上手 AI 輔助開發。",
+      "features": [
+        { "icon": "📖", "text": "累積 16 條除錯規則，記錄常見問題與解法" },
+        { "icon": "📋", "text": "標準化 Prompt 模板，提升 AI 回應品質" },
+        { "icon": "🔧", "text": "環境設定指南，確保工具正確運作" },
+        { "icon": "👥", "text": "部門內分享推廣，協助同事快速上手" }
+      ],
+      "techStack": ["Documentation", "Prompt Engineering"]
+    },
+    {
+      "id": "bug-title-generator",
+      "title": "Bug 標題自動生成器",
+      "badge": null,
+      "featured": false,
+      "description": "建立 Claude Skill 自動產生標準化 Bug 標題。貼上 Bug 描述 → AI 擷取關鍵資訊（功能模組、問題類型、觸發條件）→ 依團隊規範生成標準化標題。解決命名風格不一致問題，提升 Bug 追蹤的可搜尋性。",
+      "features": [
+        { "icon": "🐛", "text": "自動擷取功能模組、問題類型、觸發條件" },
+        { "icon": "📏", "text": "依團隊規範生成標準化標題格式" },
+        { "icon": "🔍", "text": "提升 Bug 可搜尋性，方便追蹤與統計" }
+      ],
+      "techStack": ["Claude Skills", "Prompt Engineering"]
+    }
+  ],
+  "contact": {
+    "email": "mau88258@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/%E5%BB%BA%E8%89%AF-%E9%99%B3-267875278/",
+    "line": "https://line.me/ti/p/nDbpSF6BKi",
+    "lineQR": "images/line-qr.png"
+  },
+  "footer": {
+    "copyright": "© 2026 陳建良. All rights reserved."
+  },
+  "contactPage": {
+    "title": "聯絡我",
+    "intro": "歡迎與我聯繫，討論合作機會或技術交流",
+    "cta": {
+      "title": "有任何問題嗎？",
+      "description": "無論是技術討論、合作洽談或是單純想交流，都歡迎透過上方方式與我聯繫！"
+    },
+    "labels": {
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "viewLinkedIn": "查看我的 LinkedIn",
+      "line": "Line",
+      "addFriend": "加我好友",
+      "orScanQR": "或掃描下方 QR Code"
+    }
+  }
+}
