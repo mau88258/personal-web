@@ -1119,6 +1119,25 @@ img {
     font-weight: 600;
 }
 
+/* Project Image */
+.project-image {
+    margin: var(--space-lg) 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition);
+}
+
+.project-image:hover img {
+    transform: scale(1.02);
+}
+
 /* ========================================
    Environment Section (VM4515)
 ======================================== */

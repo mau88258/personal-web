@@ -214,7 +214,8 @@ const projectsData = [
     {
         icons: ['🔍', '📊', '👥', '📁'],
         techStack: ['Node.js', 'Jira REST API', 'Chart.js'],
-        featured: false
+        featured: true,
+        image: 'images/ai_weekly_report.jpg'
     }
 ];
 
@@ -265,7 +266,16 @@ function renderProjectCards(lang) {
         });
         techHtml += '</div>';
         
-        cardEl.innerHTML = headerHtml + descHtml + featuresHtml + techHtml;
+        // Image (if exists)
+        let imageHtml = '';
+        if (data.image) {
+            imageHtml = `
+                <div class="project-image">
+                    <img src="${data.image}" alt="${card.title}" loading="lazy">
+                </div>`;
+        }
+        
+        cardEl.innerHTML = headerHtml + descHtml + imageHtml + featuresHtml + techHtml;
         container.appendChild(cardEl);
     });
 }
