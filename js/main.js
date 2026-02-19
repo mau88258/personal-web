@@ -204,12 +204,12 @@ const projectsData = [
     {
         icons: ['📖', '📋', '🔧', '👥'],
         techStack: ['Documentation', 'Prompt Engineering'],
-        featured: false
+        featured: true
     },
     {
         icons: ['🐛', '📏', '🔍'],
         techStack: ['Claude Skills', 'Prompt Engineering'],
-        featured: false
+        featured: true
     },
     {
         icons: ['🔍', '📊', '👥', '📁'],
@@ -275,7 +275,7 @@ function renderProjectCards(lang) {
                 </div>`;
         }
         
-        cardEl.innerHTML = headerHtml + descHtml + imageHtml + featuresHtml + techHtml;
+        cardEl.innerHTML = headerHtml + descHtml + featuresHtml + techHtml + imageHtml;
         container.appendChild(cardEl);
     });
 }

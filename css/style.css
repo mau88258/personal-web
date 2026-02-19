@@ -1121,10 +1121,11 @@ img {
 
 /* Project Image */
 .project-image {
-    margin: var(--space-lg) 0;
+    margin: var(--space-lg) 0 0 0;
     border-radius: var(--radius-lg);
     overflow: hidden;
     border: 1px solid var(--border-subtle);
+    max-width: 600px;
 }
 
 .project-image img {
