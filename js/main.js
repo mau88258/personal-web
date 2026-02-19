@@ -301,6 +301,12 @@ const uiStrings = {
                     title: 'Bug 標題自動生成器', 
                     desc: '建立 Claude Skill 自動產生標準化 Bug 標題。貼上 Bug 描述 → AI 擷取關鍵資訊（功能模組、問題類型、觸發條件）→ 依團隊規範生成標準化標題。解決命名風格不一致問題，提升 Bug 追蹤的可搜尋性。',
                     features: ['自動擷取功能模組、問題類型、觸發條件', '依團隊規範生成標準化標題格式', '提升 Bug 可搜尋性，方便追蹤與統計']
+                },
+                { 
+                    badge: '團隊工具', 
+                    title: 'AI 應用週報 Dashboard', 
+                    desc: '自動掃描 JIRA 工單，追蹤團隊 AI 應用情況並產生可視化週報。',
+                    features: ['自動掃描 JIRA 工單，分析 AI 應用標籤', '可視化 Dashboard：統計卡片、成員分佈圖、AI 比例圓餅圖', '群組管理：支援多團隊追蹤、成員狀態管理', '歷史週報保存，可查閱過往紀錄']
                 }
             ]
         },
@@ -426,6 +432,12 @@ const uiStrings = {
                     title: 'Bug Title Generator', 
                     desc: 'Claude Skill for auto-generating standardized bug titles. Paste bug description → AI extracts key info (module, issue type, trigger) → Generate title following team standards. Solves naming inconsistency and improves bug searchability.',
                     features: ['Auto-extracts module, issue type, and trigger conditions', 'Generates standardized title format per team standards', 'Improves bug searchability for tracking and statistics']
+                },
+                { 
+                    badge: 'Team Tool', 
+                    title: 'AI Weekly Report Dashboard', 
+                    desc: 'Automatically scans JIRA tickets to track team AI application status and generate visual weekly reports.',
+                    features: ['Auto-scans JIRA tickets and analyzes AI application labels', 'Visual Dashboard: stat cards, member distribution, AI ratio pie chart', 'Group management: multi-team tracking, member status management', 'Historical reports saved for reviewing past records']
                 }
             ]
         },
