@@ -178,6 +178,99 @@ style.textContent = `
 document.head.appendChild(style);
 
 /**
+ * 專案卡片共用資料（icon、techStack、featured 不隨語言變化）
+ */
+const projectsData = [
+    {
+        icons: ['💬', '🎨', '📄', '🤖'],
+        techStack: ['HTML/CSS/JS', 'GitHub Copilot', 'JSON'],
+        featured: true
+    },
+    {
+        icons: ['✅', '📝', '🔧', '⏱️'],
+        techStack: ['GitHub Copilot', 'Robot Framework', 'Python'],
+        featured: true
+    },
+    {
+        icons: ['🔍', '🏷️', '📊', '🔄'],
+        techStack: ['JavaScript', 'Jira REST API', 'Claude Skills'],
+        featured: true
+    },
+    {
+        icons: ['📝', '🔀', '💬', '📦'],
+        techStack: ['PowerShell', 'GitLab API', 'Teams Webhook'],
+        featured: true
+    },
+    {
+        icons: ['📖', '📋', '🔧', '👥'],
+        techStack: ['Documentation', 'Prompt Engineering'],
+        featured: false
+    },
+    {
+        icons: ['🐛', '📏', '🔍'],
+        techStack: ['Claude Skills', 'Prompt Engineering'],
+        featured: false
+    },
+    {
+        icons: ['🔍', '📊', '👥', '📁'],
+        techStack: ['Node.js', 'Jira REST API', 'Chart.js'],
+        featured: false
+    }
+];
+
+/**
+ * 動態渲染專案卡片
+ */
+function renderProjectCards(lang) {
+    const container = document.querySelector('.ai-projects-grid');
+    if (!container) return;
+    
+    const ui = uiStrings[lang];
+    if (!ui?.projects?.cards) return;
+    
+    container.innerHTML = '';
+    
+    ui.projects.cards.forEach((card, idx) => {
+        const data = projectsData[idx] || { icons: [], techStack: [], featured: false };
+        
+        const cardEl = document.createElement('div');
+        cardEl.className = `ai-project-card${data.featured ? ' featured' : ''}`;
+        
+        // Header
+        let headerHtml = '<div class="project-header">';
+        if (card.badge) {
+            headerHtml += `<span class="project-badge">${card.badge}</span>`;
+        }
+        headerHtml += `<h2>${card.title}</h2></div>`;
+        
+        // Description
+        const descHtml = `<p class="project-desc">${card.desc}</p>`;
+        
+        // Features
+        let featuresHtml = '<div class="features-list">';
+        card.features.forEach((feature, fIdx) => {
+            const icon = data.icons[fIdx] || '•';
+            featuresHtml += `
+                <div class="feature-item">
+                    <span class="feature-icon">${icon}</span>
+                    <span>${feature}</span>
+                </div>`;
+        });
+        featuresHtml += '</div>';
+        
+        // Tech Stack
+        let techHtml = '<div class="tech-stack">';
+        data.techStack.forEach(tech => {
+            techHtml += `<span>${tech}</span>`;
+        });
+        techHtml += '</div>';
+        
+        cardEl.innerHTML = headerHtml + descHtml + featuresHtml + techHtml;
+        container.appendChild(cardEl);
+    });
+}
+
+/**
  * 嵌入式多語言 UI 文字
  */
 const uiStrings = {
@@ -636,29 +729,8 @@ function switchLanguage(lang) {
     const projectIntro = document.querySelector('#ai-projects .page-intro, #projects .page-intro');
     if (projectIntro && ui.projects) projectIntro.textContent = ui.projects.intro;
     
-    const projectCards = document.querySelectorAll('.ai-project-card');
-    projectCards.forEach((card, idx) => {
-        if (ui.projects?.cards?.[idx]) {
-            const data = ui.projects.cards[idx];
-            const badge = card.querySelector('.project-badge');
-            const h2 = card.querySelector('h2');
-            const desc = card.querySelector('.project-desc');
-            if (badge) badge.textContent = data.badge;
-            if (h2) h2.textContent = data.title;
-            if (desc) desc.textContent = data.desc;
-            
-            // 翻譯 feature items
-            if (data.features) {
-                const featureItems = card.querySelectorAll('.feature-item');
-                featureItems.forEach((item, fIdx) => {
-                    if (data.features[fIdx]) {
-                        const textSpan = item.querySelectorAll('span')[1];
-                        if (textSpan) textSpan.textContent = data.features[fIdx];
-                    }
-                });
-            }
-        }
-    });
+    // 動態渲染專案卡片
+    renderProjectCards(lang);
     
     // 頁尾
     const footer = document.querySelector('.footer-text');
