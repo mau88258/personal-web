@@ -264,7 +264,7 @@ const uiStrings = {
             ctaDesc: '無論是技術討論、合作洽談或是單純想交流，都歡迎透過上方方式與我聯繫！'
         },
         projects: {
-            intro: '積極探索 AI 在實際工作中的應用，從測試開發、工單管理到團隊協作，每個專案都有完整的工作流程',
+            intro: '積極探索 AI 在實際工作中的應用，從測試開發、工單管理到團隊協作，每個專案都有完整的工作流程。正在嘗試將 AI 應用於各種發想中，此頁面將持續更新。',
             cards: [
                 { 
                     badge: '本站', 
@@ -389,7 +389,7 @@ const uiStrings = {
             ctaDesc: 'Whether it\'s technical discussions, collaboration inquiries, or just networking—feel free to reach out through any of the above!'
         },
         projects: {
-            intro: 'Actively exploring AI applications in real work scenarios—from test development and ticket management to team collaboration—each project follows a complete workflow.',
+            intro: 'Actively exploring AI applications in real work scenarios—from test development and ticket management to team collaboration—each project follows a complete workflow. Currently experimenting with AI in various ideas; this page will be continuously updated.',
             cards: [
                 { 
                     badge: 'This Site', 
