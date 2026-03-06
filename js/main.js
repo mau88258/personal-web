@@ -216,6 +216,21 @@ const projectsData = [
         techStack: ['Node.js', 'Jira REST API', 'Chart.js'],
         featured: true,
         image: 'images/ai_weekly_report.jpg'
+    },
+    {
+        icons: ['📋', '🧪', '📤', '🔄'],
+        techStack: ['Claude Skills', 'TestLink API', 'Python'],
+        featured: true
+    },
+    {
+        icons: ['🔍', '📊', '📝', '🔗'],
+        techStack: ['Node.js', 'GitLab API', 'Jira REST API'],
+        featured: true
+    },
+    {
+        icons: ['🏗️', '📊', '🔍', '⚙️'],
+        techStack: ['Node.js', 'Jenkins API', 'SSH'],
+        featured: true
     }
 ];
 
@@ -347,8 +362,8 @@ const uiStrings = {
                 { title: '測試案例管理', desc: 'AI 輔助測試案例產出與驗證，提升測試覆蓋率' }
             ],
             stats: [
-                { number: '1400+', label: '處理工單' },
-                { number: '780+', label: '提交 Bug' }
+                { number: '1700+', label: '處理工單' },
+                { number: '790+', label: '提交 Bug' }
             ],
             prevCompany: '廣略國際股份有限公司',
             prevPosition: '營運經理',
@@ -384,8 +399,8 @@ const uiStrings = {
                 { 
                     badge: '跨平台', 
                     title: 'Jira 工單自動化管理', 
-                    desc: '建立 Claude Skills 整合 Jira REST API 的完整自動化系統。在 Claude 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → Claude 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、週報自動統整，全套支援 macOS 與 Windows。',
-                    features: ['自然語言查詢工單，支援多種篩選條件', '一鍵批量添加/移除標籤，管理 AI 相關任務分類', 'Weekly AI Summary 自動生成週報，彙整工作成果', '工單狀態轉換自動化，減少重複操作']
+                    desc: '建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.6，含 14+ Skills）。在 Claude 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → Claude 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、週報自動統整，全套支援 macOS 與 Windows。',
+                    features: ['自然語言查詢工單，支援多種篩選條件與關鍵字搜尋', 'Comment 管理、ETA 設定、標籤批量操作等完整工單管理', 'Weekly AI Summary 自動生成週報，彙整工作成果', '工單狀態轉換與 Assign 自動指派，操作全程自動追蹤']
                 },
                 { 
                     badge: '團隊工具', 
@@ -410,6 +425,24 @@ const uiStrings = {
                     title: 'AI 應用週報 Dashboard', 
                     desc: '自動掃描 JIRA 工單，追蹤團隊 AI 應用情況並產生可視化週報。',
                     features: ['自動掃描 JIRA 工單，分析 AI 應用標籤', '可視化 Dashboard：統計卡片、成員分佈圖、AI 比例圓餅圖', '群組管理：支援多團隊追蹤、成員狀態管理', '歷史週報保存，可查閱過往紀錄']
+                },
+                { 
+                    badge: '自動化', 
+                    title: 'AI 測試流水線', 
+                    desc: '整合 SPEC 審查、測試案例生成、TestLink 上傳的端到端自動化流程。AI 自動審查 PM 提供的 SPEC 文件 → 依優先順序產出問題清單 → 根據 SPEC 自動生成分類測試案例 → 批次上傳至 TestLink 系統，建立完整的 Test Suite 結構。大幅縮短從需求到測試的準備時間。',
+                    features: ['自動審查 SPEC 文件，依功能完整性、異常處理、可測試性產出問題清單', '根據 SPEC 自動生成測試案例，支援 Positive/Negative/Boundary 分類', '批次上傳測試案例到 TestLink，自動建立 Test Suite 階層結構', '完整流水線：SPEC 審查 → 案例生成 → 上傳管理，一氣呵成']
+                },
+                { 
+                    badge: '跨平台', 
+                    title: 'GitLab 活動追蹤與週報', 
+                    desc: '建立 Claude Skill 整合 GitLab API，自動查詢開發者的 Commits 與 Merge Requests，並搭配 Weekly Git Summary 自動建立每週活動紀錄子單到 Jira。完整記錄開發軌跡，輸出 Jira Wiki 格式可直接貼入工單。',
+                    features: ['查詢指定日期範圍的 Commits 與 Merge Requests', '每週自動建立 GitLab 活動紀錄子單到 Jira', '支援 MR 內 Commit 明細查詢，完整追蹤開發歷程', '輸出 Jira Wiki 格式，可直接貼入工單 Comment']
+                },
+                { 
+                    badge: 'CI/CD', 
+                    title: 'Jenkins 壓測監控', 
+                    desc: '建立 Claude Skill 自動檢查多組 Jenkins 壓測 job 狀態，同時查詢 NAS 韌體版本與 HA Manager 狀態。壓測失敗時自動分析原因，快速定位問題。支援 JSON 設定檔管理多組測試環境。',
+                    features: ['監控多組 Jenkins 壓測 job 狀態，即時掌握測試進度', '自動查詢 NAS FW 版本與 HA Manager 狀態', '失敗時自動分析原因，快速定位問題', '支援 JSON 設定檔，靈活管理多組測試環境']
                 }
             ]
         },
@@ -478,8 +511,8 @@ const uiStrings = {
                 { title: 'Test Case Management', desc: 'AI-assisted test case generation and verification, improving test coverage' }
             ],
             stats: [
-                { number: '1400+', label: 'Tickets Handled' },
-                { number: '780+', label: 'Bugs Submitted' }
+                { number: '1700+', label: 'Tickets Handled' },
+                { number: '790+', label: 'Bugs Submitted' }
             ],
             prevCompany: 'Guanglue International Corp.',
             prevPosition: 'Operations Manager',
@@ -515,8 +548,8 @@ const uiStrings = {
                 { 
                     badge: 'Cross-platform', 
                     title: 'Jira Ticket Automation', 
-                    desc: 'Built Claude Skills integrated with Jira REST API for complete automation. Natural language commands in Claude → Skill calls JS scripts → Scripts execute API operations → Claude presents readable results. Features include ticket queries, label management, status transitions, and weekly report generation.',
-                    features: ['Natural language ticket queries with multiple filters', 'One-click batch add/remove labels for AI task categorization', 'Weekly AI Summary auto-generates weekly reports', 'Automated ticket status transitions, reducing repetitive tasks']
+                    desc: 'Built Claude Skills integrated with Jira REST API for complete automation (v1.6, 14+ Skills). Natural language commands in Claude → Skill calls JS scripts → Scripts execute API operations → Claude presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, and weekly report generation.',
+                    features: ['Natural language ticket queries with keyword search and filters', 'Comment management, ETA tracking, batch label ops and more', 'Weekly AI Summary auto-generates weekly reports', 'Auto status transitions and assignee management with full audit trail']
                 },
                 { 
                     badge: 'Team Tool', 
@@ -541,6 +574,24 @@ const uiStrings = {
                     title: 'AI Weekly Report Dashboard', 
                     desc: 'Automatically scans JIRA tickets to track team AI application status and generate visual weekly reports.',
                     features: ['Auto-scans JIRA tickets and analyzes AI application labels', 'Visual Dashboard: stat cards, member distribution, AI ratio pie chart', 'Group management: multi-team tracking, member status management', 'Historical reports saved for reviewing past records']
+                },
+                { 
+                    badge: 'Automation', 
+                    title: 'AI Test Pipeline', 
+                    desc: 'End-to-end automation integrating SPEC review, test case generation, and TestLink upload. AI auto-reviews PM SPEC docs → Generates prioritized issue lists → Auto-generates classified test cases → Batch uploads to TestLink with full Test Suite structure. Dramatically reduces requirement-to-test preparation time.',
+                    features: ['Auto-review SPEC docs for completeness, error handling, and testability', 'Auto-generate test cases from SPEC with Positive/Negative/Boundary classification', 'Batch upload test cases to TestLink with auto Test Suite hierarchy', 'Complete pipeline: SPEC review → case generation → upload management']
+                },
+                { 
+                    badge: 'Cross-platform', 
+                    title: 'GitLab Activity Tracking & Reports', 
+                    desc: 'Built Claude Skill integrating GitLab API to auto-query developer Commits and Merge Requests. Combined with Weekly Git Summary to auto-create weekly activity sub-tasks in Jira. Complete development tracking with Jira Wiki format output.',
+                    features: ['Query Commits and MRs within specified date ranges', 'Auto-create weekly GitLab activity sub-tasks in Jira', 'Support MR commit details for complete dev history tracking', 'Output Jira Wiki format, directly pasteable to ticket comments']
+                },
+                { 
+                    badge: 'CI/CD', 
+                    title: 'Jenkins Stress Test Monitor', 
+                    desc: 'Built Claude Skill to auto-check multiple Jenkins stress job statuses while querying NAS firmware version and HA Manager status. Auto-analyzes failure causes when tests fail. Supports JSON config for multi-environment management.',
+                    features: ['Monitor multiple Jenkins stress job statuses in real-time', 'Auto-query NAS FW version and HA Manager status', 'Auto-analyze failure causes for quick issue identification', 'JSON config support for flexible multi-environment management']
                 }
             ]
         },
