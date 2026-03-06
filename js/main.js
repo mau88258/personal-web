@@ -733,7 +733,9 @@ function switchLanguage(lang) {
     const statCards = document.querySelectorAll('.stat-card');
     statCards.forEach((card, idx) => {
         if (ui.exp.stats?.[idx]) {
+            const number = card.querySelector('.stat-number');
             const label = card.querySelector('.stat-label');
+            if (number) number.textContent = ui.exp.stats[idx].number;
             if (label) label.textContent = ui.exp.stats[idx].label;
         }
     });
