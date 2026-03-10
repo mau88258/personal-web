@@ -138,3 +138,55 @@ AI 會自動：
 | 更新內容 | 「更新網站內容」、「修改 XX 區塊」 |
 | 專案結構 | 「專案結構」、「檔案說明」 |
 | 樣式調整 | 「調整樣式」、「修改顏色」 |
+
+---
+
+## 🔍 翻譯一致性自動檢查
+
+除了 `docs/LANGUAGE_CHECK.md` 的人工檢查清單外，可使用自動化腳本快速比對中英文 JSON 結構：
+
+```bash
+node scripts/check-translation.js
+```
+
+**檢查項目：**
+- `content.json` 與 `content-en.json` 的 key 結構是否完全一致
+- 陣列長度是否相同（如 aiProjects、skills 項目數）
+- 是否有空字串值
+
+**建議時機：** 每次修改 `data/content.json` 或 `data/content-en.json` 後執行。
+
+---
+
+## 🚀 部署流程
+
+### 部署方式：靜態檔案部署
+
+本網站為純靜態網站，不需要建構步驟。
+
+### 本機預覽
+```bash
+# 直接用瀏覽器開啟
+open index.html
+
+# 或使用簡易 HTTP server（推薦，避免 CORS 問題）
+npx serve .
+# 或
+python3 -m http.server 8080
+```
+
+### 部署前檢查清單
+1. **翻譯一致性**：`node scripts/check-translation.js`
+2. **圖片完整性**：確認 `images/` 目錄下 `profile.jpg` 和 `line-qr.png` 存在
+3. **JSON 格式**：確認 `data/content.json` 和 `data/content-en.json` 格式正確
+4. **瀏覽器測試**：開啟 `index.html`，切換中英文確認顯示正確
+
+### 部署到目標主機
+```bash
+# 需要部署的檔案（排除開發文件）
+# index.html
+# css/
+# js/
+# data/
+# images/
+```

@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Node.js (若未來加入建構工具)
+node_modules/
