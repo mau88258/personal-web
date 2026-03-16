@@ -354,7 +354,16 @@ const uiStrings = {
             company: 'QNAP Systems, Inc.',
             position: '軟體自動化測試工程師',
             period: '2021/11 - 現今（4年+）',
-            desc: '負責 QuTS hero（ZFS-based NAS 作業系統）及相關儲存產品的品質保證工作。根據規格書設計測試情境並確保產品邏輯正確，撰寫並執行功能測試、穩定性測試（Stress Test）、交互性測試、Error Handling 及極限狀況測試。主動導入 Robot Framework 自動化測試與 AI 輔助工具，提升團隊測試效率。同時負責 Bug 開立與追蹤、與 RD 協作分析問題、協助客戶問題處理，並持續整理維護既有 Test Suite 與測試案例。',
+            desc: [
+                '負責 QuTS hero（ZFS-based NAS OS）及相關儲存產品的品質保證工作',
+                '根據規格書思考測試情境，確保產品規格符合邏輯',
+                '撰寫並執行功能測試、穩定性測試（Stress Test）、交互性測試、Error Handling 及極限狀況測試',
+                '進行測試項目自動化評估，並使用 Robot Framework 撰寫自動化測試腳本',
+                '開立 Bug 並與 RD 討論問題，提供實驗環境協助分析，確認修復情況並提出優化建議',
+                '協助客戶處理問題，與 RD 一起分析並提供解決方案',
+                '整理與維護既有 Test Suite、Test Cases 及 Robot Script',
+                '主動導入 AI 輔助工具與自動化流程，提升團隊測試效率'
+            ],
             projectsTitle: '📋 負責專案',
             automationTitle: '🤖 自動化測試',
             achievementsTitle: '📈 累計成果',
@@ -510,7 +519,16 @@ const uiStrings = {
             company: 'QNAP Systems, Inc.',
             position: 'QA Automation Engineer',
             period: '2021/11 - Present (4+ years)',
-            desc: 'Responsible for QA of QuTS hero (ZFS-based NAS OS) and related storage products. Design test scenarios from specs ensuring product logic correctness. Execute functional tests, stress tests, interoperability tests, error handling and edge case tests. Proactively introduced Robot Framework automation and AI-assisted tools to boost team testing efficiency. Handle bug filing & tracking, collaborate with RD on issue analysis, assist customers with problem resolution, and maintain existing Test Suites and test cases.',
+            desc: [
+                'Responsible for QA of QuTS hero (ZFS-based NAS OS) and related storage products',
+                'Design test scenarios from specs, ensuring product logic correctness',
+                'Execute functional tests, stress tests, interoperability tests, error handling and edge case tests',
+                'Evaluate test automation feasibility and develop Robot Framework automation scripts',
+                'File bugs, discuss with RD providing test environments for analysis, verify fixes and propose improvements',
+                'Assist customers with issue resolution, collaborating with RD to analyze and provide solutions',
+                'Maintain and organize existing Test Suites, Test Cases and Robot Scripts',
+                'Proactively introduced AI-assisted tools and automation workflows to boost team efficiency'
+            ],
             projectsTitle: '📋 Projects',
             automationTitle: '🤖 Test Automation',
             achievementsTitle: '📈 Achievements',
@@ -718,8 +736,10 @@ function switchLanguage(lang) {
         if (position) position.textContent = ui.exp.position;
         if (period) period.textContent = ui.exp.period;
     }
-    const workDesc = document.querySelector('.work-description p');
-    if (workDesc) workDesc.textContent = ui.exp.desc;
+    const workDesc = document.querySelector('.work-description');
+    if (workDesc && Array.isArray(ui.exp.desc)) {
+        workDesc.innerHTML = '<ul class="work-duties">' + ui.exp.desc.map(d => `<li>${d}</li>`).join('') + '</ul>';
+    }
     
     // 經歷子標題
     const subsectionTitles = document.querySelectorAll('#experience .subsection-title');
