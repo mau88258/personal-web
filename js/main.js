@@ -738,7 +738,7 @@ function switchLanguage(lang) {
     }
     const workDesc = document.querySelector('.work-description');
     if (workDesc && Array.isArray(ui.exp.desc)) {
-        workDesc.innerHTML = '<ul class="work-duties">' + ui.exp.desc.map(d => `<li>${d}</li>`).join('') + '</ul>';
+        workDesc.innerHTML = '<ol class="work-duties">' + ui.exp.desc.map(d => `<li>${d}</li>`).join('') + '</ol>';
     }
     
     // 經歷子標題

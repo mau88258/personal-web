@@ -825,18 +825,20 @@ img {
     list-style: none;
     padding: 0;
     margin: 0;
+    counter-reset: duty;
 }
 
 .work-duties li {
     position: relative;
-    padding-left: 1.5em;
+    padding-left: 2em;
     margin-bottom: 0.5em;
+    counter-increment: duty;
 }
 
 .work-duties li::before {
-    content: '•';
+    content: counter(duty) '.';
     position: absolute;
-    left: 0.2em;
+    left: 0;
     color: var(--wood);
     font-weight: bold;
 }
