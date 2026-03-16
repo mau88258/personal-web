@@ -453,8 +453,8 @@ const uiStrings = {
                 { 
                     badge: '自主學習', 
                     title: 'AI Governance & Compliance 學習計畫', 
-                    desc: '透過 ChatGPT 進行為期 12 天的系統化自主學習，深入研究 AI 治理與合規領域。從 AI Compliance 產業分析出發 → 建立 Evidence System 概念 → Risk Scoring & Classification 架構 → EU AI Act 監管框架學習 → High-Risk AI 治理要求（Data Governance、Technical Documentation）→ 商業影響分析。學習過程中每日撰寫學習報告記錄核心收穫與反思。',
-                    features: ['12 天系統化學習，涵蓋 AI Governance 完整知識體系', '深入研究 EU AI Act 風險分層架構與 High-Risk AI 治理要求', '建立 Risk Scoring、Evidence System、Risk Visibility 等核心概念', '每日學習報告記錄，從技術思維轉向市場與治理思維']
+                    desc: '透過 ChatGPT 進行為期 30+ 天的系統化自主學習計畫（目前進度：Day 12/30+），深入研究 AI 治理與合規領域。從 AI Compliance 產業分析出發 → 建立 Evidence System 概念 → Risk Scoring & Classification 架構 → EU AI Act 監管框架學習 → High-Risk AI 治理要求（Data Governance、Technical Documentation）→ 商業影響分析。學習過程中每日撰寫學習報告記錄核心收穫與反思。',
+                    features: ['30+ 天系統化學習計畫，涵蓋 AI Governance 完整知識體系', '深入研究 EU AI Act 風險分層架構與 High-Risk AI 治理要求', '建立 Risk Scoring、Evidence System、Risk Visibility 等核心概念', '每日學習報告記錄，從技術思維轉向市場與治理思維']
                 }
             ]
         },
@@ -609,8 +609,8 @@ const uiStrings = {
                 { 
                     badge: 'Self-Study', 
                     title: 'AI Governance & Compliance Study', 
-                    desc: 'Conducted a systematic 12-day self-study program via ChatGPT, diving deep into AI governance and compliance. Starting from AI Compliance industry analysis → Building Evidence System concepts → Risk Scoring & Classification framework → EU AI Act regulatory framework → High-Risk AI governance requirements (Data Governance, Technical Documentation) → Business impact analysis. Documented daily learning reports with core takeaways and reflections.',
-                    features: ['12-day systematic study covering complete AI Governance knowledge framework', 'Deep dive into EU AI Act risk-based regulation and High-Risk AI governance', 'Built understanding of Risk Scoring, Evidence System, and Risk Visibility', 'Daily learning reports documenting shift from technical to market & governance thinking']
+                    desc: 'Conducting a systematic 30+ day self-study program via ChatGPT (current progress: Day 12/30+), diving deep into AI governance and compliance. Starting from AI Compliance industry analysis → Building Evidence System concepts → Risk Scoring & Classification framework → EU AI Act regulatory framework → High-Risk AI governance requirements (Data Governance, Technical Documentation) → Business impact analysis. Documenting daily learning reports with core takeaways and reflections.',
+                    features: ['30+ day systematic study covering complete AI Governance knowledge framework', 'Deep dive into EU AI Act risk-based regulation and High-Risk AI governance', 'Built understanding of Risk Scoring, Evidence System, and Risk Visibility', 'Daily learning reports documenting shift from technical to market & governance thinking']
                 }
             ]
         },
