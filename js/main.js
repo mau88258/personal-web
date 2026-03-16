@@ -231,6 +231,11 @@ const projectsData = [
         icons: ['🏗️', '📊', '🔍', '⚙️'],
         techStack: ['Node.js', 'Jenkins API', 'SSH'],
         featured: true
+    },
+    {
+        icons: ['📜', '⚖️', '📈', '🌐'],
+        techStack: ['AI Governance', 'EU AI Act', 'Risk Assessment'],
+        featured: true
     }
 ];
 
@@ -342,7 +347,8 @@ const uiStrings = {
         training: [
             '工業局 AI 精粹計畫（機器學習、深度學習與影像辨識實戰）',
             'AI 智慧應用新世代人才培育計畫 - 工業機器人之應用',
-            '國立臺灣大學創新設計學院「智齡設計」跨校課程'
+            '國立臺灣大學創新設計學院「智齡設計」跨校課程',
+            'AI Governance & Compliance 自主學習計畫（EU AI Act、風險評估、治理架構）'
         ],
         exp: {
             company: 'QNAP Systems, Inc.',
@@ -443,6 +449,12 @@ const uiStrings = {
                     title: 'Jenkins 壓測監控', 
                     desc: '建立 Claude Skill 自動檢查多組 Jenkins 壓測 job 狀態，同時查詢 NAS 韌體版本與 HA Manager 狀態。壓測失敗時自動分析原因，快速定位問題。支援 JSON 設定檔管理多組測試環境。',
                     features: ['監控多組 Jenkins 壓測 job 狀態，即時掌握測試進度', '自動查詢 NAS FW 版本與 HA Manager 狀態', '失敗時自動分析原因，快速定位問題', '支援 JSON 設定檔，靈活管理多組測試環境']
+                },
+                { 
+                    badge: '自主學習', 
+                    title: 'AI Governance & Compliance 學習計畫', 
+                    desc: '透過 ChatGPT 進行為期 12 天的系統化自主學習，深入研究 AI 治理與合規領域。從 AI Compliance 產業分析出發 → 建立 Evidence System 概念 → Risk Scoring & Classification 架構 → EU AI Act 監管框架學習 → High-Risk AI 治理要求（Data Governance、Technical Documentation）→ 商業影響分析。學習過程中每日撰寫學習報告記錄核心收穫與反思。',
+                    features: ['12 天系統化學習，涵蓋 AI Governance 完整知識體系', '深入研究 EU AI Act 風險分層架構與 High-Risk AI 治理要求', '建立 Risk Scoring、Evidence System、Risk Visibility 等核心概念', '每日學習報告記錄，從技術思維轉向市場與治理思維']
                 }
             ]
         },
@@ -491,7 +503,8 @@ const uiStrings = {
         training: [
             'MOEA AI Program (ML, Deep Learning & Image Recognition)',
             'AI Smart Application - Industrial Robot Applications',
-            'NTU D-School "Design for Aging" Cross-campus Course'
+            'NTU D-School "Design for Aging" Cross-campus Course',
+            'AI Governance & Compliance Self-Study Program (EU AI Act, Risk Assessment, Governance Framework)'
         ],
         exp: {
             company: 'QNAP Systems, Inc.',
@@ -592,6 +605,12 @@ const uiStrings = {
                     title: 'Jenkins Stress Test Monitor', 
                     desc: 'Built Claude Skill to auto-check multiple Jenkins stress job statuses while querying NAS firmware version and HA Manager status. Auto-analyzes failure causes when tests fail. Supports JSON config for multi-environment management.',
                     features: ['Monitor multiple Jenkins stress job statuses in real-time', 'Auto-query NAS FW version and HA Manager status', 'Auto-analyze failure causes for quick issue identification', 'JSON config support for flexible multi-environment management']
+                },
+                { 
+                    badge: 'Self-Study', 
+                    title: 'AI Governance & Compliance Study', 
+                    desc: 'Conducted a systematic 12-day self-study program via ChatGPT, diving deep into AI governance and compliance. Starting from AI Compliance industry analysis → Building Evidence System concepts → Risk Scoring & Classification framework → EU AI Act regulatory framework → High-Risk AI governance requirements (Data Governance, Technical Documentation) → Business impact analysis. Documented daily learning reports with core takeaways and reflections.',
+                    features: ['12-day systematic study covering complete AI Governance knowledge framework', 'Deep dive into EU AI Act risk-based regulation and High-Risk AI governance', 'Built understanding of Risk Scoring, Evidence System, and Risk Visibility', 'Daily learning reports documenting shift from technical to market & governance thinking']
                 }
             ]
         },
