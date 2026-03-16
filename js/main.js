@@ -345,10 +345,10 @@ const uiStrings = {
             sks2016Result: '優等 (2016)'
         },
         training: [
+            'AI Governance & Compliance 自主學習計畫（EU AI Act、風險評估、治理架構）',
             '工業局 AI 精粹計畫（機器學習、深度學習與影像辨識實戰）',
             'AI 智慧應用新世代人才培育計畫 - 工業機器人之應用',
-            '國立臺灣大學創新設計學院「智齡設計」跨校課程',
-            'AI Governance & Compliance 自主學習計畫（EU AI Act、風險評估、治理架構）'
+            '國立臺灣大學創新設計學院「智齡設計」跨校課程'
         ],
         exp: {
             company: 'QNAP Systems, Inc.',
@@ -501,10 +501,10 @@ const uiStrings = {
             sks2016Result: 'Excellence Award (2016)'
         },
         training: [
+            'AI Governance & Compliance Self-Study Program (EU AI Act, Risk Assessment, Governance Framework)',
             'MOEA AI Program (ML, Deep Learning & Image Recognition)',
             'AI Smart Application - Industrial Robot Applications',
-            'NTU D-School "Design for Aging" Cross-campus Course',
-            'AI Governance & Compliance Self-Study Program (EU AI Act, Risk Assessment, Governance Framework)'
+            'NTU D-School "Design for Aging" Cross-campus Course'
         ],
         exp: {
             company: 'QNAP Systems, Inc.',
