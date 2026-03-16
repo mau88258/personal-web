@@ -348,21 +348,21 @@ const uiStrings = {
             company: 'QNAP Systems, Inc.',
             position: '軟體自動化測試工程師',
             period: '2021/11 - 現今（4年+）',
-            desc: '負責 QuTS hero 及相關產品的品質保證工作，專注於自動化測試與 AI 工具整合。',
+            desc: '負責 QuTS hero（ZFS-based NAS 作業系統）及相關儲存產品的品質保證工作。根據規格書設計測試情境並確保產品邏輯正確，撰寫並執行功能測試、穩定性測試（Stress Test）、交互性測試、Error Handling 及極限狀況測試。主動導入 Robot Framework 自動化測試與 AI 輔助工具，提升團隊測試效率。同時負責 Bug 開立與追蹤、與 RD 協作分析問題、協助客戶問題處理，並持續整理維護既有 Test Suite 與測試案例。',
             projectsTitle: '📋 負責專案',
             automationTitle: '🤖 自動化測試',
             achievementsTitle: '📈 累計成果',
             projectCards: [
-                { title: 'Hero HA (High Availability)', desc: '高可用性架構測試，確保系統穩定性與故障轉移機制' },
-                { title: 'Storage Manager', desc: '儲存管理功能測試，包含 RAID 擴展等核心功能' },
-                { title: 'Snapshot Manager', desc: '快照功能完整測試，涵蓋快照建立、排程、還原、刪除、匯出/匯入等核心操作' }
+                { title: 'Hero HA (High Availability)', desc: '高可用性架構測試，確保系統穩定性與故障轉移機制，涵蓋 CNR 測試及主被動節點切換驗證' },
+                { title: 'Storage Manager', desc: '儲存管理功能測試，包含 RAID 擴展、儲存池管理等核心功能，驗證資料完整性與效能' },
+                { title: 'Snapshot Manager', desc: '快照功能完整測試，涵蓋快照建立、排程、還原、刪除、匯出/匯入、Retention 策略等核心操作' }
             ],
             automationItems: [
-                { title: 'Robot Framework 測試環境', desc: '建立並維護 RF 7.3 測試環境，開發自動化測試案例' },
-                { title: '測試案例管理', desc: 'AI 輔助測試案例產出與驗證，提升測試覆蓋率' }
+                { title: 'Robot Framework 測試環境', desc: '建立並維護 RF 7.3 自動化測試環境，累計提交 75+ MRs，開發 27+ 個自動化測試案例與 25+ 個共用關鍵字' },
+                { title: '測試案例管理', desc: 'AI 輔助測試案例產出與驗證，撰寫 1000+ 個測試項目，涵蓋儲存、快照、備份還原等核心功能' }
             ],
             stats: [
-                { number: '1700+', label: '處理工單' },
+                { number: '1780+', label: '處理工單' },
                 { number: '790+', label: '提交 Bug' }
             ],
             prevCompany: '廣略國際股份有限公司',
@@ -393,8 +393,8 @@ const uiStrings = {
                 { 
                     badge: '核心成果', 
                     title: 'Robot Framework AI 輔助測試開發', 
-                    desc: '整合 GitHub Copilot 於 Robot Framework 測試開發。提供既有架構與規範給 AI 分析 → 描述測試需求 → AI 生成符合規範的測試案例 → 人工 Review 確認邏輯 → 執行驗證通過。也用於批量重構既有測試檔案，一次性更新以符合新規範。',
-                    features: ['新增 7 個 HA 環境測試案例，涵蓋 Thick/Thin/Dedupe 驗證', '批量重構 16 個測試檔案，統一程式碼風格與規範', '修復共用關鍵字相容性問題，提升測試穩定性', '測試案例開發時間從數小時縮短至 30 分鐘內']
+                    desc: '整合 GitHub Copilot 於 Robot Framework 7.3 自動化測試開發流程。將既有測試架構、共用關鍵字庫與團隊規範提供給 AI 分析 → 以自然語言描述測試需求與情境 → AI 生成符合規範的完整測試案例（含前置條件、操作步驟、驗證點）→ 人工 Review 確認邏輯與邊界條件 → 執行驗證通過後提交 MR。同時用於批量重構既有測試檔案，一次性更新數十個檔案以符合新版規範，大幅減少人工逐一修改的時間成本。截至目前已累計提交 75+ MRs，涵蓋 TestCases 與 Resource 兩大 Repository。',
+                    features: ['累計開發 27+ 個自動化測試案例，涵蓋 HA/Snapshot/Storage 等核心功能', '開發與維護 25+ 個共用關鍵字（Resource），提升測試程式碼複用率', '批量重構 16+ 個測試檔案，統一程式碼風格與 RF 7.3 規範', '測試案例開發時間從數小時縮短至 30 分鐘內，效率提升 80%+']
                 },
                 { 
                     badge: '跨平台', 
@@ -497,21 +497,21 @@ const uiStrings = {
             company: 'QNAP Systems, Inc.',
             position: 'QA Automation Engineer',
             period: '2021/11 - Present (4+ years)',
-            desc: 'Responsible for quality assurance of QuTS hero and related products, focusing on test automation and AI tool integration.',
+            desc: 'Responsible for QA of QuTS hero (ZFS-based NAS OS) and related storage products. Design test scenarios from specs ensuring product logic correctness. Execute functional tests, stress tests, interoperability tests, error handling and edge case tests. Proactively introduced Robot Framework automation and AI-assisted tools to boost team testing efficiency. Handle bug filing & tracking, collaborate with RD on issue analysis, assist customers with problem resolution, and maintain existing Test Suites and test cases.',
             projectsTitle: '📋 Projects',
             automationTitle: '🤖 Test Automation',
             achievementsTitle: '📈 Achievements',
             projectCards: [
-                { title: 'Hero HA (High Availability)', desc: 'High availability architecture testing, ensuring system stability and failover mechanisms' },
-                { title: 'Storage Manager', desc: 'Storage management testing, including RAID expansion and core functionalities' },
-                { title: 'Snapshot Manager', desc: 'Complete snapshot testing: creation, scheduling, restore, delete, and export/import operations' }
+                { title: 'Hero HA (High Availability)', desc: 'HA architecture testing ensuring system stability and failover, including CNR testing and active-passive node switchover validation' },
+                { title: 'Storage Manager', desc: 'Storage management testing including RAID expansion, storage pool management, verifying data integrity and performance' },
+                { title: 'Snapshot Manager', desc: 'Complete snapshot testing: creation, scheduling, restore, delete, export/import, and retention policy operations' }
             ],
             automationItems: [
-                { title: 'Robot Framework Environment', desc: 'Built and maintained RF 7.3 test environment, developed automation test cases' },
-                { title: 'Test Case Management', desc: 'AI-assisted test case generation and verification, improving test coverage' }
+                { title: 'Robot Framework Environment', desc: 'Built and maintained RF 7.3 automation environment, 75+ MRs submitted, developed 27+ test cases and 25+ shared keywords' },
+                { title: 'Test Case Management', desc: 'AI-assisted test case generation and verification, authored 1000+ test items covering storage, snapshot, backup/restore core functions' }
             ],
             stats: [
-                { number: '1700+', label: 'Tickets Handled' },
+                { number: '1780+', label: 'Tickets Handled' },
                 { number: '790+', label: 'Bugs Submitted' }
             ],
             prevCompany: 'Guanglue International Corp.',
@@ -542,8 +542,8 @@ const uiStrings = {
                 { 
                     badge: 'Core', 
                     title: 'Robot Framework AI Test Development', 
-                    desc: 'Integrated GitHub Copilot into Robot Framework test development. Provided existing architecture to AI → Described test requirements → AI generated compliant test cases → Manual review for logic → Execution verification. Also used for batch refactoring of test files to meet new standards.',
-                    features: ['Added 7 HA environment test cases covering Thick/Thin/Dedupe', 'Batch refactored 16 test files, unified code style', 'Fixed shared keyword compatibility issues', 'Reduced test case development from hours to under 30 minutes']
+                    desc: 'Integrated GitHub Copilot into Robot Framework 7.3 automation workflow. Fed existing test architecture, shared keyword library, and team conventions to AI → Described test requirements in natural language → AI generated complete test cases (preconditions, steps, checkpoints) → Manual review for logic and edge cases → Execute and submit MR. Also used for batch refactoring dozens of test files to meet new standards, dramatically reducing manual effort. 75+ MRs submitted across TestCases and Resource repositories to date.',
+                    features: ['Developed 27+ automation test cases covering HA/Snapshot/Storage core functions', 'Built and maintained 25+ shared keywords (Resource) improving code reusability', 'Batch refactored 16+ test files, unified code style and RF 7.3 standards', 'Reduced test case development from hours to under 30 min, 80%+ efficiency gain']
                 },
                 { 
                     badge: 'Cross-platform', 
