@@ -241,11 +241,6 @@ const projectsData = [
         icons: ['📸', '📊', '🔧', '🔗'],
         techStack: ['Shell Script', 'SSH', 'QNAP API'],
         featured: true
-    },
-    {
-        icons: ['🔍', '📖', '🗂️'],
-        techStack: ['Node.js', 'Confluence API'],
-        featured: false
     }
 ];
 
@@ -480,12 +475,6 @@ const uiStrings = {
                     title: 'NAS 自動化測試工具', 
                     desc: '建立一系列 Claude Skills 自動化 NAS 測試輔助操作。透過 SSH 連線 NAS + QNAP API 整合，涵蓋批量快照建立（指定 Volume 範圍、數量與 Retention 策略）、CPU 使用率即時監控（300 秒定時 + 無限時手動控制兩種模式，自動產出統計分析報告）、HA Debug Log 自動開啟（確認單機模式後調整 logger 設定並重啟服務）。大幅減少手動 SSH + CLI 操作時間。',
                     features: ['批量建立快照並設定 Retention 策略，支援多 Volume 操作', 'CPU 使用率監控：300 秒定時 + 無限時模式，產出完整統計報告', 'HA Debug Log 一鍵開啟，自動調整 logger 設定並重啟服務', 'SSH + QNAP API 整合，支援 QuTS hero h5.3.0 / h6.0.0+']
-                },
-                { 
-                    badge: '知識管理', 
-                    title: 'Confluence 知識庫整合', 
-                    desc: '建立 Claude Skill 整合 QNAP Confluence Server API，在 AI 對話中直接搜尋與閱讀內部 Confluence 頁面。支援 CQL 搜尋語法、頁面內容讀取（HTML 轉純文字供 AI 分析）、子頁面結構瀏覽、Space 清單查閱與頁面留言讀取。讓 AI 能直接存取內部知識庫，加速資訊查找與文件分析。',
-                    features: ['CQL 搜尋語法，快速定位 Confluence 頁面', '頁面內容讀取並轉為純文字，AI 直接分析', '瀏覽子頁面結構與 Space 清單，掌握知識庫全貌']
                 }
             ]
         },
@@ -657,12 +646,6 @@ const uiStrings = {
                     title: 'NAS Automation Test Tools', 
                     desc: 'Built a series of Claude Skills to automate NAS testing operations. Integrating SSH connections + QNAP API, covering batch snapshot creation (specify Volume range, count, and Retention policy), real-time CPU usage monitoring (300s timed + unlimited manual control modes with statistical analysis reports), and HA Debug Log auto-enable (verify standalone mode, adjust logger settings, restart service). Dramatically reduces manual SSH + CLI operation time.',
                     features: ['Batch snapshot creation with Retention policy, multi-Volume support', 'CPU monitoring: 300s timed + unlimited mode, full statistical reports', 'One-click HA Debug Log enable, auto-adjust logger settings and restart', 'SSH + QNAP API integration, supporting QuTS hero h5.3.0 / h6.0.0+']
-                },
-                { 
-                    badge: 'Knowledge', 
-                    title: 'Confluence Knowledge Base Integration', 
-                    desc: 'Built Claude Skill integrating QNAP Confluence Server API to search and read internal Confluence pages directly in AI conversations. Supports CQL search syntax, page content reading (HTML to plain text for AI analysis), child page structure browsing, Space listing, and page comment reading. Enables AI to directly access internal knowledge base for faster information retrieval and document analysis.',
-                    features: ['CQL search syntax for quick Confluence page discovery', 'Page content reading converted to plain text for direct AI analysis', 'Browse child page structure and Space listings for full knowledge base overview']
                 }
             ]
         },

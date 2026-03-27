@@ -225,19 +225,6 @@
         { "icon": "🔗", "text": "SSH + QNAP API integration, supporting QuTS hero h5.3.0 / h6.0.0+" }
       ],
       "techStack": ["Shell Script", "SSH", "QNAP API"]
-    },
-    {
-      "id": "confluence-integration",
-      "title": "Confluence Knowledge Base Integration",
-      "badge": "Knowledge",
-      "featured": false,
-      "description": "Built Claude Skill integrating QNAP Confluence Server API to search and read internal pages directly in AI conversations. Supports CQL search, page content reading, child page browsing, Space listing, and page comment reading.",
-      "features": [
-        { "icon": "🔍", "text": "CQL search syntax for quick Confluence page discovery" },
-        { "icon": "📖", "text": "Page content reading converted to plain text for direct AI analysis" },
-        { "icon": "🗂️", "text": "Browse child page structure and Space listings for full knowledge base overview" }
-      ],
-      "techStack": ["Node.js", "Confluence API"]
     }
   ],
   "contact": {
