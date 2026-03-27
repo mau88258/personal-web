@@ -117,8 +117,8 @@
         }
       ],
       "stats": {
-        "ticketsHandled": "1400+",
-        "bugsReported": "780+"
+        "ticketsHandled": "1780+",
+        "bugsReported": "790+"
       }
     },
     {
@@ -162,12 +162,12 @@
       "title": "Jira Ticket Automation",
       "badge": "Cross-Platform",
       "featured": true,
-      "description": "Built complete automation system with Claude Skills + Jira REST API. Issue commands in natural language via Claude → Skill calls corresponding JS script → Script executes API operations → Claude formats results for readability. Features include ticket queries, label management, status transitions, and weekly summary automation. Full support for macOS and Windows.",
+      "description": "Built complete automation system with Claude Skills + Jira REST API (v1.7, 27+ Skills). Natural language commands in Claude / Copilot → Skill calls JS scripts → Scripts execute API operations → AI presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, sub-task creation, component management, and weekly report generation. PostToolUse Hook auto-triggers Label Refresh.",
       "features": [
-        { "icon": "🔍", "text": "Natural language ticket queries with multiple filters" },
-        { "icon": "🏷️", "text": "One-click batch label add/remove for AI task classification" },
-        { "icon": "📊", "text": "Weekly AI Summary auto-generates work reports" },
-        { "icon": "🔄", "text": "Automated status transitions reduce repetitive work" }
+        { "icon": "🔍", "text": "Natural language ticket queries with keyword search and filters" },
+        { "icon": "🏷️", "text": "10+ Jira-specific Skills: Label/ETA/Comment/Transition/Assign/Component and more" },
+        { "icon": "📊", "text": "Weekly AI Summary + Git Summary auto-generates reports and activity logs" },
+        { "icon": "🔄", "text": "PostToolUse Hook automation: auto Label refresh after every Jira operation" }
       ],
       "techStack": ["JavaScript", "Jira REST API", "Claude Skills"]
     },
@@ -211,6 +211,33 @@
         { "icon": "🔍", "text": "Improved searchability for tracking and statistics" }
       ],
       "techStack": ["Claude Skills", "Prompt Engineering"]
+    },
+    {
+      "id": "nas-automation-tools",
+      "title": "NAS Automation Test Tools",
+      "badge": "NAS Testing",
+      "featured": true,
+      "description": "Built a series of Claude Skills to automate NAS testing operations. Integrating SSH + QNAP API, covering batch snapshot creation, real-time CPU monitoring (timed + unlimited modes), and HA Debug Log auto-enable. Dramatically reduces manual CLI operation time.",
+      "features": [
+        { "icon": "📸", "text": "Batch snapshot creation with Retention policy, multi-Volume support" },
+        { "icon": "📊", "text": "CPU monitoring: 300s timed + unlimited mode, full statistical reports" },
+        { "icon": "🔧", "text": "One-click HA Debug Log enable, auto-adjust logger settings and restart" },
+        { "icon": "🔗", "text": "SSH + QNAP API integration, supporting QuTS hero h5.3.0 / h6.0.0+" }
+      ],
+      "techStack": ["Shell Script", "SSH", "QNAP API"]
+    },
+    {
+      "id": "confluence-integration",
+      "title": "Confluence Knowledge Base Integration",
+      "badge": "Knowledge",
+      "featured": false,
+      "description": "Built Claude Skill integrating QNAP Confluence Server API to search and read internal pages directly in AI conversations. Supports CQL search, page content reading, child page browsing, Space listing, and page comment reading.",
+      "features": [
+        { "icon": "🔍", "text": "CQL search syntax for quick Confluence page discovery" },
+        { "icon": "📖", "text": "Page content reading converted to plain text for direct AI analysis" },
+        { "icon": "🗂️", "text": "Browse child page structure and Space listings for full knowledge base overview" }
+      ],
+      "techStack": ["Node.js", "Confluence API"]
     }
   ],
   "contact": {

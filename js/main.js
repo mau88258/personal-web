@@ -236,6 +236,16 @@ const projectsData = [
         icons: ['📜', '⚖️', '📈', '🌐'],
         techStack: ['AI Governance', 'EU AI Act', 'Risk Assessment'],
         featured: true
+    },
+    {
+        icons: ['📸', '📊', '🔧', '🔗'],
+        techStack: ['Shell Script', 'SSH', 'QNAP API'],
+        featured: true
+    },
+    {
+        icons: ['🔍', '📖', '🗂️'],
+        techStack: ['Node.js', 'Confluence API'],
+        featured: false
     }
 ];
 
@@ -414,8 +424,8 @@ const uiStrings = {
                 { 
                     badge: '跨平台', 
                     title: 'Jira 工單自動化管理', 
-                    desc: '建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.6，含 14+ Skills）。在 Claude 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → Claude 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、週報自動統整，全套支援 macOS 與 Windows。',
-                    features: ['自然語言查詢工單，支援多種篩選條件與關鍵字搜尋', 'Comment 管理、ETA 設定、標籤批量操作等完整工單管理', 'Weekly AI Summary 自動生成週報，彙整工作成果', '工單狀態轉換與 Assign 自動指派，操作全程自動追蹤']
+                    desc: '建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 27+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。',
+                    features: ['自然語言查詢工單，支援多種篩選條件與關鍵字搜尋', '10+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component 等', 'Weekly AI Summary + Git Summary 自動生成週報與活動紀錄', 'PostToolUse Hook 自動化：每次 Jira 操作後自動刷新 Label']
                 },
                 { 
                     badge: '團隊工具', 
@@ -437,15 +447,15 @@ const uiStrings = {
                 },
                 { 
                     badge: '團隊工具', 
-                    title: 'AI 應用週報 Dashboard', 
-                    desc: '自動掃描 JIRA 工單，追蹤團隊 AI 應用情況並產生可視化週報。',
-                    features: ['自動掃描 JIRA 工單，分析 AI 應用標籤', '可視化 Dashboard：統計卡片、成員分佈圖、AI 比例圓餅圖', '群組管理：支援多團隊追蹤、成員狀態管理', '歷史週報保存，可查閱過往紀錄']
+                    title: 'AI 應用週報系統', 
+                    desc: '完整的 AI 應用追蹤與週報系統。包含：(1) Web Dashboard — 自動掃描 JIRA 工單，追蹤團隊 AI 應用情況並產生可視化報表；(2) Copilot Sessions Scanner — 自動掃描當周所有 VS Code Copilot Chat Sessions，擷取工作單號與活動分類，產生 Jira Wiki 格式週報並發佈至對應子單。從資料收集到報告產出全程自動化。',
+                    features: ['自動掃描 JIRA 工單 + Copilot Chat Sessions，雙來源資料收集', '可視化 Dashboard：統計卡片、成員分佈圖、AI 比例圓餅圖', 'Copilot Sessions 自動掃描：擷取工作單號、活動分類、互動摘要', '群組管理 + 歷史週報保存，支援多團隊追蹤']
                 },
                 { 
                     badge: '自動化', 
                     title: 'AI 測試流水線', 
-                    desc: '整合 SPEC 審查、測試案例生成、TestLink 上傳的端到端自動化流程。AI 自動審查 PM 提供的 SPEC 文件 → 依優先順序產出問題清單 → 根據 SPEC 自動生成分類測試案例 → 批次上傳至 TestLink 系統，建立完整的 Test Suite 結構。大幅縮短從需求到測試的準備時間。',
-                    features: ['自動審查 SPEC 文件，依功能完整性、異常處理、可測試性產出問題清單', '根據 SPEC 自動生成測試案例，支援 Positive/Negative/Boundary 分類', '批次上傳測試案例到 TestLink，自動建立 Test Suite 階層結構', '完整流水線：SPEC 審查 → 案例生成 → 上傳管理，一氣呵成']
+                    desc: '整合 SPEC 審查、測試案例生成、TestLink 上傳與更新的端到端自動化流程。AI 自動審查 PM 提供的 SPEC 文件 → 依優先順序產出問題清單 → 根據 SPEC 自動生成分類測試案例 → 批次上傳至 TestLink 系統，建立完整的 Test Suite 結構 → 後續可批次更新既有測試案例內容（步驟、預期結果、前置條件）。大幅縮短從需求到測試的準備時間。',
+                    features: ['自動審查 SPEC 文件，依功能完整性、異常處理、可測試性產出問題清單', '根據 SPEC 自動生成測試案例，支援 Positive/Negative/Boundary 分類', '批次上傳測試案例到 TestLink，自動建立 Test Suite 階層結構', '支援批次更新既有測試案例：步驟、預期結果、前置條件一次更新']
                 },
                 { 
                     badge: '跨平台', 
@@ -462,12 +472,24 @@ const uiStrings = {
                 { 
                     badge: '自主學習', 
                     title: 'AI Governance & Compliance 學習計畫', 
-                    desc: '透過 ChatGPT 進行為期 30+ 天的系統化自主學習計畫（目前進度：Day 12/30+），深入研究 AI 治理與合規領域。從 AI Compliance 產業分析出發 → 建立 Evidence System 概念 → Risk Scoring & Classification 架構 → EU AI Act 監管框架學習 → High-Risk AI 治理要求（Data Governance、Technical Documentation）→ 商業影響分析。學習過程中每日撰寫學習報告記錄核心收穫與反思。',
-                    features: ['30+ 天系統化學習計畫，涵蓋 AI Governance 完整知識體系', '深入研究 EU AI Act 風險分層架構與 High-Risk AI 治理要求', '建立 Risk Scoring、Evidence System、Risk Visibility 等核心概念', '每日學習報告記錄，從技術思維轉向市場與治理思維']
+                    desc: '透過 ChatGPT 進行系統化自主學習計畫（持續進行中），深入研究 AI 治理與合規領域。從 AI Compliance 產業分析出發 → 建立 Evidence System 概念 → Risk Scoring & Classification 架構 → EU AI Act 監管框架學習 → High-Risk AI 治理要求（Data Governance、Technical Documentation）→ 商業影響分析 → Conformity Assessment 與認證體系。學習過程中每日撰寫學習報告記錄核心收穫與反思。',
+                    features: ['系統化學習計畫持續進行中，涵蓋 AI Governance 完整知識體系', '深入研究 EU AI Act 風險分層架構與 High-Risk AI 治理要求', '建立 Risk Scoring、Evidence System、Risk Visibility 等核心概念', '每日學習報告記錄，從技術思維轉向市場與治理思維']
+                },
+                { 
+                    badge: 'NAS 測試', 
+                    title: 'NAS 自動化測試工具', 
+                    desc: '建立一系列 Claude Skills 自動化 NAS 測試輔助操作。透過 SSH 連線 NAS + QNAP API 整合，涵蓋批量快照建立（指定 Volume 範圍、數量與 Retention 策略）、CPU 使用率即時監控（300 秒定時 + 無限時手動控制兩種模式，自動產出統計分析報告）、HA Debug Log 自動開啟（確認單機模式後調整 logger 設定並重啟服務）。大幅減少手動 SSH + CLI 操作時間。',
+                    features: ['批量建立快照並設定 Retention 策略，支援多 Volume 操作', 'CPU 使用率監控：300 秒定時 + 無限時模式，產出完整統計報告', 'HA Debug Log 一鍵開啟，自動調整 logger 設定並重啟服務', 'SSH + QNAP API 整合，支援 QuTS hero h5.3.0 / h6.0.0+']
+                },
+                { 
+                    badge: '知識管理', 
+                    title: 'Confluence 知識庫整合', 
+                    desc: '建立 Claude Skill 整合 QNAP Confluence Server API，在 AI 對話中直接搜尋與閱讀內部 Confluence 頁面。支援 CQL 搜尋語法、頁面內容讀取（HTML 轉純文字供 AI 分析）、子頁面結構瀏覽、Space 清單查閱與頁面留言讀取。讓 AI 能直接存取內部知識庫，加速資訊查找與文件分析。',
+                    features: ['CQL 搜尋語法，快速定位 Confluence 頁面', '頁面內容讀取並轉為純文字，AI 直接分析', '瀏覽子頁面結構與 Space 清單，掌握知識庫全貌']
                 }
             ]
         },
-        footer: '© 2025 陳建良. All rights reserved.'
+        footer: '© 2026 陳建良. All rights reserved.'
     },
     'en': {
         nav: { about: 'About Me', experience: 'Work Experience', projects: 'AI Applications', contact: 'Contact Me' },
@@ -579,8 +601,8 @@ const uiStrings = {
                 { 
                     badge: 'Cross-platform', 
                     title: 'Jira Ticket Automation', 
-                    desc: 'Built Claude Skills integrated with Jira REST API for complete automation (v1.6, 14+ Skills). Natural language commands in Claude → Skill calls JS scripts → Scripts execute API operations → Claude presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, and weekly report generation.',
-                    features: ['Natural language ticket queries with keyword search and filters', 'Comment management, ETA tracking, batch label ops and more', 'Weekly AI Summary auto-generates weekly reports', 'Auto status transitions and assignee management with full audit trail']
+                    desc: 'Built Claude Skills integrated with Jira REST API for complete automation (v1.7, 27+ Skills). Natural language commands in Claude / Copilot → Skill calls JS scripts → Scripts execute API operations → AI presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, sub-task creation, component management, and weekly report generation. PostToolUse Hook auto-triggers Label Refresh after each operation.',
+                    features: ['Natural language ticket queries with keyword search and filters', '10+ Jira-specific Skills: Label/ETA/Comment/Transition/Assign/Component and more', 'Weekly AI Summary + Git Summary auto-generates reports and activity logs', 'PostToolUse Hook automation: auto Label refresh after every Jira operation']
                 },
                 { 
                     badge: 'Team Tool', 
@@ -602,15 +624,15 @@ const uiStrings = {
                 },
                 { 
                     badge: 'Team Tool', 
-                    title: 'AI Weekly Report Dashboard', 
-                    desc: 'Automatically scans JIRA tickets to track team AI application status and generate visual weekly reports.',
-                    features: ['Auto-scans JIRA tickets and analyzes AI application labels', 'Visual Dashboard: stat cards, member distribution, AI ratio pie chart', 'Group management: multi-team tracking, member status management', 'Historical reports saved for reviewing past records']
+                    title: 'AI Weekly Report System', 
+                    desc: 'Comprehensive AI application tracking and reporting system. Includes: (1) Web Dashboard — auto-scans JIRA tickets to track team AI usage with visual reports; (2) Copilot Sessions Scanner — auto-scans all VS Code Copilot Chat Sessions for the week, extracts ticket numbers and activity categories, generates Jira Wiki format reports and publishes to corresponding sub-tasks. Fully automated from data collection to report generation.',
+                    features: ['Dual-source data: auto-scans JIRA tickets + Copilot Chat Sessions', 'Visual Dashboard: stat cards, member distribution, AI ratio pie chart', 'Copilot Sessions auto-scan: extracts ticket numbers, activity categories, interaction summaries', 'Group management + historical reports, multi-team tracking support']
                 },
                 { 
                     badge: 'Automation', 
                     title: 'AI Test Pipeline', 
-                    desc: 'End-to-end automation integrating SPEC review, test case generation, and TestLink upload. AI auto-reviews PM SPEC docs → Generates prioritized issue lists → Auto-generates classified test cases → Batch uploads to TestLink with full Test Suite structure. Dramatically reduces requirement-to-test preparation time.',
-                    features: ['Auto-review SPEC docs for completeness, error handling, and testability', 'Auto-generate test cases from SPEC with Positive/Negative/Boundary classification', 'Batch upload test cases to TestLink with auto Test Suite hierarchy', 'Complete pipeline: SPEC review → case generation → upload management']
+                    desc: 'End-to-end automation integrating SPEC review, test case generation, and TestLink upload/update. AI auto-reviews PM SPEC docs → Generates prioritized issue lists → Auto-generates classified test cases → Batch uploads to TestLink with full Test Suite structure → Supports batch updating existing test cases (steps, expected results, preconditions). Dramatically reduces requirement-to-test preparation time.',
+                    features: ['Auto-review SPEC docs for completeness, error handling, and testability', 'Auto-generate test cases from SPEC with Positive/Negative/Boundary classification', 'Batch upload test cases to TestLink with auto Test Suite hierarchy', 'Batch update existing test cases: steps, expected results, preconditions in one go']
                 },
                 { 
                     badge: 'Cross-platform', 
@@ -627,12 +649,24 @@ const uiStrings = {
                 { 
                     badge: 'Self-Study', 
                     title: 'AI Governance & Compliance Study', 
-                    desc: 'Conducting a systematic 30+ day self-study program via ChatGPT (current progress: Day 12/30+), diving deep into AI governance and compliance. Starting from AI Compliance industry analysis → Building Evidence System concepts → Risk Scoring & Classification framework → EU AI Act regulatory framework → High-Risk AI governance requirements (Data Governance, Technical Documentation) → Business impact analysis. Documenting daily learning reports with core takeaways and reflections.',
-                    features: ['30+ day systematic study covering complete AI Governance knowledge framework', 'Deep dive into EU AI Act risk-based regulation and High-Risk AI governance', 'Built understanding of Risk Scoring, Evidence System, and Risk Visibility', 'Daily learning reports documenting shift from technical to market & governance thinking']
+                    desc: 'Conducting a systematic self-study program via ChatGPT (ongoing), diving deep into AI governance and compliance. Starting from AI Compliance industry analysis → Building Evidence System concepts → Risk Scoring & Classification framework → EU AI Act regulatory framework → High-Risk AI governance requirements (Data Governance, Technical Documentation) → Business impact analysis → Conformity Assessment and certification systems. Documenting daily learning reports with core takeaways and reflections.',
+                    features: ['Systematic study program ongoing, covering complete AI Governance knowledge framework', 'Deep dive into EU AI Act risk-based regulation and High-Risk AI governance', 'Built understanding of Risk Scoring, Evidence System, and Risk Visibility', 'Daily learning reports documenting shift from technical to market & governance thinking']
+                },
+                { 
+                    badge: 'NAS Testing', 
+                    title: 'NAS Automation Test Tools', 
+                    desc: 'Built a series of Claude Skills to automate NAS testing operations. Integrating SSH connections + QNAP API, covering batch snapshot creation (specify Volume range, count, and Retention policy), real-time CPU usage monitoring (300s timed + unlimited manual control modes with statistical analysis reports), and HA Debug Log auto-enable (verify standalone mode, adjust logger settings, restart service). Dramatically reduces manual SSH + CLI operation time.',
+                    features: ['Batch snapshot creation with Retention policy, multi-Volume support', 'CPU monitoring: 300s timed + unlimited mode, full statistical reports', 'One-click HA Debug Log enable, auto-adjust logger settings and restart', 'SSH + QNAP API integration, supporting QuTS hero h5.3.0 / h6.0.0+']
+                },
+                { 
+                    badge: 'Knowledge', 
+                    title: 'Confluence Knowledge Base Integration', 
+                    desc: 'Built Claude Skill integrating QNAP Confluence Server API to search and read internal Confluence pages directly in AI conversations. Supports CQL search syntax, page content reading (HTML to plain text for AI analysis), child page structure browsing, Space listing, and page comment reading. Enables AI to directly access internal knowledge base for faster information retrieval and document analysis.',
+                    features: ['CQL search syntax for quick Confluence page discovery', 'Page content reading converted to plain text for direct AI analysis', 'Browse child page structure and Space listings for full knowledge base overview']
                 }
             ]
         },
-        footer: '© 2025 Neil Chen. All rights reserved.'
+        footer: '© 2026 Neil Chen. All rights reserved.'
     }
 };
 

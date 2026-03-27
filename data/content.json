@@ -117,8 +117,8 @@
         }
       ],
       "stats": {
-        "ticketsHandled": "1400+",
-        "bugsReported": "780+"
+        "ticketsHandled": "1780+",
+        "bugsReported": "790+"
       }
     },
     {
@@ -162,12 +162,12 @@
       "title": "Jira 工單自動化管理",
       "badge": "跨平台",
       "featured": true,
-      "description": "建立 Claude Skills 整合 Jira REST API 的完整自動化系統。在 Claude 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → Claude 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、週報自動統整，全套支援 macOS 與 Windows。",
+      "description": "建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 27+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。",
       "features": [
-        { "icon": "🔍", "text": "自然語言查詢工單，支援多種篩選條件" },
-        { "icon": "🏷️", "text": "一鍵批量添加/移除標籤，管理 AI 相關任務分類" },
-        { "icon": "📊", "text": "Weekly AI Summary 自動生成週報，彙整工作成果" },
-        { "icon": "🔄", "text": "工單狀態轉換自動化，減少重複操作" }
+        { "icon": "🔍", "text": "自然語言查詢工單，支援多種篩選條件與關鍵字搜尋" },
+        { "icon": "🏷️", "text": "10+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component 等" },
+        { "icon": "📊", "text": "Weekly AI Summary + Git Summary 自動生成週報與活動紀錄" },
+        { "icon": "🔄", "text": "PostToolUse Hook 自動化：每次 Jira 操作後自動刷新 Label" }
       ],
       "techStack": ["JavaScript", "Jira REST API", "Claude Skills"]
     },
@@ -211,6 +211,33 @@
         { "icon": "🔍", "text": "提升 Bug 可搜尋性，方便追蹤與統計" }
       ],
       "techStack": ["Claude Skills", "Prompt Engineering"]
+    },
+    {
+      "id": "nas-automation-tools",
+      "title": "NAS 自動化測試工具",
+      "badge": "NAS 測試",
+      "featured": true,
+      "description": "建立一系列 Claude Skills 自動化 NAS 測試輔助操作。透過 SSH 連線 NAS + QNAP API 整合，涵蓋批量快照建立、CPU 使用率即時監控（定時/無限時兩種模式）、HA Debug Log 自動開啟等，大幅減少手動 CLI 操作時間。",
+      "features": [
+        { "icon": "📸", "text": "批量建立快照並設定 Retention 策略，支援多 Volume 操作" },
+        { "icon": "📊", "text": "CPU 使用率監控：300 秒定時 + 無限時模式，產出完整統計報告" },
+        { "icon": "🔧", "text": "HA Debug Log 一鍵開啟，自動調整 logger 設定並重啟服務" },
+        { "icon": "🔗", "text": "SSH + QNAP API 整合，支援 QuTS hero h5.3.0 / h6.0.0+" }
+      ],
+      "techStack": ["Shell Script", "SSH", "QNAP API"]
+    },
+    {
+      "id": "confluence-integration",
+      "title": "Confluence 知識庫整合",
+      "badge": "知識管理",
+      "featured": false,
+      "description": "建立 Claude Skill 整合 QNAP Confluence Server API，在 AI 對話中直接搜尋與閱讀內部 Confluence 頁面。支援 CQL 搜尋語法、頁面內容讀取、子頁面結構瀏覽、Space 清單查閱與頁面留言讀取。",
+      "features": [
+        { "icon": "🔍", "text": "CQL 搜尋語法，快速定位 Confluence 頁面" },
+        { "icon": "📖", "text": "頁面內容讀取並轉為純文字，AI 直接分析" },
+        { "icon": "🗂️", "text": "瀏覽子頁面結構與 Space 清單，掌握知識庫全貌" }
+      ],
+      "techStack": ["Node.js", "Confluence API"]
     }
   ],
   "contact": {
