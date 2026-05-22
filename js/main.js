@@ -241,6 +241,16 @@ const projectsData = [
         icons: ['📸', '📊', '🔧', '🔗'],
         techStack: ['Shell Script', 'SSH', 'QNAP API'],
         featured: true
+    },
+    {
+        icons: ['🎭', '🔗', '📋', '📸'],
+        techStack: ['Playwright', 'SSH', 'Node.js'],
+        featured: true
+    },
+    {
+        icons: ['📄', '🔍', '💬', '🔐'],
+        techStack: ['Graph API', 'Azure CLI', 'Confluence API'],
+        featured: true
     }
 ];
 
@@ -378,12 +388,12 @@ const uiStrings = {
                 { title: 'Snapshot Manager', desc: '快照功能完整測試，涵蓋快照建立、排程、還原、刪除、匯出/匯入、Retention 策略等核心操作' }
             ],
             automationItems: [
-                { title: 'Robot Framework 測試環境', desc: '建立並維護 RF 7.3 自動化測試環境，累計提交 75+ MRs，開發 27+ 個自動化測試案例與 25+ 個共用關鍵字' },
+                { title: 'Robot Framework 測試環境', desc: '建立並維護 RF 7.3 自動化測試環境，累計提交 170+ MRs，開發 27+ 個自動化測試案例與 25+ 個共用關鍵字' },
                 { title: '測試案例管理', desc: 'AI 輔助測試案例產出與驗證，撰寫 1000+ 個測試項目，涵蓋儲存、快照、備份還原等核心功能' }
             ],
             stats: [
-                { number: '1780+', label: '處理工單' },
-                { number: '790+', label: '提交 Bug' }
+                { number: '1640+', label: '處理工單' },
+                { number: '820+', label: '提交 Bug' }
             ],
             prevCompany: '廣略國際股份有限公司',
             prevPosition: '營運經理',
@@ -413,14 +423,14 @@ const uiStrings = {
                 { 
                     badge: '核心成果', 
                     title: 'Robot Framework AI 輔助測試開發', 
-                    desc: '整合 GitHub Copilot 於 Robot Framework 7.3 自動化測試開發流程。將既有測試架構、共用關鍵字庫與團隊規範提供給 AI 分析 → 以自然語言描述測試需求與情境 → AI 生成符合規範的完整測試案例（含前置條件、操作步驟、驗證點）→ 人工 Review 確認邏輯與邊界條件 → 執行驗證通過後提交 MR。同時用於批量重構既有測試檔案，一次性更新數十個檔案以符合新版規範，大幅減少人工逐一修改的時間成本。截至目前已累計提交 75+ MRs，涵蓋 TestCases 與 Resource 兩大 Repository。',
+                    desc: '整合 GitHub Copilot 於 Robot Framework 7.3 自動化測試開發流程。將既有測試架構、共用關鍵字庫與團隊規範提供給 AI 分析 → 以自然語言描述測試需求與情境 → AI 生成符合規範的完整測試案例（含前置條件、操作步驟、驗證點）→ 人工 Review 確認邏輯與邊界條件 → 執行驗證通過後提交 MR。同時用於批量重構既有測試檔案，一次性更新數十個檔案以符合新版規範，大幅減少人工逐一修改的時間成本。截至目前已累計提交 170+ MRs，涵蓋 TestCases 與 Resource 兩大 Repository。',
                     features: ['累計開發 27+ 個自動化測試案例，涵蓋 HA/Snapshot/Storage 等核心功能', '開發與維護 25+ 個共用關鍵字（Resource），提升測試程式碼複用率', '批量重構 16+ 個測試檔案，統一程式碼風格與 RF 7.3 規範', '測試案例開發時間從數小時縮短至 30 分鐘內，效率提升 80%+']
                 },
                 { 
                     badge: '跨平台', 
                     title: 'Jira 工單自動化管理', 
-                    desc: '建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 27+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。',
-                    features: ['自然語言查詢工單，支援多種篩選條件與關鍵字搜尋', '10+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component 等', 'Weekly AI Summary + Git Summary 自動生成週報與活動紀錄', 'PostToolUse Hook 自動化：每次 Jira 操作後自動刷新 Label']
+                    desc: '建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 40+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。',
+                    features: ['自然語言查詢工單，支援多種篩選條件與關鍵字搜尋', '15+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component/Link 等', 'Weekly AI Summary + Git Summary 自動生成週報與活動紀錄', 'PostToolUse Hook 自動化：每次 Jira 操作後自動刷新 Label']
                 },
                 { 
                     badge: '團隊工具', 
@@ -475,6 +485,18 @@ const uiStrings = {
                     title: 'NAS 自動化測試工具', 
                     desc: '建立一系列 Claude Skills 自動化 NAS 測試輔助操作。透過 SSH 連線 NAS + QNAP API 整合，涵蓋批量快照建立（指定 Volume 範圍、數量與 Retention 策略）、CPU 使用率即時監控（300 秒定時 + 無限時手動控制兩種模式，自動產出統計分析報告）、HA Debug Log 自動開啟（確認單機模式後調整 logger 設定並重啟服務）。大幅減少手動 SSH + CLI 操作時間。',
                     features: ['批量建立快照並設定 Retention 策略，支援多 Volume 操作', 'CPU 使用率監控：300 秒定時 + 無限時模式，產出完整統計報告', 'HA Debug Log 一鍵開啟，自動調整 logger 設定並重啟服務', 'SSH + QNAP API 整合，支援 QuTS hero h5.3.0 / h6.0.0+']
+                },
+                { 
+                    badge: 'E2E 測試', 
+                    title: 'Playwright 端對端 UI 自動化測試', 
+                    desc: '建立 Playwright + SSH 整合的端對端自動化測試框架，針對 NAS Snapshot 功能進行完整 UI 自動化測試。涵蓋 QTS 5.2.x（EXT4/LVM）、QuTS hero h5.2.x（ZFS）、QTS 6.x.x 三大平台，每個平台含 9-17 個 Phase 的完整測試流程（Take/Edit/Schedule/Clone/Revert/Delete/Retention）。結合 Web UI 操作 + SSH CLI 驗證，確保 UI 操作結果與後端一致。',
+                    features: ['跨三大平台：QTS 5.2.x、QuTS hero h5.2.x、QTS 6.x.x 完整覆蓋', 'Playwright Web UI 操作 + SSH CLI 後端驗證雙重確認', '9-17 Phase 端對端測試流程：Take/Edit/Schedule/Clone/Revert/Delete', '自動截圖 + 詳細 Phase 報告，PASS/FAIL 可追溯驗證']
+                },
+                { 
+                    badge: '企業整合', 
+                    title: '企業文件與協作平台整合', 
+                    desc: '建立 Claude Skills 整合企業內部多個文件與協作平台。透過 Azure CLI + Microsoft Graph API 讀取 SharePoint 文件（Word/PowerPoint/Excel/PDF，支援圖片提取與章節定位）；透過 Jira Token 讀取 Confluence 頁面（搜尋/瀏覽 Space/子頁面結構）；透過 Graph API 讀取 Teams 頻道訊息。讓 AI Agent 能直接存取企業知識庫，加速跨平台資訊整合。',
+                    features: ['SharePoint 文件讀取：Word/PPT/Excel/PDF，支援圖片提取與章節定位', 'Confluence 頁面搜尋與讀取，瀏覽 Space 與子頁面結構', 'Teams 頻道訊息讀取，掌握團隊溝通脈絡', 'Azure CLI + Graph API 自動認證，無需手動處理 Token']
                 }
             ]
         },
@@ -549,12 +571,12 @@ const uiStrings = {
                 { title: 'Snapshot Manager', desc: 'Complete snapshot testing: creation, scheduling, restore, delete, export/import, and retention policy operations' }
             ],
             automationItems: [
-                { title: 'Robot Framework Environment', desc: 'Built and maintained RF 7.3 automation environment, 75+ MRs submitted, developed 27+ test cases and 25+ shared keywords' },
+                { title: 'Robot Framework Environment', desc: 'Built and maintained RF 7.3 automation environment, 170+ MRs submitted, developed 27+ test cases and 25+ shared keywords' },
                 { title: 'Test Case Management', desc: 'AI-assisted test case generation and verification, authored 1000+ test items covering storage, snapshot, backup/restore core functions' }
             ],
             stats: [
-                { number: '1780+', label: 'Tickets Handled' },
-                { number: '790+', label: 'Bugs Submitted' }
+                { number: '1640+', label: 'Tickets Handled' },
+                { number: '820+', label: 'Bugs Submitted' }
             ],
             prevCompany: 'Guanglue International Corp.',
             prevPosition: 'Operations Manager',
@@ -584,14 +606,14 @@ const uiStrings = {
                 { 
                     badge: 'Core', 
                     title: 'Robot Framework AI Test Development', 
-                    desc: 'Integrated GitHub Copilot into Robot Framework 7.3 automation workflow. Fed existing test architecture, shared keyword library, and team conventions to AI → Described test requirements in natural language → AI generated complete test cases (preconditions, steps, checkpoints) → Manual review for logic and edge cases → Execute and submit MR. Also used for batch refactoring dozens of test files to meet new standards, dramatically reducing manual effort. 75+ MRs submitted across TestCases and Resource repositories to date.',
+                    desc: 'Integrated GitHub Copilot into Robot Framework 7.3 automation workflow. Fed existing test architecture, shared keyword library, and team conventions to AI → Described test requirements in natural language → AI generated complete test cases (preconditions, steps, checkpoints) → Manual review for logic and edge cases → Execute and submit MR. Also used for batch refactoring dozens of test files to meet new standards, dramatically reducing manual effort. 170+ MRs submitted across TestCases and Resource repositories to date.',
                     features: ['Developed 27+ automation test cases covering HA/Snapshot/Storage core functions', 'Built and maintained 25+ shared keywords (Resource) improving code reusability', 'Batch refactored 16+ test files, unified code style and RF 7.3 standards', 'Reduced test case development from hours to under 30 min, 80%+ efficiency gain']
                 },
                 { 
                     badge: 'Cross-platform', 
                     title: 'Jira Ticket Automation', 
-                    desc: 'Built Claude Skills integrated with Jira REST API for complete automation (v1.7, 27+ Skills). Natural language commands in Claude / Copilot → Skill calls JS scripts → Scripts execute API operations → AI presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, sub-task creation, component management, and weekly report generation. PostToolUse Hook auto-triggers Label Refresh after each operation.',
-                    features: ['Natural language ticket queries with keyword search and filters', '10+ Jira-specific Skills: Label/ETA/Comment/Transition/Assign/Component and more', 'Weekly AI Summary + Git Summary auto-generates reports and activity logs', 'PostToolUse Hook automation: auto Label refresh after every Jira operation']
+                    desc: 'Built Claude Skills integrated with Jira REST API for complete automation (v1.7, 40+ Skills). Natural language commands in Claude / Copilot → Skill calls JS scripts → Scripts execute API operations → AI presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, sub-task creation, component management, and weekly report generation. PostToolUse Hook auto-triggers Label Refresh after each operation.',
+                    features: ['Natural language ticket queries with keyword search and filters', '15+ Jira-specific Skills: Label/ETA/Comment/Transition/Assign/Component/Link and more', 'Weekly AI Summary + Git Summary auto-generates reports and activity logs', 'PostToolUse Hook automation: auto Label refresh after every Jira operation']
                 },
                 { 
                     badge: 'Team Tool', 
@@ -646,6 +668,18 @@ const uiStrings = {
                     title: 'NAS Automation Test Tools', 
                     desc: 'Built a series of Claude Skills to automate NAS testing operations. Integrating SSH connections + QNAP API, covering batch snapshot creation (specify Volume range, count, and Retention policy), real-time CPU usage monitoring (300s timed + unlimited manual control modes with statistical analysis reports), and HA Debug Log auto-enable (verify standalone mode, adjust logger settings, restart service). Dramatically reduces manual SSH + CLI operation time.',
                     features: ['Batch snapshot creation with Retention policy, multi-Volume support', 'CPU monitoring: 300s timed + unlimited mode, full statistical reports', 'One-click HA Debug Log enable, auto-adjust logger settings and restart', 'SSH + QNAP API integration, supporting QuTS hero h5.3.0 / h6.0.0+']
+                },
+                { 
+                    badge: 'E2E Testing', 
+                    title: 'Playwright End-to-End UI Automation', 
+                    desc: 'Built an end-to-end automation test framework integrating Playwright + SSH for comprehensive NAS Snapshot UI testing. Covering QTS 5.2.x (EXT4/LVM), QuTS hero h5.2.x (ZFS), and QTS 6.x.x — three major platforms with 9-17 Phase complete test flows (Take/Edit/Schedule/Clone/Revert/Delete/Retention). Combines Web UI operations + SSH CLI verification to ensure UI results match backend state.',
+                    features: ['Cross-platform coverage: QTS 5.2.x, QuTS hero h5.2.x, QTS 6.x.x', 'Playwright Web UI operations + SSH CLI backend dual verification', '9-17 Phase end-to-end test flow: Take/Edit/Schedule/Clone/Revert/Delete', 'Auto-screenshots + detailed Phase reports with traceable PASS/FAIL']
+                },
+                { 
+                    badge: 'Enterprise', 
+                    title: 'Enterprise Document & Collaboration Integration', 
+                    desc: 'Built Claude Skills integrating multiple enterprise document and collaboration platforms. Reads SharePoint files (Word/PowerPoint/Excel/PDF with image extraction and section navigation) via Azure CLI + Microsoft Graph API; reads Confluence pages (search/browse Space/child page structure) via Jira Token; reads Teams channel messages via Graph API. Enables AI Agent direct access to enterprise knowledge bases, accelerating cross-platform information integration.',
+                    features: ['SharePoint document reading: Word/PPT/Excel/PDF with image extraction', 'Confluence page search and reading, browse Space and child page structure', 'Teams channel message reading for team communication context', 'Azure CLI + Graph API auto-authentication, no manual Token handling']
                 }
             ]
         },

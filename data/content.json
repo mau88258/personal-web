@@ -117,8 +117,8 @@
         }
       ],
       "stats": {
-        "ticketsHandled": "1780+",
-        "bugsReported": "790+"
+        "ticketsHandled": "1640+",
+        "bugsReported": "820+"
       }
     },
     {
@@ -162,10 +162,10 @@
       "title": "Jira 工單自動化管理",
       "badge": "跨平台",
       "featured": true,
-      "description": "建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 27+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。",
+      "description": "建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 40+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。",
       "features": [
         { "icon": "🔍", "text": "自然語言查詢工單，支援多種篩選條件與關鍵字搜尋" },
-        { "icon": "🏷️", "text": "10+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component 等" },
+        { "icon": "🏷️", "text": "15+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component/Link 等" },
         { "icon": "📊", "text": "Weekly AI Summary + Git Summary 自動生成週報與活動紀錄" },
         { "icon": "🔄", "text": "PostToolUse Hook 自動化：每次 Jira 操作後自動刷新 Label" }
       ],
@@ -225,6 +225,34 @@
         { "icon": "🔗", "text": "SSH + QNAP API 整合，支援 QuTS hero h5.3.0 / h6.0.0+" }
       ],
       "techStack": ["Shell Script", "SSH", "QNAP API"]
+    },
+    {
+      "id": "playwright-e2e-testing",
+      "title": "Playwright 端對端 UI 自動化測試",
+      "badge": "E2E 測試",
+      "featured": true,
+      "description": "建立 Playwright + SSH 整合的端對端自動化測試框架，針對 NAS Snapshot 功能進行完整 UI 自動化測試。涵蓋 QTS 5.2.x、QuTS hero h5.2.x、QTS 6.x.x 三大平台。",
+      "features": [
+        { "icon": "🎭", "text": "跨三大平台：QTS 5.2.x、QuTS hero h5.2.x、QTS 6.x.x 完整覆蓋" },
+        { "icon": "🔗", "text": "Playwright Web UI 操作 + SSH CLI 後端驗證雙重確認" },
+        { "icon": "📋", "text": "9-17 Phase 端對端測試流程：Take/Edit/Schedule/Clone/Revert/Delete" },
+        { "icon": "📸", "text": "自動截圖 + 詳細 Phase 報告，PASS/FAIL 可追溯驗證" }
+      ],
+      "techStack": ["Playwright", "SSH", "Node.js"]
+    },
+    {
+      "id": "enterprise-document-integration",
+      "title": "企業文件與協作平台整合",
+      "badge": "企業整合",
+      "featured": true,
+      "description": "建立 Claude Skills 整合企業內部多個文件與協作平台，讓 AI Agent 能直接存取企業知識庫。",
+      "features": [
+        { "icon": "📄", "text": "SharePoint 文件讀取：Word/PPT/Excel/PDF，支援圖片提取與章節定位" },
+        { "icon": "🔍", "text": "Confluence 頁面搜尋與讀取，瀏覽 Space 與子頁面結構" },
+        { "icon": "💬", "text": "Teams 頻道訊息讀取，掌握團隊溝通脈絡" },
+        { "icon": "🔐", "text": "Azure CLI + Graph API 自動認證，無需手動處理 Token" }
+      ],
+      "techStack": ["Graph API", "Azure CLI", "Confluence API"]
     }
   ],
   "contact": {
