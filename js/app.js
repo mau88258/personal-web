@@ -5,7 +5,7 @@
 (function () {
     'use strict';
 
-    const VERSION = '20261112';
+    const VERSION = '20261112b';
     const SOURCES = { 'zh-TW': 'data/content.json', en: 'data/content-en.json' };
     const store = {
         get(key) { try { return localStorage.getItem(key); } catch (e) { return null; } },
@@ -40,11 +40,15 @@
         const h = c.hero;
         return `
         <section class="hero">
-            <div class="hero-bg" aria-hidden="true"></div>
-            <div class="wrap hero-grid">
+            <div class="wrap">
                 <div class="hero-copy">
-                    <p class="eyebrow">${esc(h.eyebrow)}</p>
-                    <p class="hero-name">${esc(h.name)} <span>${esc(h.nameAlt)}</span></p>
+                    <div class="hero-id">
+                        <img class="avatar" src="images/profile.jpg?v=${VERSION}" alt="${esc(h.name)}" width="60" height="60">
+                        <div>
+                            <p class="hero-name">${esc(h.name)} <span>${esc(h.nameAlt)}</span></p>
+                            <p class="hero-role">${esc(h.eyebrow)}</p>
+                        </div>
+                    </div>
                     <h1>${esc(h.headline)}</h1>
                     <p class="lead">${esc(h.lead)}</p>
                     <div class="cta">
@@ -53,11 +57,6 @@
                     </div>
                     <p class="status"><i aria-hidden="true"></i>${esc(h.status)}</p>
                 </div>
-                <figure class="portrait">
-                    <img src="images/profile.jpg?v=${VERSION}" alt="${esc(h.name)}" width="560" height="700">
-                </figure>
-            </div>
-            <div class="wrap">
                 <dl class="stats">
                     ${list(c.stats, (s) => `
                     <div class="stat">
@@ -189,13 +188,9 @@
                 <div class="jobs">
                     ${list(e.jobs, (j) => `
                     <article class="job reveal">
-                        <header class="job-head">
-                            <div>
-                                <h3>${esc(j.company)}</h3>
-                                <p class="job-role">${esc(j.role)}</p>
-                            </div>
-                            <span class="job-period">${esc(j.period)}</span>
-                        </header>
+                        <p class="job-period">${esc(j.period)}</p>
+                        <div class="job-main">
+                        <h3>${esc(j.role)} <span>· ${esc(j.company)}</span></h3>
                         <p class="job-summary">${esc(j.summary)}</p>
                         ${j.duties.length ? `<ul class="ticks duties">${list(j.duties, (d) => `<li>${esc(d)}</li>`)}</ul>` : ''}
                         ${j.areas.length ? `
@@ -203,6 +198,7 @@
                         <div class="areas">
                             ${list(j.areas, (a) => `<div class="area"><strong>${esc(a.name)}</strong><span>${esc(a.desc)}</span></div>`)}
                         </div>` : ''}
+                        </div>
                     </article>`)}
                 </div>
 
@@ -363,6 +359,16 @@
         document.getElementById('nav-links').addEventListener('click', (e) => {
             if (e.target.closest('a')) closeMenu();
         });
+
+        // 跟隨滑鼠的淡光暈（整頁唯一的招牌效果；觸控與減少動態時不啟用）
+        const spot = document.getElementById('spot');
+        if (spot && window.matchMedia('(hover: hover)').matches &&
+            !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            window.addEventListener('pointermove', (e) => {
+                spot.style.setProperty('--mx', `${e.clientX}px`);
+                spot.style.setProperty('--my', `${e.clientY}px`);
+            }, { passive: true });
+        }
 
         const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
         window.addEventListener('scroll', onScroll, { passive: true });

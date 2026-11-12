@@ -14,7 +14,7 @@
     "name": "Neil Chen",
     "nameAlt": "陳建良",
     "headline": "Turning QA experience into systems that AI follows.",
-    "lead": "Software Test Automation Engineer at QNAP with four years of testing storage systems (ZFS, high availability, snapshots). My focus now is taking the whole test workflow — spec review, case design, on-device execution, bug filing and verification, reporting — and building it into a system that AI agents run unattended, with a review gate at every step.",
+    "lead": "Software Test Automation Engineer at QNAP with five years of testing storage systems (ZFS, high availability, snapshots). My focus now is taking the whole test workflow — spec review, case design, on-device execution, bug filing and verification, reporting — and building it into a system that AI agents run unattended, with a review gate at every step.",
     "ctaPrimary": "See the AI work",
     "ctaSecondary": "Get in touch",
     "status": "Taipei · QNAP Systems (2021 – present)"
@@ -23,9 +23,9 @@
     { "value": "70", "label": "Custom AI Skills", "note": "Each one a repeatable workflow" },
     { "value": "12", "label": "Dedicated agents", "note": "7 of them only review" },
     { "value": "6", "label": "Node AI fleet", "note": "1 supervisor + 5 workers, unattended" },
-    { "value": "1,640+", "label": "Tickets handled", "note": "Since joining" },
-    { "value": "820+", "label": "Bugs reported", "note": "Since joining" },
-    { "value": "170+", "label": "Automation MRs", "note": "Test scripts and shared keywords" }
+    { "value": "2,260+", "label": "Tickets handled and closed", "note": "Since 2021; 510+ of them done with AI" },
+    { "value": "880+", "label": "Bugs reported", "note": "Since 2021" },
+    { "value": "115+", "label": "Merged MRs", "note": "Test scripts and shared keywords" }
   ],
   "about": {
     "label": "About",
