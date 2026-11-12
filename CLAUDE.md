@@ -15,8 +15,7 @@ personal_web/
 │   ├── content.json        # 📌 中文內容（單一來源）
 │   └── content-en.json     # 📌 英文內容（結構必須與中文完全一致）
 ├── images/                 # profile.jpg（已壓到 900px）、line-qr.png
-├── scripts/check-translation.js   # 比對兩份 JSON 的 key 結構與陣列長度
-└── docs/                   # ⚠️ 舊架構（uiStrings 寫在 main.js）時期的文件，內容已過時，僅供參考
+└── scripts/check-translation.js   # 比對兩份 JSON 的 key 結構與陣列長度
 ```
 
 ## 改內容
