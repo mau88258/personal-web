@@ -1,283 +1,304 @@
 {
-  "ui": {
-    "nav": {
-      "about": "關於我",
-      "ai": "AI 應用",
-      "experience": "工作經歷",
-      "contact": "聯絡我"
-    },
-    "sections": {
-      "education": "學歷背景",
-      "skills": "專業技能",
-      "awards": "榮譽獎項",
-      "training": "專業培訓",
-      "experience": "工作經歷",
-      "aiProjects": "AI 應用專案",
-      "contact": "聯絡我"
-    },
-    "labels": {
-      "master": "碩士",
-      "bachelor": "學士",
-      "present": "現今",
-      "months": "個月",
-      "years": "年",
-      "ticketsHandled": "處理工單",
-      "bugsReported": "提交 Bug"
-    }
+  "meta": {
+    "title": "陳建良 Neil Chen — QA Automation × AI Agent Engineering",
+    "description": "陳建良（Neil Chen）— QNAP 軟體自動化測試工程師。把儲存系統 QA 的經驗做成 AI agent 可以無人值守執行、每一步都有檢查關卡的工作系統。"
   },
-  "personal": {
+  "nav": {
+    "about": "關於我",
+    "ai": "AI 成果",
+    "experience": "經歷",
+    "contact": "聯絡"
+  },
+  "hero": {
+    "eyebrow": "QA Automation × AI Agent Engineering",
     "name": "陳建良",
-    "nameEn": "Neil Chen",
-    "greeting": "Hi, 我是",
-    "title": "AI 輔助開發實踐者 · 軟體自動化測試工程師 @ QNAP",
-    "description": "以 QA 自動化為基礎，積極探索 AI 在工作流程中的實際應用。從測試案例生成、工單管理到文件協作，持續實驗並落地各種 AI 輔助方案。相信 AI 不只是工具，更是改變工作方式的契機——目標是成為能善用 AI 創造價值的工程師。",
-    "tags": ["AI Integration", "Claude / Copilot", "QA Automation", "Python"],
-    "education": [
+    "nameAlt": "Neil Chen",
+    "headline": "把 QA 的經驗，做成 AI 會照著做的系統。",
+    "lead": "QNAP 軟體自動化測試工程師，四年儲存系統（ZFS、高可用、快照）測試經驗。現在的工作重心，是把規格審查、案例設計、實機執行、Bug 開單與驗證、報告產出這整條測試流程，做成 AI agent 可以無人值守執行、而且每一步都有檢查關卡的工作系統。",
+    "ctaPrimary": "看 AI 成果",
+    "ctaSecondary": "聯絡我",
+    "status": "台北 · 任職 QNAP Systems（2021 至今）"
+  },
+  "stats": [
+    { "value": "70", "label": "自建 AI Skills", "note": "每個都是一段可重複執行的工作流程" },
+    { "value": "12", "label": "專責 Agent", "note": "其中 7 個只負責審查把關" },
+    { "value": "6", "label": "節點 AI 機群", "note": "1 個調度 ＋ 5 個執行，無人值守" },
+    { "value": "1,640+", "label": "處理工單", "note": "任職以來累計" },
+    { "value": "820+", "label": "提交 Bug", "note": "任職以來累計" },
+    { "value": "170+", "label": "自動化 MR", "note": "測試腳本與共用關鍵字" }
+  ],
+  "about": {
+    "label": "關於我",
+    "title": "現在在做什麼",
+    "intro": "我的位置在 QA 與 AI 工程的交界：懂測試該怎麼做才算數，也能把這套判斷寫成 AI 讀得懂、照著做、做錯會被擋下的規則。",
+    "pillars": [
       {
-        "school": "淡江大學",
-        "major": "電機工程學系（智慧型機器人實驗室 - 機器人工程碩士學位）",
-        "degree": "碩士",
-        "period": "2018 - 2020",
-        "activities": "擔任實驗室負責人，統籌團隊年度研究規劃、進度管理與任務分配。帶領團隊參與 FIRA RoboWorld Cup 國際機器人競賽，培養團隊協調與專案執行能力。"
+        "title": "AI Agent 工作系統",
+        "body": "把個人工作方式整理成一個有版本控制的「大腦」repo：Skill 定義怎麼做、知識庫記錄事實與踩過的坑、審查 Agent 在寫入前把關。任何一台機器 clone 下來就具備同樣的能力。",
+        "points": ["Skill／Agent／Hook 架構設計", "多機調度與無人值守邊界", "Token 用量量測與治理"]
       },
       {
-        "school": "淡江大學",
-        "major": "電機工程學系",
-        "degree": "學士",
-        "period": "2014 - 2018",
-        "activities": "大一即加入智慧型機器人實驗室，累積四年機器人開發與 AI 應用經驗。擔任系學會副會長與班級代表，培養領導與溝通能力。"
+        "title": "測試工程",
+        "body": "從規格書找出邏輯漏洞、設計測試情境、寫自動化腳本、在實機上執行並判定結果。重視證據：每個結論都要能追回原始輸出，驗證要有對照組證明量得到問題。",
+        "points": ["規格審查與測試案例設計", "Playwright／Robot Framework 自動化", "Bug 複製、根因分析與修正驗證"]
+      },
+      {
+        "title": "儲存系統領域知識",
+        "body": "長期負責 ZFS 架構 NAS 作業系統的儲存核心功能：高可用叢集、儲存池與 RAID、快照與備份還原。這些領域知識是 AI 產出能不能用的關鍵——知道什麼結果不合理，才擋得住 AI 的錯。",
+        "points": ["高可用（HA）故障轉移", "儲存池、RAID、效能診斷", "快照、複寫、備份還原"]
       }
     ]
   },
-  "skills": [
-    {
-      "category": "AI 應用",
-      "items": ["Claude Skills 開發", "GitHub Copilot 協作", "Prompt Engineering", "AI 輔助工作流程設計"]
-    },
-    {
-      "category": "程式開發",
-      "items": ["Python", "Robot Framework", "JavaScript / Node.js"]
-    },
-    {
-      "category": "測試自動化",
-      "items": ["自動化測試架構設計", "CI/CD 整合", "Linux 系統操作"]
-    },
-    {
-      "category": "技術領域",
-      "items": ["Storage / NAS 系統", "HA 高可用架構", "深度學習影像辨識"]
-    }
-  ],
-  "awards": [
-    {
-      "name": "淡江大學機器人創意競賽",
-      "rank": "第一名",
-      "year": 2017
-    },
-    {
-      "name": "新光保全智慧型機器人競賽",
-      "rank": "優等",
-      "year": 2016
-    }
-  ],
-  "training": [
-    {
-      "year": 2021,
-      "name": "工業局 AI 精粹計畫（機器學習、深度學習與影像辨識實戰）"
-    },
-    {
-      "year": 2019,
-      "name": "AI 智慧應用新世代人才培育計畫 - 工業機器人之應用"
-    },
-    {
-      "year": 2018,
-      "name": "國立臺灣大學創新設計學院「智齡設計」跨校課程"
-    }
-  ],
-  "experience": [
-    {
-      "company": "QNAP Systems, Inc.",
-      "position": "軟體自動化測試工程師",
-      "period": "2021/11 - 現今（4年+）",
-      "description": "負責 QuTS hero 及相關產品的品質保證工作，專注於自動化測試與 AI 工具整合。",
-      "projects": [
-        {
-          "name": "Hero HA (High Availability)",
-          "description": "高可用性架構測試，確保系統穩定性與故障轉移機制",
-          "tags": ["QHRSHAMG", "CNR Testing"]
-        },
-        {
-          "name": "Storage Manager",
-          "description": "儲存管理功能測試，包含 RAID 擴展等核心功能",
-          "tags": ["HROSTRMR", "RAID Expand"]
-        },
-        {
-          "name": "Snapshot Manager",
-          "description": "快照功能完整測試，涵蓋快照建立、排程、還原、刪除、匯出/匯入等核心操作",
-          "tags": ["SNASHAPP", "Export/Import"]
-        }
-      ],
-      "stats": {
-        "ticketsHandled": "1640+",
-        "bugsReported": "820+"
+  "capabilities": {
+    "label": "能力",
+    "title": "專業能力",
+    "groups": [
+      {
+        "name": "AI 工程",
+        "summary": "把模型變成可靠的工作夥伴",
+        "items": ["Claude Code／Agent SDK", "GitHub Copilot", "Skill 與 Subagent 設計", "Hook 與權限守門", "審查鏈（Checker）設計", "Prompt 與 Context 管理"]
+      },
+      {
+        "name": "測試自動化",
+        "summary": "UI、API、CLI 三層都能驗",
+        "items": ["Playwright（Python／Node.js）", "Robot Framework", "pytest", "Jenkins CI", "TestLink 案例管理", "Allure 報告"]
+      },
+      {
+        "name": "程式與系統",
+        "summary": "寫工具，也顧得住環境",
+        "items": ["Python", "JavaScript／Node.js", "Shell／PowerShell", "Linux 系統操作", "Git／GitLab", "systemd／VM 部署"]
+      },
+      {
+        "name": "領域與合規",
+        "summary": "知道什麼結果才算對",
+        "items": ["ZFS／NAS 儲存", "HA 高可用架構", "SMB／FTP／iSCSI", "效能診斷與分析", "IEC 62443-4-1 文件", "AI Governance（EU AI Act）"]
       }
+    ]
+  },
+  "ai": {
+    "label": "AI 成果",
+    "title": "AI 應用成果",
+    "intro": "不是用 AI 寫幾段程式，而是把整條工作流程交給 AI 執行，並設計足夠的關卡讓結果可以信任。以下是目前在日常工作中實際運作的系統。",
+    "featured": [
+      {
+        "id": "fleet",
+        "tag": "核心系統",
+        "title": "多機 AI 機群：無人值守的測試團隊",
+        "summary": "把 6 台虛擬機變成共用同一個「大腦」的 AI 節點。一個調度者負責規劃與派工，五個執行者各自接任務；我在通訊軟體留一句話，或工單系統指派新單，機群就開始工作，做完回報結果與學到的教訓。",
+        "bullets": [
+          "調度者依任務類型拆解、派工、追蹤，並在用量達門檻時暫停派新任務",
+          "風險分級：唯讀與低風險操作自動執行，建單、推送、改設定需要我核准",
+          "推送三道關卡：節點預設不能推送，審查通過並取得一次性授權碼才放行",
+          "每個任務回報都附「教訓」，由回顧流程沉澱回知識庫"
+        ],
+        "metrics": [
+          { "value": "6", "label": "節點（Linux＋Windows）" },
+          { "value": "720+", "label": "五週內的大腦 commit" },
+          { "value": "24h", "label": "可排程、可夜間執行" }
+        ],
+        "stack": ["Claude Code headless", "Node.js", "systemd", "Teams", "GitLab", "ESXi"],
+        "diagram": "fleet"
+      },
+      {
+        "id": "pipeline",
+        "tag": "全流程",
+        "title": "測試全流程 AI 化：從規格到報告",
+        "summary": "一張規格單進來，AI 依序完成規格審查、測試規劃、命名、UI 探索、撰寫步驟、上傳案例管理系統；測試階段再自動寫腳本、上實機執行、判定失敗原因、開 Bug、產出報告。每個階段都是一個 Skill，階段之間由獨立的審查 Agent 把關。",
+        "bullets": [
+          "規格審查產出給 PM 的確認清單：一項一個背景說明、選項表與建議",
+          "測試規劃有第二道審查：覆蓋矩陣、冗餘、缺漏、規格忠實度等七個面向",
+          "案例資料單一來源，修正與上傳都從同一份檔案出發",
+          "失敗案例對照最新規格判定：真失敗、規格已變、或誤判，各有後續流程"
+        ],
+        "metrics": [
+          { "value": "11", "label": "個階段串成一條鏈" },
+          { "value": "1,000+", "label": "累計撰寫測試項目" },
+          { "value": "0", "label": "無審查的寫入" }
+        ],
+        "stack": ["Claude Skills", "Playwright", "TestLink API", "Jira REST API"],
+        "diagram": "pipeline"
+      },
+      {
+        "id": "checkers",
+        "tag": "品質閘門",
+        "title": "寫入前審查鏈：讓 AI 的產出可以信任",
+        "summary": "不可逆或代價高的動作——建 Bug 單、上傳測試案例、推送程式——執行前一律交給沒有參與撰寫的全新 Agent 審查。審查者重讀規則、只判通過或不通過，不替作者修改，也不接受作者的結論。",
+        "bullets": [
+          "7 個審查 Agent：Bug 草稿、測試規劃、案例上傳、自動化腳本、程式碼、推送安全",
+          "程式審查專抓「把失敗當成功」、邊界條件、跨平台差異",
+          "推送前掃描機密與不該入庫的內容，核對授權範圍",
+          "同一份產出最多三輪，僵持就交由人裁決"
+        ],
+        "metrics": [],
+        "stack": ["Subagent", "PreToolUse／PostToolUse Hook", "Git"]
+      },
+      {
+        "id": "knowledge",
+        "tag": "知識系統",
+        "title": "有版本控制的知識庫：AI 的長期記憶",
+        "summary": "AI 每次對話都從零開始，所以把值得保留的東西寫進 repo：平台事實、診斷判準、案件脈絡、方法論，以及「誤判庫」——看起來像 A 其實是 B 的陷阱。查找順序固定為「做法 → 事實 → 誤判」，下指令前先查，不在實機上試。",
+        "bullets": [
+          "13 份平台與版本事實、27 份案件脈絡、13 份方法論",
+          "19 則誤判陷阱：解掉一個誤導性症狀就寫一則",
+          "否決過的方案另有決策紀錄，重提前先讀理由",
+          "每次工作結束自動回顧：可 Skill 化、可 Agent 化、該回填知識庫的各自處理"
+        ],
+        "metrics": [],
+        "stack": ["Markdown", "Git", "Session 回顧流程"]
+      },
+      {
+        "id": "repro",
+        "tag": "問題分析",
+        "title": "客戶問題複製與根因分析",
+        "summary": "把「從客戶回報到實機重現」整理成方法論：收集上下文、解析診斷包、設計能區分假說的複製計畫、建置與量測、逆轉驗證。診斷包解析交給專責 Agent，主對話只收結論。",
+        "bullets": [
+          "判別式實驗設計：每個實驗都要能排除一個假說",
+          "效能問題先分「忙」與「異常」，須有資料集、磁碟、記憶體三層數據才下結論",
+          "記憶體洩漏驗證：基線、造境、四個檢查點加長時間採樣曲線",
+          "交付 RD 可重跑的重演手冊，而不只是結論"
+        ],
+        "metrics": [],
+        "stack": ["SSH", "ZFS", "Shell", "Python"]
+      },
+      {
+        "id": "ui-verify",
+        "tag": "UI 自動化",
+        "title": "UI 測試與 Bug 修正驗證",
+        "summary": "被測動作一律走 Web UI，命令列只負責造資料、讀回與拆除。驗證 UI 修正時不靠肉眼，用 DOM 幾何量測逐項斷言，並刻意讓修正失效跑一次對照組，證明這套量測真的抓得到問題。",
+        "bullets": [
+          "跨三個作業系統世代的快照功能端對端測試",
+          "多語系字串驗證：檔案層全語系比對加上 UI 層實機截圖",
+          "每個案例自建環境、測完拆除還原，不依賴既有資源",
+          "自動截圖與分階段報告，通過與失敗都可追溯"
+        ],
+        "metrics": [],
+        "stack": ["Playwright", "Python", "SSH"]
+      }
+    ],
+    "fleetDiagram": {
+      "inputsTitle": "入口",
+      "inputs": ["通訊軟體留言", "工單指派", "排程"],
+      "supervisorTitle": "調度者",
+      "supervisor": ["拆解與派工", "風險分級", "用量閘門"],
+      "workersTitle": "執行者 × 5",
+      "workers": ["一任務一個 AI 行程", "各自持有實驗設備", "回報結果＋教訓"],
+      "outputsTitle": "產出",
+      "outputs": ["測試結果與報告", "工單留言", "知識庫回填"],
+      "gate": "所有寫入都先經過審查 Agent；推送需一次性授權"
     },
-    {
-      "company": "廣略國際股份有限公司",
-      "position": "營運經理",
-      "period": "2020/12 - 2021/6（7個月）",
-      "description": "負責店內管理、宣傳行銷、活動策劃、粉絲團經營與品牌推廣，培養社交溝通與專案規劃能力。"
+    "pipeline": {
+      "steps": [
+        { "name": "規格審查", "desc": "找邏輯漏洞，列 PM 確認清單" },
+        { "name": "測試規劃", "desc": "測試項目與目的" },
+        { "name": "規劃審查", "desc": "覆蓋矩陣第二道門" },
+        { "name": "命名", "desc": "標準化案例標題" },
+        { "name": "UI 探索", "desc": "記錄元件與選擇器" },
+        { "name": "撰寫步驟", "desc": "前置、步驟、預期結果" },
+        { "name": "上傳審查", "desc": "逐欄合規檢查" },
+        { "name": "上傳", "desc": "進案例管理系統" },
+        { "name": "實機執行", "desc": "寫腳本並在設備上跑" },
+        { "name": "判定與開單", "desc": "對規格判定、開 Bug" },
+        { "name": "報告", "desc": "一則完整報告回工單" }
+      ]
+    },
+    "more": {
+      "title": "其他工具與整合",
+      "items": [
+        { "title": "報告產生器", "desc": "複製、驗證、測試、效能等報告共用骨架與視覺範本，產出 HTML 單檔；每個數字都能追回原始數據。", "stack": ["Python", "HTML／SVG"] },
+        { "title": "Token 用量治理", "desc": "量測後發現每次呼叫固定重送超過 4 萬 token，把主指令檔從 68KB 精簡到 17KB，規則本文外移、需要時才讀。", "stack": ["量測", "Context 設計"] },
+        { "title": "工單系統自動化", "desc": "查詢、標籤、留言、狀態、指派、預計完成日、建單與子單全部以自然語言驅動，操作後由 Hook 自動補標記。", "stack": ["Jira REST API", "Node.js"] },
+        { "title": "企業平台整合", "desc": "讓 AI 直接讀取文件庫、Wiki、團隊頻道訊息與會議錄影逐字稿，自動處理認證。", "stack": ["Graph API", "Confluence API", "whisper.cpp"] },
+        { "title": "週報自動化", "desc": "掃描當週 AI 對話與程式提交，統整成 AI 應用週報與 Git 活動紀錄，自動建立並更新紀錄單。", "stack": ["GitLab API", "Node.js"] },
+        { "title": "NAS 測試工具組", "desc": "批量快照、CPU 監控、版本對齊檢查、除錯紀錄開啟、環境健檢等日常操作，各自成為一個 Skill。", "stack": ["SSH", "Shell"] },
+        { "title": "Robot Framework AI 輔助開發", "desc": "把既有架構與規範交給 AI 分析後產出符合規範的案例，並批量重構既有腳本；累計 27+ 案例、25+ 共用關鍵字。", "stack": ["Robot Framework", "Python"] },
+        { "title": "CI 穩定性測試監看", "desc": "一次檢查多組壓力測試工作的狀態與設備版本，失敗時自動分析原因。", "stack": ["Jenkins API", "SSH"] },
+        { "title": "本網站", "desc": "從第一版到這次改版都以 AI 對話完成；內容由中英文 JSON 驅動，另有腳本檢查兩份翻譯結構一致。", "stack": ["HTML／CSS／JS", "JSON"] }
+      ]
+    },
+    "timeline": {
+      "title": "AI 導入歷程",
+      "items": [
+        { "when": "2026 / 02", "title": "從輔助寫程式開始", "desc": "以 AI 協助測試腳本開發與重構，並用對話方式建出本網站第一版。" },
+        { "when": "2026 上半年", "title": "把重複工作做成 Skill", "desc": "工單管理、週報、NAS 操作、端對端 UI 測試陸續 Skill 化，累積到 40 多個。" },
+        { "when": "2026 / 10", "title": "大腦 repo 與機群上線", "desc": "行為與事實集中到一個 repo；6 節點機群開始接任務，建立審查鏈與推送關卡。" },
+        { "when": "2026 / 11", "title": "測試執行無人值守", "desc": "測試執行、Bug 開單與驗證由機群完成；同步做用量治理，Skill 增至 70 個。" }
+      ]
     }
-  ],
-  "aiProjects": [
-    {
-      "id": "personal-website",
-      "title": "AI 輔助個人網站架設",
-      "badge": "本站",
-      "featured": true,
-      "description": "使用 GitHub Copilot (Claude) 從零建立本網站。以自然語言描述需求與設計偏好 → AI 生成基礎架構 → 對話迭代調整配色與互動 → 建立 JSON 資料驅動架構 → 撰寫 CLAUDE.md 協作規範。全程無需手寫程式碼，完全透過 AI 對話完成開發。",
-      "features": [
-        { "icon": "💬", "text": "全程自然語言對話開發，零手寫程式碼" },
-        { "icon": "🎨", "text": "木質調深色主題設計與響應式佈局" },
-        { "icon": "📄", "text": "JSON 資料驅動架構，內容更新無需改 HTML" },
-        { "icon": "🤖", "text": "CLAUDE.md 協作規範，AI 可直接理解維護" }
-      ],
-      "techStack": ["HTML/CSS/JS", "GitHub Copilot", "JSON"]
+  },
+  "experience": {
+    "label": "經歷",
+    "title": "工作經歷與背景",
+    "jobs": [
+      {
+        "company": "QNAP Systems, Inc.",
+        "role": "軟體自動化測試工程師",
+        "period": "2021 / 11 — 現在",
+        "summary": "負責 ZFS 架構 NAS 作業系統及相關儲存產品的品質保證，並主導個人與團隊的 AI 輔助測試流程導入。",
+        "duties": [
+          "依規格書設計測試情境，檢視規格邏輯是否合理",
+          "執行功能、壓力、交互、錯誤處理與極限狀況測試",
+          "評估自動化可行性並撰寫自動化測試腳本",
+          "開立 Bug、提供實驗環境協助 RD 分析、確認修正",
+          "協助處理客戶問題：複製、分析並提供解決方向",
+          "維護既有測試套件、案例與自動化腳本",
+          "建置 AI 輔助工具與流程，分享給團隊使用"
+        ],
+        "areasTitle": "負責領域",
+        "areas": [
+          { "name": "高可用叢集（HA）", "desc": "故障轉移、主被動節點切換與叢集穩定性" },
+          { "name": "儲存管理", "desc": "儲存池、RAID 擴充、資料完整性與效能" },
+          { "name": "快照管理", "desc": "建立、排程、還原、複寫、匯出匯入與保留策略" },
+          { "name": "應用套件", "desc": "檔案傳輸服務改版的規格審查、測試設計與執行" }
+        ]
+      },
+      {
+        "company": "廣略國際股份有限公司",
+        "role": "營運經理",
+        "period": "2020 / 12 — 2021 / 06",
+        "summary": "負責門市管理、行銷宣傳、活動策劃與社群經營，累積溝通協調與專案規劃經驗。",
+        "duties": [],
+        "areasTitle": "",
+        "areas": []
+      }
+    ],
+    "education": {
+      "title": "學歷",
+      "items": [
+        { "school": "淡江大學", "degree": "電機工程碩士（機器人工程）", "period": "2018 — 2020", "note": "智慧型機器人實驗室負責人，統籌研究規劃與進度，帶隊參加 FIRA RoboWorld Cup 國際機器人競賽。" },
+        { "school": "淡江大學", "degree": "電機工程學士", "period": "2014 — 2018", "note": "大一加入智慧型機器人實驗室；擔任系學會副會長與班級代表。" }
+      ]
     },
-    {
-      "id": "rf-testing",
-      "title": "Robot Framework AI 輔助測試開發",
-      "badge": "核心成果",
-      "featured": true,
-      "description": "整合 GitHub Copilot 於 Robot Framework 測試開發。提供既有架構與規範給 AI 分析 → 描述測試需求 → AI 生成符合規範的測試案例 → 人工 Review 確認邏輯 → 執行驗證通過。也用於批量重構既有測試檔案，一次性更新以符合新規範。",
-      "features": [
-        { "icon": "✅", "text": "新增 7 個 HA 環境測試案例，涵蓋 Thick/Thin/Dedupe 驗證" },
-        { "icon": "📝", "text": "批量重構 16 個測試檔案，統一程式碼風格與規範" },
-        { "icon": "🔧", "text": "修復共用關鍵字相容性問題，提升測試穩定性" },
-        { "icon": "⏱️", "text": "測試案例開發時間從數小時縮短至 30 分鐘內" }
-      ],
-      "techStack": ["GitHub Copilot", "Robot Framework", "Python"]
+    "awards": {
+      "title": "獎項",
+      "items": [
+        { "name": "淡江大學機器人創意競賽", "rank": "第一名", "year": "2017" },
+        { "name": "新光保全智慧型機器人競賽", "rank": "優等", "year": "2016" }
+      ]
     },
-    {
-      "id": "jira-automation",
-      "title": "Jira 工單自動化管理",
-      "badge": "跨平台",
-      "featured": true,
-      "description": "建立 Claude Skills 整合 Jira REST API 的完整自動化系統（v1.7，含 40+ Skills）。在 Claude / Copilot 中以自然語言下達指令 → Skill 呼叫對應 JS 腳本 → 腳本執行 API 操作 → AI 整理成易讀格式呈現。功能涵蓋工單查詢、標籤管理、狀態轉換、Comment 管理、ETA 設定、Sub-task 建立、Component 管理、週報自動統整，全套支援 macOS 與 Windows。含 PostToolUse Hook 自動觸發 Label Refresh。",
-      "features": [
-        { "icon": "🔍", "text": "自然語言查詢工單，支援多種篩選條件與關鍵字搜尋" },
-        { "icon": "🏷️", "text": "15+ 個 Jira 專用 Skill：Label/ETA/Comment/Transition/Assign/Component/Link 等" },
-        { "icon": "📊", "text": "Weekly AI Summary + Git Summary 自動生成週報與活動紀錄" },
-        { "icon": "🔄", "text": "PostToolUse Hook 自動化：每次 Jira 操作後自動刷新 Label" }
-      ],
-      "techStack": ["JavaScript", "Jira REST API", "Claude Skills"]
-    },
-    {
-      "id": "git-automation",
-      "title": "Git 工作流自動化套件",
-      "badge": "團隊工具",
-      "featured": true,
-      "description": "使用 AI 協助開發的 PowerShell 腳本套件，自動化日常 Git 操作。執行 commit → 自動格式化訊息 → 推送並建立 MR → 自動指派 Reviewer → 發送 Teams 通知。套件含初始化腳本，新成員一鍵部署即可使用，已在 QA 團隊推廣。",
-      "features": [
-        { "icon": "📝", "text": "自動格式化 Commit Message，符合團隊規範" },
-        { "icon": "🔀", "text": "一鍵建立 GitLab MR，自動指派 Reviewer" },
-        { "icon": "💬", "text": "MR 建立後自動發送 Teams 通知" },
-        { "icon": "📦", "text": "初始化套件一鍵部署，新成員快速上手" }
-      ],
-      "techStack": ["PowerShell", "GitLab API", "Teams Webhook"]
-    },
-    {
-      "id": "ai-infrastructure",
-      "title": "AI 協作最佳實踐文件",
-      "badge": "知識庫",
-      "featured": false,
-      "description": "從實際 AI 協作經驗累積的系統性文件。包含除錯經驗規則（避免重複踩坑）→ Prompt 撰寫模板（提升 AI 理解度）→ 環境設定指南（確保工具正確運作）→ 工作流規範（定義最佳流程）。已在部門內分享，幫助同事快速上手 AI 輔助開發。",
-      "features": [
-        { "icon": "📖", "text": "累積 16 條除錯規則，記錄常見問題與解法" },
-        { "icon": "📋", "text": "標準化 Prompt 模板，提升 AI 回應品質" },
-        { "icon": "🔧", "text": "環境設定指南，確保工具正確運作" },
-        { "icon": "👥", "text": "部門內分享推廣，協助同事快速上手" }
-      ],
-      "techStack": ["Documentation", "Prompt Engineering"]
-    },
-    {
-      "id": "bug-title-generator",
-      "title": "Bug 標題自動生成器",
-      "badge": null,
-      "featured": false,
-      "description": "建立 Claude Skill 自動產生標準化 Bug 標題。貼上 Bug 描述 → AI 擷取關鍵資訊（功能模組、問題類型、觸發條件）→ 依團隊規範生成標準化標題。解決命名風格不一致問題，提升 Bug 追蹤的可搜尋性。",
-      "features": [
-        { "icon": "🐛", "text": "自動擷取功能模組、問題類型、觸發條件" },
-        { "icon": "📏", "text": "依團隊規範生成標準化標題格式" },
-        { "icon": "🔍", "text": "提升 Bug 可搜尋性，方便追蹤與統計" }
-      ],
-      "techStack": ["Claude Skills", "Prompt Engineering"]
-    },
-    {
-      "id": "nas-automation-tools",
-      "title": "NAS 自動化測試工具",
-      "badge": "NAS 測試",
-      "featured": true,
-      "description": "建立一系列 Claude Skills 自動化 NAS 測試輔助操作。透過 SSH 連線 NAS + QNAP API 整合，涵蓋批量快照建立、CPU 使用率即時監控（定時/無限時兩種模式）、HA Debug Log 自動開啟等，大幅減少手動 CLI 操作時間。",
-      "features": [
-        { "icon": "📸", "text": "批量建立快照並設定 Retention 策略，支援多 Volume 操作" },
-        { "icon": "📊", "text": "CPU 使用率監控：300 秒定時 + 無限時模式，產出完整統計報告" },
-        { "icon": "🔧", "text": "HA Debug Log 一鍵開啟，自動調整 logger 設定並重啟服務" },
-        { "icon": "🔗", "text": "SSH + QNAP API 整合，支援 QuTS hero h5.3.0 / h6.0.0+" }
-      ],
-      "techStack": ["Shell Script", "SSH", "QNAP API"]
-    },
-    {
-      "id": "playwright-e2e-testing",
-      "title": "Playwright 端對端 UI 自動化測試",
-      "badge": "E2E 測試",
-      "featured": true,
-      "description": "建立 Playwright + SSH 整合的端對端自動化測試框架，針對 NAS Snapshot 功能進行完整 UI 自動化測試。涵蓋 QTS 5.2.x、QuTS hero h5.2.x、QTS 6.x.x 三大平台。",
-      "features": [
-        { "icon": "🎭", "text": "跨三大平台：QTS 5.2.x、QuTS hero h5.2.x、QTS 6.x.x 完整覆蓋" },
-        { "icon": "🔗", "text": "Playwright Web UI 操作 + SSH CLI 後端驗證雙重確認" },
-        { "icon": "📋", "text": "9-17 Phase 端對端測試流程：Take/Edit/Schedule/Clone/Revert/Delete" },
-        { "icon": "📸", "text": "自動截圖 + 詳細 Phase 報告，PASS/FAIL 可追溯驗證" }
-      ],
-      "techStack": ["Playwright", "SSH", "Node.js"]
-    },
-    {
-      "id": "enterprise-document-integration",
-      "title": "企業文件與協作平台整合",
-      "badge": "企業整合",
-      "featured": true,
-      "description": "建立 Claude Skills 整合企業內部多個文件與協作平台，讓 AI Agent 能直接存取企業知識庫。",
-      "features": [
-        { "icon": "📄", "text": "SharePoint 文件讀取：Word/PPT/Excel/PDF，支援圖片提取與章節定位" },
-        { "icon": "🔍", "text": "Confluence 頁面搜尋與讀取，瀏覽 Space 與子頁面結構" },
-        { "icon": "💬", "text": "Teams 頻道訊息讀取，掌握團隊溝通脈絡" },
-        { "icon": "🔐", "text": "Azure CLI + Graph API 自動認證，無需手動處理 Token" }
-      ],
-      "techStack": ["Graph API", "Azure CLI", "Confluence API"]
+    "training": {
+      "title": "培訓與進修",
+      "items": [
+        { "year": "2026", "name": "AI Governance & Compliance 自主學習（EU AI Act、風險評估、治理架構）" },
+        { "year": "2021", "name": "工業局 AI 精粹計畫（機器學習、深度學習與影像辨識實戰）" },
+        { "year": "2019", "name": "AI 智慧應用新世代人才培育計畫：工業機器人之應用" },
+        { "year": "2018", "name": "臺灣大學創新設計學院「智齡設計」跨校課程" }
+      ]
     }
-  ],
+  },
   "contact": {
+    "label": "聯絡",
+    "title": "歡迎聯絡",
+    "intro": "想交流 AI 在測試與工程流程的實際做法、或有合作機會，都歡迎來信。",
     "email": "mau88258@gmail.com",
+    "emailLabel": "寄信給我",
     "linkedin": "https://www.linkedin.com/in/%E5%BB%BA%E8%89%AF-%E9%99%B3-267875278/",
+    "linkedinLabel": "LinkedIn",
     "line": "https://line.me/ti/p/nDbpSF6BKi",
-    "lineQR": "images/line-qr.png"
+    "lineLabel": "Line 加好友",
+    "qrHint": "或掃描 QR Code"
   },
   "footer": {
-    "copyright": "© 2026 陳建良. All rights reserved."
-  },
-  "contactPage": {
-    "title": "聯絡我",
-    "intro": "歡迎與我聯繫，討論合作機會或技術交流",
-    "cta": {
-      "title": "有任何問題嗎？",
-      "description": "無論是技術討論、合作洽談或是單純想交流，都歡迎透過上方方式與我聯繫！"
-    },
-    "labels": {
-      "email": "Email",
-      "linkedin": "LinkedIn",
-      "viewLinkedIn": "查看我的 LinkedIn",
-      "line": "Line",
-      "addFriend": "加我好友",
-      "orScanQR": "或掃描下方 QR Code"
-    }
+    "copyright": "© 2026 陳建良 Neil Chen",
+    "built": "以 AI 協作設計與開發"
   }
 }

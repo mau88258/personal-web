@@ -1,255 +1,304 @@
 {
-  "ui": {
-    "nav": {
-      "about": "About",
-      "ai": "AI Projects",
-      "experience": "Experience",
-      "contact": "Contact"
-    },
-    "sections": {
-      "education": "Education",
-      "skills": "Skills",
-      "awards": "Awards",
-      "training": "Training",
-      "experience": "Experience",
-      "aiProjects": "AI Applications",
-      "contact": "Contact Me"
-    },
-    "labels": {
-      "master": "Master",
-      "bachelor": "Bachelor",
-      "present": "Present",
-      "months": "months",
-      "years": "years",
-      "ticketsHandled": "Tickets Handled",
-      "bugsReported": "Bugs Reported"
-    }
+  "meta": {
+    "title": "Neil Chen — QA Automation × AI Agent Engineering",
+    "description": "Neil Chen — Software Test Automation Engineer at QNAP. Turning storage QA experience into AI agent systems that run unattended, with a review gate at every step."
   },
-  "personal": {
+  "nav": {
+    "about": "About",
+    "ai": "AI Work",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "QA Automation × AI Agent Engineering",
     "name": "Neil Chen",
-    "nameEn": "Neil Chen",
-    "greeting": "Hi, I'm",
-    "title": "AI-Driven Development Practitioner · Software QA Engineer @ QNAP",
-    "description": "Building on QA automation expertise, actively exploring practical AI applications in workflows. From test case generation to ticket management and documentation collaboration, continuously experimenting and implementing various AI-assisted solutions. Believing AI is not just a tool, but an opportunity to transform how we work — aiming to become an engineer who leverages AI to create value.",
-    "tags": ["AI Integration", "Claude / Copilot", "QA Automation", "Python"],
-    "education": [
+    "nameAlt": "陳建良",
+    "headline": "Turning QA experience into systems that AI follows.",
+    "lead": "Software Test Automation Engineer at QNAP with four years of testing storage systems (ZFS, high availability, snapshots). My focus now is taking the whole test workflow — spec review, case design, on-device execution, bug filing and verification, reporting — and building it into a system that AI agents run unattended, with a review gate at every step.",
+    "ctaPrimary": "See the AI work",
+    "ctaSecondary": "Get in touch",
+    "status": "Taipei · QNAP Systems (2021 – present)"
+  },
+  "stats": [
+    { "value": "70", "label": "Custom AI Skills", "note": "Each one a repeatable workflow" },
+    { "value": "12", "label": "Dedicated agents", "note": "7 of them only review" },
+    { "value": "6", "label": "Node AI fleet", "note": "1 supervisor + 5 workers, unattended" },
+    { "value": "1,640+", "label": "Tickets handled", "note": "Since joining" },
+    { "value": "820+", "label": "Bugs reported", "note": "Since joining" },
+    { "value": "170+", "label": "Automation MRs", "note": "Test scripts and shared keywords" }
+  ],
+  "about": {
+    "label": "About",
+    "title": "What I do now",
+    "intro": "I work where QA meets AI engineering: I know what it takes for a test to count, and I can write that judgement as rules an AI can read, follow, and be stopped by when it gets them wrong.",
+    "pillars": [
       {
-        "school": "Tamkang University",
-        "major": "Electrical Engineering (Intelligent Robot Lab - Robotics Engineering)",
-        "degree": "Master",
-        "period": "2018 - 2020",
-        "activities": "Lab leader responsible for annual research planning, progress management, and task allocation. Led team to participate in FIRA RoboWorld Cup international robotics competition, developing team coordination and project execution skills."
+        "title": "AI agent work systems",
+        "body": "I keep my way of working in a version-controlled \"brain\" repository: Skills define how to do things, a knowledge base records facts and past mistakes, and review agents check work before anything is written. Any machine that clones it has the same abilities.",
+        "points": ["Skill / agent / hook architecture", "Multi-machine dispatch and unattended limits", "Token usage measurement and control"]
       },
       {
-        "school": "Tamkang University",
-        "major": "Electrical Engineering",
-        "degree": "Bachelor",
-        "period": "2014 - 2018",
-        "activities": "Joined Intelligent Robot Lab in freshman year, accumulating four years of robotics development and AI application experience. Served as Vice President of Department Student Association and Class Representative, developing leadership and communication skills."
+        "title": "Test engineering",
+        "body": "Finding logic gaps in specs, designing scenarios, writing automation, running it on real devices and judging the result. Evidence comes first: every conclusion traces back to raw output, and every verification has a control run that proves the measurement can detect the problem.",
+        "points": ["Spec review and test case design", "Playwright / Robot Framework automation", "Bug reproduction, root cause, fix verification"]
+      },
+      {
+        "title": "Storage domain knowledge",
+        "body": "Long-term owner of core storage features on a ZFS-based NAS operating system: high-availability clusters, storage pools and RAID, snapshots and backup. That knowledge decides whether AI output is usable — you can only catch an AI's mistake if you know which result makes no sense.",
+        "points": ["High availability (HA) failover", "Storage pools, RAID, performance diagnosis", "Snapshots, replication, backup and restore"]
       }
     ]
   },
-  "skills": [
-    {
-      "category": "AI Applications",
-      "items": ["Claude Skills Development", "GitHub Copilot Collaboration", "Prompt Engineering", "AI-Assisted Workflow Design"]
-    },
-    {
-      "category": "Development",
-      "items": ["Python", "Robot Framework", "JavaScript / Node.js"]
-    },
-    {
-      "category": "Test Automation",
-      "items": ["Automation Framework Design", "CI/CD Integration", "Linux Operations"]
-    },
-    {
-      "category": "Technical Domains",
-      "items": ["Storage / NAS Systems", "HA Architecture", "Deep Learning Image Recognition"]
-    }
-  ],
-  "awards": [
-    {
-      "name": "Tamkang University Robot Creativity Competition",
-      "rank": "1st Place",
-      "year": 2017
-    },
-    {
-      "name": "Shin Kong Security Intelligent Robot Competition",
-      "rank": "Excellence Award",
-      "year": 2016
-    }
-  ],
-  "training": [
-    {
-      "year": 2021,
-      "name": "Industrial Bureau AI Excellence Program (ML, DL & Image Recognition)"
-    },
-    {
-      "year": 2019,
-      "name": "AI Smart Application New Generation Talent Program - Industrial Robotics"
-    },
-    {
-      "year": 2018,
-      "name": "NTU D-School 'Aging Design' Cross-Campus Course"
-    }
-  ],
-  "experience": [
-    {
-      "company": "QNAP Systems, Inc.",
-      "position": "Software QA Automation Engineer",
-      "period": "2021/11 - Present (4+ years)",
-      "description": "Responsible for quality assurance of QuTS hero and related products, focusing on test automation and AI tool integration.",
-      "projects": [
-        {
-          "name": "Hero HA (High Availability)",
-          "description": "High availability architecture testing, ensuring system stability and failover mechanisms",
-          "tags": ["QHRSHAMG", "CNR Testing"]
-        },
-        {
-          "name": "Storage Manager",
-          "description": "Storage management feature testing, including RAID expansion and core functionalities",
-          "tags": ["HROSTRMR", "RAID Expand"]
-        },
-        {
-          "name": "Snapshot Manager",
-          "description": "Complete snapshot feature testing, covering creation, scheduling, restoration, deletion, and export/import operations",
-          "tags": ["SNASHAPP", "Export/Import"]
-        }
-      ],
-      "stats": {
-        "ticketsHandled": "1640+",
-        "bugsReported": "820+"
+  "capabilities": {
+    "label": "Skills",
+    "title": "Capabilities",
+    "groups": [
+      {
+        "name": "AI engineering",
+        "summary": "Making a model a dependable colleague",
+        "items": ["Claude Code / Agent SDK", "GitHub Copilot", "Skill and subagent design", "Hooks and permission guards", "Review chain (checker) design", "Prompt and context management"]
+      },
+      {
+        "name": "Test automation",
+        "summary": "Verify at UI, API and CLI level",
+        "items": ["Playwright (Python / Node.js)", "Robot Framework", "pytest", "Jenkins CI", "TestLink case management", "Allure reports"]
+      },
+      {
+        "name": "Code and systems",
+        "summary": "Build the tools, keep the environment running",
+        "items": ["Python", "JavaScript / Node.js", "Shell / PowerShell", "Linux administration", "Git / GitLab", "systemd / VM deployment"]
+      },
+      {
+        "name": "Domain and compliance",
+        "summary": "Knowing what a correct result looks like",
+        "items": ["ZFS / NAS storage", "HA architecture", "SMB / FTP / iSCSI", "Performance diagnosis", "IEC 62443-4-1 documents", "AI governance (EU AI Act)"]
       }
+    ]
+  },
+  "ai": {
+    "label": "AI Work",
+    "title": "AI in production use",
+    "intro": "This is not about having AI write a few snippets. It is about handing the whole workflow to AI and designing enough gates that the result can be trusted. These systems run in my daily work today.",
+    "featured": [
+      {
+        "id": "fleet",
+        "tag": "Core system",
+        "title": "Multi-machine AI fleet: an unattended test team",
+        "summary": "Six virtual machines became AI nodes that share one \"brain\". A supervisor plans and dispatches, five workers take tasks. I leave one line in a chat app, or a ticket gets assigned, and the fleet starts working, then reports the result and the lesson it learned.",
+        "bullets": [
+          "The supervisor splits work by task type, dispatches, tracks, and pauses new tasks when usage reaches a threshold",
+          "Risk tiers: read-only and low-risk actions run on their own; creating tickets, pushing code and changing settings need my approval",
+          "Three gates on every push: nodes cannot push by default, and need a passed review plus a one-time code",
+          "Every task report carries a lesson, which a retrospective step files into the knowledge base"
+        ],
+        "metrics": [
+          { "value": "6", "label": "nodes (Linux + Windows)" },
+          { "value": "720+", "label": "brain commits in five weeks" },
+          { "value": "24h", "label": "scheduled and overnight runs" }
+        ],
+        "stack": ["Claude Code headless", "Node.js", "systemd", "Teams", "GitLab", "ESXi"],
+        "diagram": "fleet"
+      },
+      {
+        "id": "pipeline",
+        "tag": "End to end",
+        "title": "The full test workflow on AI: from spec to report",
+        "summary": "A spec ticket comes in and AI works through spec review, test planning, naming, UI exploration, writing steps and uploading to the case management system. In the test phase it writes the scripts, runs them on real devices, judges each failure, files bugs and writes the report. Each stage is a Skill, and independent review agents sit between stages.",
+        "bullets": [
+          "Spec review produces a confirmation list for the PM: background, an options table and a recommendation per item",
+          "Test plans get a second review across seven aspects: coverage matrix, redundancy, gaps, fidelity to the spec and more",
+          "Case data has a single source; fixes and uploads both start from the same file",
+          "Each failure is judged against the latest spec: real failure, spec changed, or misjudgement — each with its own follow-up"
+        ],
+        "metrics": [
+          { "value": "11", "label": "stages in one chain" },
+          { "value": "1,000+", "label": "test items written" },
+          { "value": "0", "label": "writes without review" }
+        ],
+        "stack": ["Claude Skills", "Playwright", "TestLink API", "Jira REST API"],
+        "diagram": "pipeline"
+      },
+      {
+        "id": "checkers",
+        "tag": "Quality gates",
+        "title": "Review before write: making AI output trustworthy",
+        "summary": "Anything irreversible or costly — filing a bug, uploading test cases, pushing code — first goes to a fresh agent that took no part in writing it. The reviewer re-reads the rules, returns only pass or fail, does not fix the work, and does not accept the author's conclusion.",
+        "bullets": [
+          "7 review agents: bug drafts, test plans, case uploads, automation scripts, code, push safety",
+          "Code review targets failures reported as success, edge cases and platform differences",
+          "Before a push: scan for secrets and files that should not be committed, and check the scope of authorisation",
+          "At most three rounds per piece of work; a deadlock goes to a human"
+        ],
+        "metrics": [],
+        "stack": ["Subagents", "PreToolUse / PostToolUse hooks", "Git"]
+      },
+      {
+        "id": "knowledge",
+        "tag": "Knowledge system",
+        "title": "A version-controlled knowledge base: long-term memory for AI",
+        "summary": "An AI starts every conversation from zero, so what is worth keeping goes into the repository: platform facts, diagnostic criteria, case context, methods, and a \"misjudgement library\" of traps that look like A but are B. The lookup order is fixed — method, then fact, then misjudgement — and commands are looked up before they are run, not tried out on a device.",
+        "bullets": [
+          "13 platform and version fact sheets, 27 case files, 13 method documents",
+          "19 misjudgement traps: one entry for every misleading symptom solved",
+          "Rejected options have a decision log, read before anyone proposes them again",
+          "Every session ends with a retrospective: what becomes a Skill, an agent, or a knowledge-base entry"
+        ],
+        "metrics": [],
+        "stack": ["Markdown", "Git", "Session retrospective"]
+      },
+      {
+        "id": "repro",
+        "tag": "Problem analysis",
+        "title": "Customer issue reproduction and root cause analysis",
+        "summary": "The path from a customer report to a reproduction on a real device, written as a method: collect context, parse the diagnostic bundle, design a plan that tells hypotheses apart, build and measure, then reverse the change to confirm. A dedicated agent parses the bundle and returns only the conclusion.",
+        "bullets": [
+          "Discriminating experiments: each one must rule out a hypothesis",
+          "Performance issues are first split into busy versus abnormal, and need dataset, disk and memory data before any conclusion",
+          "Memory leak verification: baseline, load, four checkpoints and a long sampling curve",
+          "Developers receive a replay guide they can run themselves, not just a conclusion"
+        ],
+        "metrics": [],
+        "stack": ["SSH", "ZFS", "Shell", "Python"]
+      },
+      {
+        "id": "ui-verify",
+        "tag": "UI automation",
+        "title": "UI testing and bug fix verification",
+        "summary": "The action under test always goes through the web UI; the command line only creates data, reads back and cleans up. UI fixes are not checked by eye: each item is asserted with DOM geometry, and a control run with the fix disabled proves the measurement really detects the bug.",
+        "bullets": [
+          "End-to-end snapshot tests across three operating system generations",
+          "Localisation checks: all languages compared at file level, plus screenshots from the real UI",
+          "Each case builds its own environment and tears it down, never relying on existing resources",
+          "Automatic screenshots and phase-by-phase reports, traceable for pass and fail alike"
+        ],
+        "metrics": [],
+        "stack": ["Playwright", "Python", "SSH"]
+      }
+    ],
+    "fleetDiagram": {
+      "inputsTitle": "Triggers",
+      "inputs": ["Chat message", "Ticket assignment", "Schedule"],
+      "supervisorTitle": "Supervisor",
+      "supervisor": ["Split and dispatch", "Risk tiers", "Usage gate"],
+      "workersTitle": "Workers × 5",
+      "workers": ["One AI process per task", "Each holds its lab devices", "Report result + lesson"],
+      "outputsTitle": "Output",
+      "outputs": ["Test results and reports", "Ticket comments", "Knowledge base entries"],
+      "gate": "Every write passes a review agent first; a push needs a one-time code"
     },
-    {
-      "company": "Kuang Lue International Co., Ltd.",
-      "position": "Operations Manager",
-      "period": "2020/12 - 2021/6 (7 months)",
-      "description": "Responsible for store management, marketing campaigns, event planning, social media management, and brand promotion, developing communication and project planning skills."
+    "pipeline": {
+      "steps": [
+        { "name": "Spec review", "desc": "Find gaps, list PM questions" },
+        { "name": "Test plan", "desc": "Test items and purpose" },
+        { "name": "Plan review", "desc": "Coverage matrix, second gate" },
+        { "name": "Naming", "desc": "Standard case titles" },
+        { "name": "UI exploration", "desc": "Record elements and selectors" },
+        { "name": "Write steps", "desc": "Preconditions, steps, expected" },
+        { "name": "Upload review", "desc": "Field-by-field compliance" },
+        { "name": "Upload", "desc": "Into case management" },
+        { "name": "Run on device", "desc": "Write scripts and execute" },
+        { "name": "Judge and file", "desc": "Check against spec, file bugs" },
+        { "name": "Report", "desc": "One full report on the ticket" }
+      ]
+    },
+    "more": {
+      "title": "Other tools and integrations",
+      "items": [
+        { "title": "Report generator", "desc": "Reproduction, verification, test and performance reports share one skeleton and visual template, output as a single HTML file; every number traces back to raw data.", "stack": ["Python", "HTML / SVG"] },
+        { "title": "Token usage control", "desc": "Measurement showed over 40k tokens resent on every call. The main instruction file went from 68KB to 17KB, with rule text moved out and read only when needed.", "stack": ["Measurement", "Context design"] },
+        { "title": "Ticket system automation", "desc": "Queries, labels, comments, status, assignment, due dates, tickets and sub-tasks are all driven by natural language, with a hook adding the tracking label afterwards.", "stack": ["Jira REST API", "Node.js"] },
+        { "title": "Enterprise platform integration", "desc": "Lets AI read document libraries, wiki pages, team channel messages and meeting recording transcripts, handling authentication on its own.", "stack": ["Graph API", "Confluence API", "whisper.cpp"] },
+        { "title": "Weekly report automation", "desc": "Scans the week's AI sessions and code commits, compiles an AI usage report and a Git activity record, and creates and updates the record tickets.", "stack": ["GitLab API", "Node.js"] },
+        { "title": "NAS test toolkit", "desc": "Batch snapshots, CPU monitoring, build alignment checks, debug log switches and environment health checks — each one a Skill.", "stack": ["SSH", "Shell"] },
+        { "title": "AI-assisted Robot Framework development", "desc": "AI analyses the existing framework and conventions, then produces compliant cases and refactors old scripts in bulk; 27+ cases and 25+ shared keywords so far.", "stack": ["Robot Framework", "Python"] },
+        { "title": "CI stress test monitoring", "desc": "Checks several stress test jobs and device builds in one go, and analyses the cause when one fails.", "stack": ["Jenkins API", "SSH"] },
+        { "title": "This website", "desc": "Built through AI conversation from the first version to this redesign; content comes from Chinese and English JSON files, with a script that checks both have the same structure.", "stack": ["HTML / CSS / JS", "JSON"] }
+      ]
+    },
+    "timeline": {
+      "title": "How the AI work grew",
+      "items": [
+        { "when": "2026 / 02", "title": "Started with coding assistance", "desc": "Used AI to develop and refactor test scripts, and built the first version of this site through conversation." },
+        { "when": "Early 2026", "title": "Repeated work became Skills", "desc": "Ticket management, weekly reports, NAS operations and end-to-end UI tests became Skills one by one, reaching more than 40." },
+        { "when": "2026 / 10", "title": "Brain repository and fleet go live", "desc": "Behaviour and facts moved into one repository; the six-node fleet began taking tasks, with a review chain and push gates." },
+        { "when": "2026 / 11", "title": "Unattended test execution", "desc": "The fleet runs tests, files bugs and verifies fixes; usage control was added and the Skill count reached 70." }
+      ]
     }
-  ],
-  "aiProjects": [
-    {
-      "id": "personal-website",
-      "title": "AI-Assisted Personal Website",
-      "badge": "This Site",
-      "featured": true,
-      "description": "Built this website from scratch using GitHub Copilot (Claude). Described requirements in natural language → AI generated base architecture → Iteratively refined design through conversation → Established JSON-driven architecture → Created CLAUDE.md collaboration guidelines. Zero hand-written code, entirely developed through AI conversation.",
-      "features": [
-        { "icon": "💬", "text": "Full natural language development, zero hand-written code" },
-        { "icon": "🎨", "text": "Wood-tone dark theme with responsive layout" },
-        { "icon": "📄", "text": "JSON-driven architecture, no HTML editing for content updates" },
-        { "icon": "🤖", "text": "CLAUDE.md collaboration spec for AI maintainability" }
-      ],
-      "techStack": ["HTML/CSS/JS", "GitHub Copilot", "JSON"]
+  },
+  "experience": {
+    "label": "Experience",
+    "title": "Experience and background",
+    "jobs": [
+      {
+        "company": "QNAP Systems, Inc.",
+        "role": "Software Test Automation Engineer",
+        "period": "2021 / 11 — Present",
+        "summary": "Quality assurance for a ZFS-based NAS operating system and related storage products, and the lead on bringing AI-assisted test workflows to my own work and the team.",
+        "duties": [
+          "Design test scenarios from specs and check that the spec logic holds",
+          "Run functional, stress, interaction, error handling and edge case tests",
+          "Assess automation feasibility and write automated test scripts",
+          "File bugs, provide lab environments for developer analysis, confirm fixes",
+          "Support customer issues: reproduce, analyse and propose a direction",
+          "Maintain existing test suites, cases and automation scripts",
+          "Build AI-assisted tools and workflows and share them with the team"
+        ],
+        "areasTitle": "Areas owned",
+        "areas": [
+          { "name": "High-availability cluster (HA)", "desc": "Failover, active-passive switching and cluster stability" },
+          { "name": "Storage management", "desc": "Storage pools, RAID expansion, data integrity and performance" },
+          { "name": "Snapshot management", "desc": "Create, schedule, restore, replicate, export/import and retention" },
+          { "name": "Application packages", "desc": "Spec review, test design and execution for a file transfer service redesign" }
+        ]
+      },
+      {
+        "company": "Guanglue International Co., Ltd.",
+        "role": "Operations Manager",
+        "period": "2020 / 12 — 2021 / 06",
+        "summary": "Ran store operations, marketing, event planning and social media, building communication and project planning experience.",
+        "duties": [],
+        "areasTitle": "",
+        "areas": []
+      }
+    ],
+    "education": {
+      "title": "Education",
+      "items": [
+        { "school": "Tamkang University", "degree": "M.S. Electrical Engineering (Robotics)", "period": "2018 — 2020", "note": "Head of the Intelligent Robot Lab: planned research and schedules, and led the team at the FIRA RoboWorld Cup." },
+        { "school": "Tamkang University", "degree": "B.S. Electrical Engineering", "period": "2014 — 2018", "note": "Joined the Intelligent Robot Lab in the first year; vice president of the department student association and class representative." }
+      ]
     },
-    {
-      "id": "rf-testing",
-      "title": "Robot Framework AI-Assisted Testing",
-      "badge": "Core Achievement",
-      "featured": true,
-      "description": "Integrated GitHub Copilot into Robot Framework test development. Provided existing architecture and conventions to AI → Described test requirements → AI generated compliant test cases → Manual review for logic verification → Executed and validated. Also used for batch refactoring existing test files to meet new standards.",
-      "features": [
-        { "icon": "✅", "text": "Added 7 HA environment test cases covering Thick/Thin/Dedupe" },
-        { "icon": "📝", "text": "Batch refactored 16 test files, unified code style" },
-        { "icon": "🔧", "text": "Fixed shared keyword compatibility issues" },
-        { "icon": "⏱️", "text": "Reduced test case development from hours to under 30 minutes" }
-      ],
-      "techStack": ["GitHub Copilot", "Robot Framework", "Python"]
+    "awards": {
+      "title": "Awards",
+      "items": [
+        { "name": "Tamkang University Robot Creativity Competition", "rank": "1st place", "year": "2017" },
+        { "name": "Shin Kong Security Intelligent Robot Competition", "rank": "Excellence award", "year": "2016" }
+      ]
     },
-    {
-      "id": "jira-automation",
-      "title": "Jira Ticket Automation",
-      "badge": "Cross-Platform",
-      "featured": true,
-      "description": "Built complete automation system with Claude Skills + Jira REST API (v1.7, 27+ Skills). Natural language commands in Claude / Copilot → Skill calls JS scripts → Scripts execute API operations → AI presents readable results. Features include ticket queries, label management, status transitions, comment management, ETA tracking, sub-task creation, component management, and weekly report generation. PostToolUse Hook auto-triggers Label Refresh.",
-      "features": [
-        { "icon": "🔍", "text": "Natural language ticket queries with keyword search and filters" },
-        { "icon": "🏷️", "text": "10+ Jira-specific Skills: Label/ETA/Comment/Transition/Assign/Component and more" },
-        { "icon": "📊", "text": "Weekly AI Summary + Git Summary auto-generates reports and activity logs" },
-        { "icon": "🔄", "text": "PostToolUse Hook automation: auto Label refresh after every Jira operation" }
-      ],
-      "techStack": ["JavaScript", "Jira REST API", "Claude Skills"]
-    },
-    {
-      "id": "git-automation",
-      "title": "Git Workflow Automation Suite",
-      "badge": "Team Tool",
-      "featured": true,
-      "description": "PowerShell script suite developed with AI assistance for daily Git operations. Execute commit → Auto-format message → Push and create MR → Auto-assign reviewer → Send Teams notification. Includes initialization script for one-click deployment by new team members. Deployed across QA team.",
-      "features": [
-        { "icon": "📝", "text": "Auto-format commit messages to team standards" },
-        { "icon": "🔀", "text": "One-click GitLab MR creation with auto-assigned reviewers" },
-        { "icon": "💬", "text": "Auto Teams notification on MR creation" },
-        { "icon": "📦", "text": "One-click initialization for new team members" }
-      ],
-      "techStack": ["PowerShell", "GitLab API", "Teams Webhook"]
-    },
-    {
-      "id": "ai-infrastructure",
-      "title": "AI Collaboration Best Practices",
-      "badge": "Knowledge Base",
-      "featured": false,
-      "description": "Systematic documentation from real AI collaboration experience. Includes debugging rules (avoid repeated pitfalls) → Prompt templates (improve AI comprehension) → Environment setup guides (ensure tools work correctly) → Workflow standards (define best processes). Shared within department to help colleagues quickly adopt AI-assisted development.",
-      "features": [
-        { "icon": "📖", "text": "16 debugging rules documenting common issues and solutions" },
-        { "icon": "📋", "text": "Standardized prompt templates for better AI responses" },
-        { "icon": "🔧", "text": "Environment setup guides ensuring proper tool operation" },
-        { "icon": "👥", "text": "Department-wide sharing to accelerate adoption" }
-      ],
-      "techStack": ["Documentation", "Prompt Engineering"]
-    },
-    {
-      "id": "bug-title-generator",
-      "title": "Bug Title Generator",
-      "badge": null,
-      "featured": false,
-      "description": "Claude Skill for automated standardized bug titles. Paste bug description → AI extracts key info (module, issue type, trigger conditions) → Generates standardized title per team conventions. Solves inconsistent naming styles, improves bug tracking searchability.",
-      "features": [
-        { "icon": "🐛", "text": "Auto-extract module, issue type, and trigger conditions" },
-        { "icon": "📏", "text": "Generate standardized titles per team conventions" },
-        { "icon": "🔍", "text": "Improved searchability for tracking and statistics" }
-      ],
-      "techStack": ["Claude Skills", "Prompt Engineering"]
-    },
-    {
-      "id": "nas-automation-tools",
-      "title": "NAS Automation Test Tools",
-      "badge": "NAS Testing",
-      "featured": true,
-      "description": "Built a series of Claude Skills to automate NAS testing operations. Integrating SSH + QNAP API, covering batch snapshot creation, real-time CPU monitoring (timed + unlimited modes), and HA Debug Log auto-enable. Dramatically reduces manual CLI operation time.",
-      "features": [
-        { "icon": "📸", "text": "Batch snapshot creation with Retention policy, multi-Volume support" },
-        { "icon": "📊", "text": "CPU monitoring: 300s timed + unlimited mode, full statistical reports" },
-        { "icon": "🔧", "text": "One-click HA Debug Log enable, auto-adjust logger settings and restart" },
-        { "icon": "🔗", "text": "SSH + QNAP API integration, supporting QuTS hero h5.3.0 / h6.0.0+" }
-      ],
-      "techStack": ["Shell Script", "SSH", "QNAP API"]
+    "training": {
+      "title": "Training",
+      "items": [
+        { "year": "2026", "name": "AI Governance & Compliance self-study (EU AI Act, risk assessment, governance frameworks)" },
+        { "year": "2021", "name": "IDB AI Elite Program (machine learning, deep learning and image recognition)" },
+        { "year": "2019", "name": "AI Smart Application Talent Program: industrial robot applications" },
+        { "year": "2018", "name": "NTU D-School cross-university course: Design for Aging" }
+      ]
     }
-  ],
+  },
   "contact": {
+    "label": "Contact",
+    "title": "Get in touch",
+    "intro": "Happy to talk about how AI works in real test and engineering workflows, or about opportunities to work together.",
     "email": "mau88258@gmail.com",
+    "emailLabel": "Email me",
     "linkedin": "https://www.linkedin.com/in/%E5%BB%BA%E8%89%AF-%E9%99%B3-267875278/",
+    "linkedinLabel": "LinkedIn",
     "line": "https://line.me/ti/p/nDbpSF6BKi",
-    "lineQR": "images/line-qr.png"
+    "lineLabel": "Add me on Line",
+    "qrHint": "or scan the QR code"
   },
   "footer": {
-    "copyright": "© 2026 Neil Chen. All rights reserved."
-  },
-  "contactPage": {
-    "title": "Contact Me",
-    "intro": "Feel free to reach out for collaboration opportunities or technical discussions",
-    "cta": {
-      "title": "Have any questions?",
-      "description": "Whether it's technical discussions, collaboration inquiries, or just networking — feel free to contact me through the channels above!"
-    },
-    "labels": {
-      "email": "Email",
-      "linkedin": "LinkedIn",
-      "viewLinkedIn": "View my LinkedIn",
-      "line": "Line",
-      "addFriend": "Add me",
-      "orScanQR": "or scan QR Code below"
-    }
+    "copyright": "© 2026 Neil Chen",
+    "built": "Designed and built with AI"
   }
 }

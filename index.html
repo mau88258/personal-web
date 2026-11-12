@@ -1,361 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Neil Chen</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>陳建良 Neil Chen — QA Automation × AI Agent Engineering</title>
+    <meta name="description" content="陳建良（Neil Chen）— QNAP 軟體自動化測試工程師。把儲存系統 QA 的經驗做成 AI agent 可以無人值守執行、每一步都有檢查關卡的工作系統。">
+    <meta property="og:title" content="陳建良 Neil Chen — QA Automation × AI Agent Engineering">
+    <meta property="og:description" content="把 QA 的經驗，做成 AI 會照著做的系統。">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0c0e13">
+    <script>
+        // 在首次繪製前套用已儲存的主題，避免閃爍
+        try {
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+        } catch (e) {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css?v=20261112">
 </head>
 <body>
-    <!-- 導航列 -->
-    <nav class="navbar">
-        <div class="nav-brand">
-            <span class="brand-name">陳建良</span>
-            <span class="brand-title">AI × Automation</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="nav" id="nav">
+        <div class="nav-inner">
+            <a class="brand" href="#top" aria-label="Neil Chen">
+                <span class="brand-mark">NC</span>
+                <span class="brand-text" data-bind="brand">Neil Chen</span>
+            </a>
+            <nav class="nav-links" id="nav-links" aria-label="Primary">
+                <a href="#about" data-nav="about"></a>
+                <a href="#ai-projects" data-nav="ai"></a>
+                <a href="#experience" data-nav="experience"></a>
+                <a href="#contact" data-nav="contact"></a>
+            </nav>
+            <div class="nav-tools">
+                <div class="lang" role="group" aria-label="Language">
+                    <button type="button" data-lang="zh-TW">中</button>
+                    <button type="button" data-lang="en">EN</button>
+                </div>
+                <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+                    <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+                </button>
+                <button type="button" class="icon-btn menu-btn" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                </button>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#about" class="nav-link active" data-page="about" data-i18n="nav.about">關於我</a></li>
-            <li><a href="#ai-projects" class="nav-link" data-page="ai-projects" data-i18n="nav.projects">AI 應用經歷</a></li>
-            <li><a href="#experience" class="nav-link" data-page="experience" data-i18n="nav.experience">工作經歷</a></li>
-            <li><a href="#contact" class="nav-link" data-page="contact" data-i18n="nav.contact">聯絡我</a></li>
-        </ul>
-        <div class="lang-switcher">
-            <button class="lang-btn active" data-lang="zh-TW">中</button>
-            <button class="lang-btn" data-lang="en">EN</button>
+    </header>
+
+    <main id="main">
+        <div id="top"></div>
+        <div id="app">
+            <p class="loading">Loading…</p>
         </div>
-        <button class="mobile-menu-btn" aria-label="開啟選單">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
-
-    <!-- 主要內容區 -->
-    <main class="main-content">
-        <!-- 關於我 -->
-        <section id="about" class="page active">
-            <div class="container">
-                <div class="hero-section">
-                    <div class="hero-text">
-                        <h1 class="hero-title">
-                            <span class="greeting">Hi, 我是</span>
-                            <span class="name">陳建良</span>
-                            <span class="name-en">Neil Chen</span>
-                        </h1>
-                        <p class="hero-subtitle">AI 輔助開發實踐者 · 軟體自動化測試工程師 @ QNAP</p>
-                        <p class="hero-description">
-                            以 QA 自動化為基礎，積極探索 AI 在工作流程中的實際應用。
-                            從測試案例生成、工單管理到文件協作，持續實驗並落地各種 AI 輔助方案。
-                            相信 AI 不只是工具，更是改變工作方式的契機——目標是成為能善用 AI 創造價值的工程師。
-                        </p>
-                        <div class="hero-tags">
-                            <span class="tag">AI Integration</span>
-                            <span class="tag">Claude / Copilot</span>
-                            <span class="tag">QA Automation</span>
-                            <span class="tag">Python</span>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="avatar-container">
-                            <img src="images/profile.jpg" alt="Neil Chen" class="avatar-image"
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="avatar-placeholder" style="display: none;">
-                                <span>NC</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <div class="about-details">
-                    <h2 class="section-title">學歷背景</h2>
-                    <div class="education-card">
-                        <div class="edu-icon">🎓</div>
-                        <div class="edu-content">
-                            <h3>淡江大學</h3>
-                            <p class="edu-major">電機工程學系（智慧型機器人實驗室 - 機器人工程碩士學位）</p>
-                            <p class="edu-degree">碩士 <span class="edu-period">2018 - 2020</span></p>
-                            <p class="edu-activities">擔任實驗室負責人，統籌團隊年度研究規劃、進度管理與任務分配。帶領團隊參與 FIRA RoboWorld Cup 國際機器人競賽，培養團隊協調與專案執行能力。</p>
-                        </div>
-                    </div>
-                    <div class="education-card">
-                        <div class="edu-icon">🎓</div>
-                        <div class="edu-content">
-                            <h3>淡江大學</h3>
-                            <p class="edu-major">電機工程學系</p>
-                            <p class="edu-degree">學士 <span class="edu-period">2014 - 2018</span></p>
-                            <p class="edu-activities">大一即加入智慧型機器人實驗室，累積四年機器人開發與 AI 應用經驗。擔任系學會副會長與班級代表，培養領導與溝通能力。</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <div class="skills-section">
-                    <h2 class="section-title">專業技能</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>AI 應用</h3>
-                            <ul>
-                                <li>Claude Skills 開發</li>
-                                <li>GitHub Copilot 協作</li>
-                                <li>Prompt Engineering</li>
-                                <li>AI 輔助工作流程設計</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>程式開發</h3>
-                            <ul>
-                                <li>Python</li>
-                                <li>Robot Framework</li>
-                                <li>JavaScript / Node.js</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>測試自動化</h3>
-                            <ul>
-                                <li>自動化測試架構設計</li>
-                                <li>CI/CD 整合</li>
-                                <li>Linux 系統操作</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>技術領域</h3>
-                            <ul>
-                                <li>Storage / NAS 系統</li>
-                                <li>HA 高可用架構</li>
-                                <li>深度學習影像辨識</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <!-- 榮譽與培訓 -->
-                <div class="awards-section">
-                    <h2 class="section-title">榮譽獎項</h2>
-                    <div class="awards-grid">
-                        <div class="award-card">
-                            <span class="award-icon">🏆</span>
-                            <div class="award-content">
-                                <h4>淡江大學機器人創意競賽</h4>
-                                <p>第一名 (2017)</p>
-                            </div>
-                        </div>
-                        <div class="award-card">
-                            <span class="award-icon">🥈</span>
-                            <div class="award-content">
-                                <h4>新光保全智慧型機器人競賽</h4>
-                                <p>優等 (2016)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-divider"></div>
-
-                <div class="training-section">
-                    <h2 class="section-title">專業培訓</h2>
-                    <div class="training-list">
-                        <div class="training-item">
-                            <span class="training-year">2026</span>
-                            <span class="training-name">AI Governance & Compliance 自主學習計畫（EU AI Act、風險評估、治理架構）</span>
-                        </div>
-                        <div class="training-item">
-                            <span class="training-year">2021</span>
-                            <span class="training-name">工業局 AI 精粹計畫（機器學習、深度學習與影像辨識實戰）</span>
-                        </div>
-                        <div class="training-item">
-                            <span class="training-year">2019</span>
-                            <span class="training-name">AI 智慧應用新世代人才培育計畫 - 工業機器人之應用</span>
-                        </div>
-                        <div class="training-item">
-                            <span class="training-year">2018</span>
-                            <span class="training-name">國立臺灣大學創新設計學院「智齡設計」跨校課程</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 工作經歷 -->
-        <section id="experience" class="page">
-            <div class="container">
-                <h1 class="page-title">工作經歷</h1>
-                
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="company-header">
-                                <h2>QNAP Systems, Inc.</h2>
-                                <span class="position">軟體自動化測試工程師</span>
-                                <span class="period">2021/11 - 現今（4年+）</span>
-                            </div>
-                            
-                            <div class="work-description">
-                                <ol class="work-duties">
-                                    <li>負責 QuTS hero（ZFS-based NAS OS）及相關儲存產品的品質保證工作</li>
-                                    <li>根據規格書思考測試情境，確保產品規格符合邏輯</li>
-                                    <li>撰寫並執行功能測試、穩定性測試（Stress Test）、交互性測試、Error Handling 及極限狀況測試</li>
-                                    <li>進行測試項目自動化評估，並使用 Robot Framework 撰寫自動化測試腳本</li>
-                                    <li>開立 Bug 並與 RD 討論問題，提供實驗環境協助分析，確認修復情況並提出優化建議</li>
-                                    <li>協助客戶處理問題，與 RD 一起分析並提供解決方案</li>
-                                    <li>整理與維護既有 Test Suite、Test Cases 及 Robot Script</li>
-                                    <li>主動導入 AI 輔助工具與自動化流程，提升團隊測試效率</li>
-                                </ol>
-                            </div>
-
-                            <h3 class="subsection-title">📋 負責專案</h3>
-                            <div class="project-cards">
-                                <div class="project-card">
-                                    <h4>Hero HA (High Availability)</h4>
-                                    <p>高可用性架構測試，確保系統穩定性與故障轉移機制，涵蓋 CNR 測試及主被動節點切換驗證</p>
-                                    <div class="project-tags">
-                                        <span>QHRSHAMG</span>
-                                        <span>CNR Testing</span>
-                                    </div>
-                                </div>
-                                <div class="project-card">
-                                    <h4>Storage Manager</h4>
-                                    <p>儲存管理功能測試，包含 RAID 擴展、儲存池管理等核心功能，驗證資料完整性與效能</p>
-                                    <div class="project-tags">
-                                        <span>HROSTRMR</span>
-                                        <span>RAID Expand</span>
-                                    </div>
-                                </div>
-                                <div class="project-card">
-                                    <h4>Snapshot Manager</h4>
-                                    <p>快照功能完整測試，涵蓋快照建立、排程、還原、刪除、匯出/匯入、Retention 策略等核心操作</p>
-                                    <div class="project-tags">
-                                        <span>SNASHAPP</span>
-                                        <span>Export/Import</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h3 class="subsection-title">🤖 自動化測試</h3>
-                            <div class="automation-section">
-                                <div class="automation-item">
-                                    <div class="auto-icon">🔧</div>
-                                    <div class="auto-content">
-                                        <h4>Robot Framework 測試環境</h4>
-                                        <p>建立並維護 RF 7.3 自動化測試環境，累計提交 170+ MRs，開發 27+ 個自動化測試案例與 25+ 個共用關鍵字</p>
-                                    </div>
-                                </div>
-                                <div class="automation-item">
-                                    <div class="auto-icon">📊</div>
-                                    <div class="auto-content">
-                                        <h4>測試案例管理</h4>
-                                        <p>AI 輔助測試案例產出與驗證，撰寫 1000+ 個測試項目，涵蓋儲存、快照、備份還原等核心功能</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h3 class="subsection-title">📈 累計成果</h3>
-                            <div class="jira-stats">
-                                <div class="stat-card">
-                                    <span class="stat-number">1640+</span>
-                                    <span class="stat-label">處理工單</span>
-                                </div>
-                                <div class="stat-card resolved">
-                                    <span class="stat-number">820+</span>
-                                    <span class="stat-label">提交 Bug</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 前一份工作 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="company-header">
-                                <h2>廣略國際股份有限公司</h2>
-                                <span class="position">營運經理</span>
-                                <span class="period">2020/12 - 2021/6（7個月）</span>
-                            </div>
-                            <div class="work-description">
-                                <p>負責店內管理、宣傳行銷、活動策劃、粉絲團經營與品牌推廣，培養社交溝通與專案規劃能力。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI 應用 -->
-        <section id="ai-projects" class="page">
-            <div class="container">
-                <h1 class="page-title">AI 應用專案</h1>
-                <p class="page-intro">積極探索 AI 在實際工作中的應用，從測試開發、工單管理到團隊協作，每個專案都有完整的工作流程</p>
-
-                <!-- 專案卡片由 JS 動態生成 -->
-                <div class="ai-projects-grid"></div>
-            </div>
-        </section>
-
-        <!-- 聯絡我 -->
-        <section id="contact" class="page">
-            <div class="container">
-                <h1 class="page-title">聯絡我</h1>
-                <p class="page-intro">歡迎與我聯繫，討論合作機會或技術交流</p>
-
-                <div class="contact-grid">
-                    <div class="contact-card">
-                        <div class="contact-icon">📧</div>
-                        <h3>Email</h3>
-                        <a href="mailto:mau88258@gmail.com">mau88258@gmail.com</a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/%E5%BB%BA%E8%89%AF-%E9%99%B3-267875278/" target="_blank" rel="noopener noreferrer">
-                            查看我的 LinkedIn
-                        </a>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-icon">💬</div>
-                        <h3>Line</h3>
-                        <a href="https://line.me/ti/p/nDbpSF6BKi" target="_blank" rel="noopener noreferrer" class="line-link">
-                            加我好友
-                        </a>
-                        <span class="link-hint">或掃描下方 QR Code</span>
-                        <div class="line-qr-container" id="line-qr">
-                            <!-- 方式一：使用圖片檔案（預設）-->
-                            <img src="images/line-qr.png" alt="Line QR Code" class="line-qr-image" 
-                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <!-- 方式二：若圖片不存在則顯示佔位符 -->
-                            <div class="line-qr-placeholder" style="display: none;">
-                                <p>QR Code</p>
-                                <span class="qr-hint">請放入 images/line-qr.png</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-cta">
-                    <h2>有任何問題嗎？</h2>
-                    <p>無論是技術討論、合作洽談或是單純想交流，都歡迎透過上方方式與我聯繫！</p>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- 頁尾 -->
     <footer class="footer">
-        <div class="container">
-            <p class="footer-text">&copy; 2025 陳建良. All rights reserved.</p>
+        <div class="wrap footer-inner">
+            <span id="footer-copy"></span>
+            <span id="footer-built"></span>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <noscript>
+        <p style="padding:2rem;text-align:center">This site needs JavaScript to display its content. Contact: mau88258@gmail.com</p>
+    </noscript>
+
+    <script src="js/app.js?v=20261112"></script>
 </body>
 </html>

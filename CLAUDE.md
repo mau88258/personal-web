@@ -1,192 +1,55 @@
 # Personal Website - AI 協作說明
 
 ## 專案概述
-陳建良 (Neil Chen) 個人介紹網站，採用木質調深色主題風格。
+陳建良 (Neil Chen) 個人網站。2026-11-12 整個重寫：單頁捲動式、深色為預設（右上角可切淺色）、中英雙語。
+線上網址：https://mau88258.github.io/personal-web/ （GitHub Pages，push 到 `main` 後約 1 分鐘生效）。
 
 ## 檔案結構
 ```
 personal_web/
-├── CLAUDE.md           # AI 協作說明（本檔案）
-├── index.html          # 主頁面，使用模板結構
-├── css/
-│   └── style.css       # 木質調深色主題樣式
-├── js/
-│   └── main.js         # 導航邏輯 + 內容動態載入
+├── CLAUDE.md               # 本檔
+├── index.html              # 骨架：導覽列、頁尾、<div id="app">（內容全由 JS 渲染）
+├── css/site.css            # 全部樣式；顏色都是 :root 變數，淺色在 :root[data-theme="light"]
+├── js/app.js               # 讀兩份 JSON → 渲染各區塊；語言／主題切換、捲動定位
 ├── data/
-│   └── content.json    # 📌 內容資料檔（更新重點）
-└── images/
-    └── line-qr.png     # Line QRcode 圖片
+│   ├── content.json        # 📌 中文內容（單一來源）
+│   └── content-en.json     # 📌 英文內容（結構必須與中文完全一致）
+├── images/                 # profile.jpg（已壓到 900px）、line-qr.png
+├── scripts/check-translation.js   # 比對兩份 JSON 的 key 結構與陣列長度
+└── docs/                   # ⚠️ 舊架構（uiStrings 寫在 main.js）時期的文件，內容已過時，僅供參考
 ```
 
-## 更新指南
+## 改內容
+**只改 `data/content.json` 與 `data/content-en.json`，兩份同步改**，不用動 HTML／JS。
 
-### 📌 新增/修改 AI 專案
-編輯 `data/content.json` 中的 `aiProjects` 陣列：
-```json
-{
-  "id": "unique-id",
-  "title": "專案名稱",
-  "badge": "標籤（如：核心成果、跨平台）",
-  "featured": true,
-  "description": "一段簡短描述",
-  "features": [
-    { "icon": "✅", "text": "功能重點 1" },
-    { "icon": "📝", "text": "功能重點 2" }
-  ],
-  "techStack": ["技術標籤1", "技術標籤2"]
-}
-```
+| 要改什麼 | JSON 位置 |
+|---|---|
+| 首屏標語、簡介 | `hero` |
+| 首屏六格數字 | `stats`（`value`／`label`／`note`） |
+| 「現在在做什麼」三欄 | `about.pillars` |
+| 專業能力標籤 | `capabilities.groups` |
+| AI 重點成果卡 | `ai.featured`（`diagram` 填 `fleet` 或 `pipeline` 會佔整列並帶圖） |
+| 機群圖／流程圖的文字 | `ai.fleetDiagram`／`ai.pipeline.steps` |
+| 其他工具小卡 | `ai.more.items` |
+| AI 導入歷程 | `ai.timeline.items` |
+| 工作經歷、學歷、獎項、培訓 | `experience` |
+| 聯絡方式 | `contact` |
 
-### 📌 更新工作經歷
-編輯 `data/content.json` 中的 `experience.projects` 陣列。
-
-### 📌 更新個人資訊
-編輯 `data/content.json` 中的 `personal` 物件。
-
-## 內容規範
-
-### AI 專案卡片
-- `featured: true` 的卡片會有特殊邊框高亮
-- `badge` 會顯示在標題左上角
-- `features` 建議 2-4 項，用統整數據而非詳細技術細節
-- `techStack` 建議 2-4 個標籤
-
-### 撰寫風格
-- 用統整數據呈現（如：新增 7 個案例）
-- 避免過於技術導向的描述
-- 適合個人介紹展示用途
-
-## 技術細節
-
-### 動態載入機制
-`main.js` 會在頁面載入時：
-1. 讀取 `data/content.json`
-2. 根據資料動態渲染各區塊
-3. 若載入失敗，顯示預設靜態內容
-
-### CSS 主題變數（可調整）
-```css
---wood: #c49a6c;           /* 木質主色 */
---wood-light: #d4b896;     /* 木質淺色 */
---gold: #c9a962;           /* 金色點綴 */
---bg-darkest: #0d0d0d;     /* 最深背景 */
---bg-dark: #1a1a1a;        /* 深色背景 */
---bg-card: #1f1f1f;        /* 卡片背景 */
-```
-
-## 常見操作範例
-
-### 新增一個 AI 專案
-1. 開啟 `data/content.json`
-2. 在 `aiProjects` 陣列新增物件
-3. 刷新網頁即可看到變更
-
-### 從 Jira 週報更新內容
-可請求 AI 協助：
-> 「請從 Jira 週報統整本週 AI 應用成果，更新到 content.json」
-
-AI 會自動：
-1. 查詢 Jira API 取得最新週報
-2. 統整成適合網站展示的格式
-3. 更新 content.json
-
-## 注意事項
-- 修改 JSON 後需確保格式正確（可用 JSON 驗證工具）
-- 圖片檔案放置於 `images/` 目錄
-- Line QRcode 圖片請自行放入 `images/line-qr.png`
-
-## 🌐 多語言翻譯規則（必遵守）
-
-### 同步更新規則
-**當中文內容有任何更動時，必須同步更新對應的英文翻譯。**
-
-翻譯內容位於 `js/main.js` 中的 `uiStrings` 物件：
-- `uiStrings['zh-TW']` - 中文內容
-- `uiStrings['en']` - 英文內容
-
-### 更新流程
-1. 修改中文內容 (`uiStrings['zh-TW']` 的某個欄位)
-2. **立即**修改英文內容 (`uiStrings['en']` 的對應欄位)
-3. 檢查 `switchLanguage()` 函數是否有處理該欄位
-4. 執行完整翻譯檢查
-
-### 翻譯檢查
-詳細檢查清單請參閱：`docs/LANGUAGE_CHECK.md`
-
-觸發檢查的 Prompt：
-```
-請依照 docs/LANGUAGE_CHECK.md 的規範，完整檢查網站中英文翻譯
-```
-
-### 翻譯品質標準
-- 專有名詞保留英文（如 Robot Framework, Claude Skills）
-- 技術術語使用業界慣用翻譯
-- 語意準確，非逐字翻譯
-- 英文句子自然流暢
-
-## 🤖 AI Skill 說明
-
-本網站配有專用 AI Skill 協助開發維護，詳見：`docs/SKILL_PERSONAL_WEB.md`
-
-### 常用觸發詞
-| 功能 | 觸發詞 |
-|------|--------|
-| 翻譯檢查 | 「檢查網站翻譯」、「language check」 |
-| 新增專案 | 「新增專案」、「add project」 |
-| 外部專案 | 「外部專案」、「外部 AI 應用」 |
-| Jira 更新 | 「從 Jira 更新」、「Jira 週報更新」 |
-| 更新內容 | 「更新網站內容」、「修改 XX 區塊」 |
-| 專案結構 | 「專案結構」、「檔案說明」 |
-| 樣式調整 | 「調整樣式」、「修改顏色」 |
-
----
-
-## 🔍 翻譯一致性自動檢查
-
-除了 `docs/LANGUAGE_CHECK.md` 的人工檢查清單外，可使用自動化腳本快速比對中英文 JSON 結構：
-
+改完：
 ```bash
-node scripts/check-translation.js
+node scripts/check-translation.js      # key 結構要一致（jobs[1].areasTitle 空字串是刻意的）
+python3 -m http.server 8080            # 本機預覽一定要走 HTTP，直接開 index.html 會讀不到 JSON
 ```
 
-**檢查項目：**
-- `content.json` 與 `content-en.json` 的 key 結構是否完全一致
-- 陣列長度是否相同（如 aiProjects、skills 項目數）
-- 是否有空字串值
+## 改版面
+- 樣式只在 `css/site.css`；區塊的 HTML 結構在 `js/app.js` 的 `renderHero／renderAbout／renderAI／renderExperience／renderContact`。
+- 錨點固定：`#about`、`#ai-projects`、`#experience`、`#contact`（舊連結沿用，不要改名）。
+- **改了 css／js／JSON 要同步改版本號**：`index.html` 兩處 `?v=YYYYMMDD` 與 `js/app.js` 的 `VERSION`，否則瀏覽器會吃到舊快取。
 
-**建議時機：** 每次修改 `data/content.json` 或 `data/content-en.json` 後執行。
+## 內容規範（公開網站）
+- 只寫概括性描述：**不放**工單號、內部專案代碼、IP／主機名、同事姓名、客戶案件、未公開的產品規劃。
+- 數字要有來源；累計數字用「+」表示下限，不寫估計值。
+- 專有名詞保留英文（Playwright、Robot Framework、Claude Skills）；英文版語意準確、不逐字翻。
 
----
-
-## 🚀 部署流程
-
-### 部署方式：靜態檔案部署
-
-本網站為純靜態網站，不需要建構步驟。
-
-### 本機預覽
-```bash
-# 直接用瀏覽器開啟
-open index.html
-
-# 或使用簡易 HTTP server（推薦，避免 CORS 問題）
-npx serve .
-# 或
-python3 -m http.server 8080
-```
-
-### 部署前檢查清單
-1. **翻譯一致性**：`node scripts/check-translation.js`
-2. **圖片完整性**：確認 `images/` 目錄下 `profile.jpg` 和 `line-qr.png` 存在
-3. **JSON 格式**：確認 `data/content.json` 和 `data/content-en.json` 格式正確
-4. **瀏覽器測試**：開啟 `index.html`，切換中英文確認顯示正確
-
-### 部署到目標主機
-```bash
-# 需要部署的檔案（排除開發文件）
-# index.html
-# css/
-# js/
-# data/
-# images/
-```
+## 部署
+純靜態、無建構步驟。`git push origin main` 即部署；push 前跑翻譯檢查、本機切中英與深淺色各看一次。
